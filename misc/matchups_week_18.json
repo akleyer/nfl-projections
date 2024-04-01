@@ -1,0 +1,258 @@
+[
+  {
+    "home": "BAL",
+    "away": "PIT",
+    "weather": 97,
+    "wind": 23,
+    "temp": 38,
+    "dome": "no",
+    "field": "grass",
+    "betting_lines" : {
+      "home_ml": 143,
+      "away_ml": -170,
+      "home_spread": 3,
+      "away_spread": -3,
+      "total": 34.5
+    }
+  },
+  {
+    "home": "IND",
+    "away": "HOU",
+    "weather": null,
+    "wind": null,
+    "temp": null,
+    "dome": "yes",
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": 105,
+      "away_ml": -125,
+      "home_spread": 1,
+      "away_spread": -1,
+      "total": 47.5
+    }
+  },
+  {
+    "home": "NE",
+    "away": "NYJ",
+    "weather": 99,
+    "wind": 15,
+    "temp": 29,
+    "dome": "no",
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": -130,
+      "away_ml": 110,
+      "home_spread": -2,
+      "away_spread": 2,
+      "total": 30.5
+    }
+  },
+  {
+    "home": "CIN",
+    "away": "CLE",
+    "weather": 0,
+    "wind": 13,
+    "temp": 38,
+    "dome": "no",
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": -335,
+      "away_ml": 260,
+      "home_spread": -7,
+      "away_spread": 7,
+      "total": 37.5
+    }
+  },
+  {
+    "home": "CAR",
+    "away": "TB",
+    "weather": 0,
+    "wind": 14,
+    "dome": "no",
+    "temp": 52,
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": 192,
+      "away_ml": -235,
+      "home_spread": 4.5,
+      "away_spread": -4.5,
+      "total": 36.5
+    }
+  },
+  {
+    "home": "TEN",
+    "away": "JAC",
+    "weather": 0,
+    "wind": 12,
+    "temp": 44,
+    "dome": "no",
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": 170,
+      "away_ml": -205,
+      "home_spread": 4,
+      "away_spread": -4,
+      "total": 41
+    }
+  },
+  {
+    "home": "NO",
+    "away": "ATL",
+    "weather": null,
+    "wind": null,
+    "temp": null,
+    "dome": "yes",
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": -165,
+      "away_ml": 140,
+      "home_spread": -3,
+      "away_spread": 3,
+      "total": 42
+    }
+  },
+  {
+    "home": "DET",
+    "away": "MIN",
+    "weather": null,
+    "wind": null,
+    "temp": null,
+    "dome": "yes",
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": -190,
+      "away_ml": 158,
+      "home_spread": -3,
+      "away_spread": 3,
+      "total": 46
+    }
+  },
+  {
+    "home": "WAS",
+    "away": "DAL",
+    "weather": 0,
+    "wind": 13,
+    "temp": 44,
+    "dome": "no",
+    "field": "grass",
+    "betting_lines" : {
+      "home_ml": 550,
+      "away_ml": -800,
+      "home_spread": 13,
+      "away_spread": -13,
+      "total": 46.5
+    }
+  },
+  {
+    "home": "LV",
+    "away": "DEN",
+    "weather": null,
+    "wind": null,
+    "dome": "yes",
+    "temp": null,
+    "field": "grass",
+    "betting_lines" : {
+      "home_ml": -165,
+      "away_ml": 140,
+      "home_spread": -3,
+      "away_spread": 3,
+      "total": 37
+    }
+  },
+  {
+    "home": "LAC",
+    "away": "KC",
+    "weather": null,
+    "wind": null,
+    "dome": "yes",
+    "temp": null,
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": -190,
+      "away_ml": 158,
+      "home_spread": -3.5,
+      "away_spread": 3.5,
+      "total": 35
+    }
+  },
+  {
+    "home": "SF",
+    "away": "LA",
+    "weather": 0,
+    "wind": 12,
+    "dome": "no",
+    "temp": 52,
+    "field": "grass",
+    "betting_lines" : {
+      "home_ml": -205,
+      "away_ml": 170,
+      "home_spread": -4,
+      "away_spread": 4,
+      "total": 41
+    }
+  },
+  {
+    "home": "ARI",
+    "away": "SEA",
+    "weather": null,
+    "wind": null,
+    "dome": "yes",
+    "temp": null,
+    "field": "grass",
+    "betting_lines" : {
+      "home_ml": 130,
+      "away_ml": -155,
+      "home_spread": 3,
+      "away_spread": -3,
+      "total": 47.5
+    }
+  },
+  {
+    "home": "GB",
+    "away": "CHI",
+    "weather": 0,
+    "wind": 8,
+    "dome": "no",
+    "temp": 34,
+    "field": "grass",
+    "betting_lines" : {
+      "home_ml": -160,
+      "away_ml": 135,
+      "home_spread": -3,
+      "away_spread": 3,
+      "total": 45
+    }
+  },
+  {
+    "home": "NYG",
+    "away": "PHI",
+    "weather": 24,
+    "wind": 8,
+    "dome": "no",
+    "temp": 35,
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": 205,
+      "away_ml": -250,
+      "home_spread": 5.5,
+      "away_spread": -5.5,
+      "total": 42
+    }
+  },
+  {
+    "home": "MIA",
+    "away": "BUF",
+    "weather": 1,
+    "wind": 12,
+    "dome": "no",
+    "temp": 66,
+    "field": "grass",
+    "betting_lines" : {
+      "home_ml": 130,
+      "away_ml": -155,
+      "home_spread": 2.5,
+      "away_spread": -2.5,
+      "total": 48.5
+    }
+  }
+]

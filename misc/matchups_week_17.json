@@ -1,0 +1,226 @@
+[
+  {
+    "home": "BAL",
+    "away": "PIT",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": 162,
+      "away_ml": -195,
+      "home_spread": 4,
+      "away_spread": -4,
+      "total": 36.5
+    }
+  },
+  {
+    "home": "HOU",
+    "away": "IND",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": -105,
+      "away_ml": -115,
+      "home_spread": 1,
+      "away_spread": -1,
+      "total": 47.5
+    }
+  },
+  {
+    "home": "NE",
+    "away": "NYJ",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": -140,
+      "away_ml": 118,
+      "home_spread": -2.5,
+      "away_spread": 2.5,
+      "total": 30.5
+    }
+  },
+  {
+    "home": "CIN",
+    "away": "CLE",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": -240,
+      "away_ml": 196,
+      "home_spread": -5.5,
+      "away_spread": 5.5,
+      "total": 39
+    }
+  },
+  {
+    "home": "TB",
+    "away": "CAR",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": -250,
+      "away_ml": 205,
+      "home_spread": -5.5,
+      "away_spread": 5.5,
+      "total": 37.5
+    }
+  },
+  {
+    "home": "JAC",
+    "away": "TEN",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": -225,
+      "away_ml": 185,
+      "home_spread": -5,
+      "away_spread": 5,
+      "total": 40
+    }
+  },
+  {
+    "home": "NO",
+    "away": "ATL",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": -170,
+      "away_ml": 143,
+      "home_spread": -3,
+      "away_spread": 3,
+      "total": 42.5
+    }
+  },
+  {
+    "home": "MIN",
+    "away": "DET",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": 175,
+      "away_ml": -170,
+      "home_spread": 4,
+      "away_spread": -4,
+      "total": 46.5
+    }
+  },
+  {
+    "home": "WAS",
+    "away": "DAL",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": 550,
+      "away_ml": -800,
+      "home_spread": 13,
+      "away_spread": -13,
+      "total": 45.5
+    }
+  },
+  {
+    "home": "LV",
+    "away": "DEN",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": -145,
+      "away_ml": 122,
+      "home_spread": -2.5,
+      "away_spread": 2.5,
+      "total": 38
+    }
+  },
+  {
+    "home": "LAC",
+    "away": "KC",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": -130,
+      "away_ml": 110,
+      "home_spread": -2,
+      "away_spread": 2,
+      "total": 36
+    }
+  },
+  {
+    "home": "SF",
+    "away": "LA",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": -178,
+      "away_ml": 150,
+      "home_spread": -3.5,
+      "away_spread": 3.5,
+      "total": 42.5
+    }
+  },
+  {
+    "home": "SEA",
+    "away": "ARI",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": -155,
+      "away_ml": 130,
+      "home_spread": -3,
+      "away_spread": 3,
+      "total": 47.5
+    }
+  },
+  {
+    "home": "CHI",
+    "away": "GB",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": 140,
+      "away_ml": -165,
+      "home_spread": 3,
+      "away_spread": -3,
+      "total": 44
+    }
+  },
+  {
+    "home": "NYG",
+    "away": "PHI",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": 196,
+      "away_ml": -240,
+      "home_spread": 5,
+      "away_spread": -5,
+      "total": 41
+    }
+  },
+  {
+    "home": "BUF",
+    "away": "MIA",
+    "weather": "",
+    "wind": "",
+    "dome": "",
+    "betting_lines" : {
+      "home_ml": -160,
+      "away_ml": 135,
+      "home_spread": -3,
+      "away_spread": 3,
+      "total": 50.5
+    }
+  }
+]

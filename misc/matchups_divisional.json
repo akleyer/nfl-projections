@@ -1,0 +1,66 @@
+[
+  {
+    "home": "BAL",
+    "away": "HOU",
+    "weather": 2,
+    "wind": 13.5,
+    "temp": 25.5,
+    "dome": "no",
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": -455,
+      "away_ml": 345,
+      "home_spread": -9.5,
+      "away_spread": 9.5,
+      "total": 43.5
+    }
+  },
+  {
+    "home": "SF",
+    "away": "GB",
+    "weather": 87,
+    "wind": 10,
+    "dome": "no",
+    "temp": 55,
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": -455,
+      "away_ml": 345,
+      "home_spread": -9.5,
+      "away_spread": 9.5,
+      "total": 50.5
+    }
+  },
+  {
+    "home": "DET",
+    "away": "TB",
+    "weather": null,
+    "wind": null,
+    "temp": null,
+    "dome": "yes",
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": -278,
+      "away_ml": 222,
+      "home_spread": -6,
+      "away_spread": 6,
+      "total": 50
+    }
+  },
+  {
+    "home": "BUF",
+    "away": "KC",
+    "weather": 7.5,
+    "wind": 11,
+    "temp": 23,
+    "dome": "no",
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": -155,
+      "away_ml": 130,
+      "home_spread": -2.5,
+      "away_spread": 2.5,
+      "total": 45.5
+    }
+  }
+]

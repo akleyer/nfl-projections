@@ -1,0 +1,66 @@
+[
+  {
+    "home": "DAL",
+    "away": "GB",
+    "weather": null,
+    "wind": null,
+    "temp": null,
+    "dome": "yes",
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": -355,
+      "away_ml": 278,
+      "home_spread": -7.5,
+      "away_spread": 7.5,
+      "total": 51
+    }
+  },
+  {
+    "home": "DET",
+    "away": "LA",
+    "weather": null,
+    "wind": null,
+    "dome": "yes",
+    "temp": null,
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": -165,
+      "away_ml": 140,
+      "home_spread": -3,
+      "away_spread": 3,
+      "total": 52.5
+    }
+  },
+  {
+    "home": "BUF",
+    "away": "PIT",
+    "weather": 67,
+    "wind": 18,
+    "temp": 21,
+    "dome": "no",
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": -550,
+      "away_ml": 400,
+      "home_spread": -10,
+      "away_spread": 10,
+      "total": 37.5
+    }
+  },
+  {
+    "home": "TB",
+    "away": "PHI",
+    "weather": 62,
+    "wind": 9,
+    "temp": 67,
+    "dome": "no",
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": 118,
+      "away_ml": -140,
+      "home_spread": 3,
+      "away_spread": -3,
+      "total": 43
+    }
+  }
+]

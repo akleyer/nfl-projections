@@ -1,0 +1,19 @@
+[
+  {
+    "home": "KC",
+    "away": "SF",
+    "weather": null,
+    "wind": null,
+    "temp": null,
+    "dome": "yes",
+    "neutral": "yes",
+    "field": "turf",
+    "betting_lines" : {
+      "home_ml": 100,
+      "away_ml": -120,
+      "home_spread": 1,
+      "away_spread": -1,
+      "total": 47.5
+    }
+  }
+]
