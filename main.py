@@ -1,755 +1,582 @@
-#!/usr/bin/env python3
-
-import csv
-import json
+from typing import Dict, List, Tuple, Optional
+from data_loader import load_all_position_data, load_csv_data, load_json_data
+from team import Team
+from utils import get_pct_from_wind, get_pct_from_precip, get_pct_from_temp_delta, linear_function
+import config
 import pandas as pd
+import logging
+import pprint as pp
 
+# Set up logging
+logging.basicConfig(level=logging.INFO, 
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    datefmt='%Y-%m-%d %H:%M:%S')
+# Set up logging
+logger = logging.getLogger(__name__)
 
-def load_csv_data(file_path, process_row):
+def load_and_process_data() -> Tuple[Dict, Dict, Dict, Dict, Dict, Dict, Dict, List]:
     """
-    Load data from a CSV file and apply a processing function to it.
-
-    Args:
-        file_path (str): The path to the CSV file.
-        process_row (function): A function to process each row of the CSV data.
-
+    Load and process all necessary data for the NFL projection model.
+    
     Returns:
-        Any: The result of applying the processing function to the data.
+        Tuple containing processed data for teams, DVOA, adjusted yards, play rates,
+        home field advantage, average temperature, and matchups.
     """
-    with open(file_path, newline='') as csvfile:
-        reader = csv.reader(csvfile)
-        return process_row(reader)
-
-
-def load_json_data(file_path):
-    """
-    Load JSON data from a file.
-
-    Args:
-        file_path (str): The path to the JSON file.
-
-    Returns:
-        dict: The loaded JSON data as a dictionary.
-    """
-    with open(file_path, 'r') as file:
-        return json.load(file)
-
-
-def process_projections(reader):
-    """
-    Process projection data from a CSV reader.
-
-    Args:
-        reader (csv.reader): CSV reader object containing projection data.
-
-    Returns:
-        dict: A dictionary containing processed projection data.
-    """
-    team_db = {}
-    for row in reader:
-        if row[3] not in ['FB', 'K', 'DST']:
-            team_db.setdefault(row[2], {"QB": [], "WR": [], "RB": [], "TE": []})[row[3]].append(
-                (row[1], row[11], row[14]))
-    return team_db
-
-
-def process_dvoa_data(reader, pass_col, rush_col):
-    """
-    Process DVOA (Defense-adjusted Value Over Average) data from a CSV reader.
-
-    Args:
-        reader (csv.reader): CSV reader object containing DVOA data.
-        pass_col (int): Column index for pass DVOA data.
-        rush_col (int): Column index for rush DVOA data.
-
-    Returns:
-        tuple: A tuple containing pass DVOA and rush DVOA data as dictionaries.
-    """
-    pass_dvoa, rush_dvoa = {}, {}
-    for row in reader:
-        pass_dvoa[row[0]] = float(row[pass_col])
-        rush_dvoa[row[0]] = float(row[rush_col])
-    return pass_dvoa, rush_dvoa
-
-
-def get_weighted_dvoa(dvoa_tmp):
-    """
-    Calculate weighted DVOA (Defense-adjusted Value Over Average) for players.
-
-    Args:
-        dvoa_tmp (dict): A dictionary containing DVOA data for players, organized by year.
-
-    Returns:
-        dict: A dictionary containing weighted DVOA values for players.
-    """
-    final_dvoa = {}
-    final_dvoa_tracker = {}
-    years = ["2023_playoffs", "2023", "2022", "2021", "2020"]
-
-    weight_factors = [1, 2, 4, 8, 16]  # Corresponding weight factors for each year
-
-    for year, players in dvoa_tmp.items():
-        for player, stats in players.items():
-            dvoa_val, num = stats
-
-            if player not in final_dvoa_tracker:
-                final_dvoa_tracker[player] = [0, 0]
-
-            for i, target_year in enumerate(years):
-                if year == target_year:
-                    weighted_dvoa = dvoa_val * (num / weight_factors[i])
-                    final_dvoa_tracker[player][0] += weighted_dvoa
-                    final_dvoa_tracker[player][1] += (num / weight_factors[i])
-
-    for player, values in final_dvoa_tracker.items():
-        weighted_dvoa, num = values
-        final_dvoa[player] = weighted_dvoa / num
-
-    return final_dvoa
-
-
-def _calculate_total_dvoa(players, dvoa_dict, total_dvoa, total, att_or_targets_index):
-    """
-    Calculate the total DVOA (Defense-adjusted Value Over Average) for a group of players.
-
-    Args:
-        players (list): A list of player data, where each player is represented as a list.
-        dvoa_dict (dict): A dictionary containing DVOA values for players.
-        total_dvoa (float): The running total of DVOA values.
-        total (float): The running total of the attribute (e.g., attempts or targets) values.
-        att_or_targets_index (int): The index of the attribute (e.g., attempts or targets) in the player data.
-
-    Returns:
-        tuple: A tuple containing the total DVOA and the total attribute value.
-    """
-    for player in players:
-        name = player[0]
-        att_or_targets = player[att_or_targets_index]
-        player_dvoa = dvoa_dict.get(name, 0.0)
-        total_dvoa += float(att_or_targets) * player_dvoa
-        total += float(att_or_targets)
-    return total_dvoa, total
-
-
-class Team:
-    def __init__(self,
-                 team_abbreviation,
-                 team_data,
-                 def_pass,
-                 dvoa_obj,
-                 ary,
-                 asr,
-                 def_rush,
-                 pr,
-                 functions
-                 ):
-        """
-        Initialize a Team object.
-
-        Args:
-            team_abbreviation (str): The abbreviation of the team.
-            team_data (dict): Data related to the team's players.
-            def_pass (dict): Defensive passing data.
-            dvoa_obj (dict): DVOA data.
-            ary (dict): Offensive line rushing data.
-            asr (dict): Offensive line passing data.
-            def_rush (dict): Defensive rushing data.
-            pr (dict): Play rate data.
-            functions (dict): Functions for calculating values.
-        """
-        self.abbreviation = team_abbreviation
-        self.team_data = team_data
-        self.dvoa = dvoa_obj
-        self.pass_dvoa = get_weighted_dvoa(dvoa_obj["Passing"])
-        self.rb_rush_dvoa = get_weighted_dvoa(dvoa_obj["Rushing"]["RB"])
-        self.qb_rush_dvoa = get_weighted_dvoa(dvoa_obj["Rushing"]["QB"])
-        self.wr_rush_dvoa = get_weighted_dvoa(dvoa_obj["Rushing"]["WR"])
-        self.te_rec_dvoa = get_weighted_dvoa(dvoa_obj["Receiving"]["TE"])
-        self.rb_rec_dvoa = get_weighted_dvoa(dvoa_obj["Receiving"]["RB"])
-        self.wr_rec_dvoa = get_weighted_dvoa(dvoa_obj["Receiving"]["WR"])
-        self.ol_pass = asr
-        self.ol_rush = ary
-        self.def_pass = def_pass
-        self.def_rush = def_rush
-        self.play_rates = pr
-        self.qb_func = functions["Pass"]
-        self.rush_func = functions["Rush"]
-        self.rec_func = functions["Rec"]
-        self.ol_pass_func = functions["OLPF"]
-        self.ol_rush_func = functions["OLRF"]
-        self.dpf = functions["DPF"]
-        self.drf = functions["DRF"]
-
-    def print_lineup(self):
-        print(self.abbreviation)
-        for pos, players in self.team_data.items():
-            for player in players:
-                player_name, att, targets = player
-                if float(att) or float(targets):
-                    print(f"{pos:<5}{player_name:<15}")
-        # print(self.team_data)
-
-    def generate_qb_value(self):
-        """
-        Generate the quarterback value based on DVOA.
-
-        Returns:
-            float: The calculated quarterback value.
-        """
-        return self.pass_dvoa[self.team_data["QB"][0][0]]
-
-    def get_qb_value(self):
-        """
-        Get the quarterback value considering a threshold.
-
-        Returns:
-            float: The quarterback value.
-        """
-        dvoa_tmp = self.generate_qb_value()
-        qb_val = self.qb_func(dvoa_tmp)
-        return max(0, qb_val) if qb_val <= -5 else qb_val
-
-    def get_ol_pass_value(self):
-        """
-        Get the offensive line pass value.
-
-        Returns:
-            float: The offensive line pass value.
-        """
-        resting_starters = []
-        multiplier = 0.70 if self.abbreviation in resting_starters else 1.0
-        return self.ol_pass_func(self.ol_pass[self.abbreviation]) * multiplier
-
-    def get_ol_rush_value(self):
-        """
-        Get the offensive line rush value.
-
-        Returns:
-            float: The offensive line rush value.
-        """
-        resting_starters = []
-        multiplier = 0.70 if self.abbreviation in resting_starters else 1.0
-        return self.ol_rush_func(self.ol_rush[self.abbreviation]) * multiplier
-
-    def get_def_pass_value(self):
-        """
-        Get the defensive pass value with potential multiplier.
-
-        Returns:
-            float: The defensive pass value.
-        """
-        resting_starters = []
-        multiplier = 0.70 if self.abbreviation in resting_starters else 1.0
-        return self.dpf(self.def_pass[self.abbreviation]) * multiplier
-
-    def get_def_rush_value(self):
-        """
-        Get the defensive rush value with potential multiplier.
-
-        Returns:
-            float: The defensive rush value.
-        """
-        resting_starters = []
-        multiplier = 0.70 if self.abbreviation in resting_starters else 1.0
-        return self.drf(self.def_rush[self.abbreviation]) * multiplier
-
-    def get_off_pass_value(self):
-        """
-        Get the offensive pass value combining various factors.
-
-        Returns:
-            float: The offensive pass value.
-        """
-        qb_value = self.get_qb_value()
-        rec_value = self.get_rec_value()
-        ol_pass_value = self.get_ol_pass_value()
-        rushing_value = self.get_rushing_value()
-        return (qb_value * 0.55) + (rec_value * 0.30) + (ol_pass_value * 0.1) + (rushing_value * 0.05)
-
-    def get_off_rush_value(self):
-        """
-        Get the offensive rush value combining rushing and OL factors.
-
-        Returns:
-            float: The offensive rush value.
-        """
-        rushing_value = self.get_rushing_value()
-        ol_rush_value = self.get_ol_rush_value()
-        return (rushing_value * 0.65) + (ol_rush_value * 0.35)
-
-    def get_play_rates(self):
-        """
-        Get the play rates for the team.
-
-        Returns:
-            dict: The play rates data.
-        """
-        return self.play_rates[self.abbreviation]
-
-    def get_off_plays_per_60(self):
-        """
-        Get the offensive plays per 60 minutes.
-
-        Returns:
-            float: Offensive plays per 60 minutes.
-        """
-        return self.get_play_rates()["OFF"]["PlayPer60"]
-
-    def get_def_plays_per_60(self):
-        """
-        Get the defensive plays per 60 minutes.
-
-        Returns:
-            float: Defensive plays per 60 minutes.
-        """
-        return self.get_play_rates()["DEF"]["PlayPer60"]
-
-    def get_off_pass_rate(self):
-        """
-        Get the offensive pass rate.
-
-        Returns:
-            float: Offensive pass rate.
-        """
-        return self.get_play_rates()["OFF"]["PassRate"]
-
-    def get_def_pass_rate(self):
-        """
-        Get the defensive pass rate.
-
-        Returns:
-            float: Defensive pass rate.
-        """
-        return self.get_play_rates()["DEF"]["PassRate"]
-
-    def get_off_rush_rate(self):
-        """
-        Get the offensive rush rate.
-
-        Returns:
-            float: Offensive rush rate.
-        """
-        return self.get_play_rates()["OFF"]["RushRate"]
-
-    def get_def_rush_rate(self):
-        """
-        Get the defensive rush rate.
-
-        Returns:
-            float: Defensive rush rate.
-        """
-        return self.get_play_rates()["DEF"]["RushRate"]
-
-    def generate_rushing_value(self):
-        """
-        Generate the total rushing value for the team.
-
-        Returns:
-            float: The total rushing value.
-        """
-        total_dvoa, total_attempts = 0, 0
-        for position, dvoa_dict in [('RB', self.rb_rush_dvoa), ('WR', self.wr_rush_dvoa), ('QB', self.qb_rush_dvoa)]:
-            total_dvoa, total_attempts = _calculate_total_dvoa(self.team_data[position], dvoa_dict, total_dvoa,
-                                                               total_attempts, 1)
-        total_dvoa = total_dvoa / total_attempts if total_attempts else 0
-        return total_dvoa
-
-    def get_rushing_value(self):
-        """
-        Get the rushing value for the team.
-
-        Returns:
-            float: The rushing value.
-        """
-        total_dvoa = self.generate_rushing_value()
-        return self.rush_func(total_dvoa)
-
-    def generate_rec_value(self):
-        """
-        Generate the total receiving value for the team.
-
-        Returns:
-            float: The total receiving value.
-        """
-        total_dvoa, total_targets = 0, 0
-        for position, dvoa_dict in [('RB', self.rb_rec_dvoa), ('WR', self.wr_rec_dvoa), ('TE', self.te_rec_dvoa)]:
-            total_dvoa, total_targets = _calculate_total_dvoa(self.team_data[position], dvoa_dict, total_dvoa,
-                                                              total_targets, 2)
-        total_dvoa = total_dvoa / total_targets if total_targets else 0
-        return total_dvoa
-
-    def get_rec_value(self):
-        """
-        Get the receiving value for the team.
-
-        Returns:
-            float: The receiving value.
-        """
-        total_dvoa = self.generate_rec_value()
-        return self.rec_func(total_dvoa)
-
-
-# Load data
-nfl_teams = load_csv_data("projections/2023/week18/fantasy-football-weekly-projections.csv", process_projections)
-def_pass_dvoa, def_rush_dvoa = load_csv_data('dvoa/2023/team_defense_dvoa.csv',
-                                             lambda reader: process_dvoa_data(reader, 7, 9))
-adjusted_rush_yards, adjusted_sack_rate = load_csv_data('dvoa/2023/dvoa_adjusted_line_yards.csv',
-                                                        lambda reader: process_dvoa_data(reader, 3, 15))
-
-
-def create_play_rate_entry(row):
-    """
-    Create a play rate entry based on a row of data.
-
-    Args:
-        row (list): A list containing data for play rates, including pass and rush rates.
-
-    Returns:
-        dict: A dictionary containing play rate information for both offense (OFF) and defense (DEF).
-    """
-    return {
-        "OFF": {
-            "PlayPer60": float(row[2]),
-            "PassRate": float(row[1]),
-            "RushRate": 100 - float(row[1]),
+    nfl_teams = load_all_position_data()
+    def_pass_dvoa, def_rush_dvoa = load_csv_data(config.DVOA_FILE, config.process_dvoa_data)
+    adjusted_rush_yards, adjusted_sack_rate = load_csv_data(config.ADJUSTED_LINE_YARDS_FILE, config.process_dvoa_data_ol)
+    play_rates = load_csv_data(config.PLAY_RATES_FILE, config.create_play_rate_entry)
+    home_field_adv = load_csv_data(config.HOME_ADV_FILE, config.process_home_field_adv)
+    home_field_avg_tmp = load_csv_data(config.AVG_TEMP_FILE, config.process_avg_temp)
+    matchups = load_json_data(config.MATCHUPS_FILE)
+
+    # 2024 projected oline value
+    oline_delta = load_csv_data(config.PROJ_OLINE_VAL_FILE, config.process_proj_oline)
+    
+    dvoa = {
+        "Passing": {year: load_csv_data(f"dvoa/{year}/passing_dvoa.csv", config.process_dvoa_yearly)
+                    for year in config.YEARS},
+        "Rushing": {
+            pos: {year: load_csv_data(f"dvoa/{year}/{pos.lower()}_rushing_dvoa.csv", config.process_dvoa_yearly)
+                  for year in config.YEARS}
+            for pos in ["RB", "QB", "WR"]
         },
-        "DEF": {
-            "PlayPer60": float(row[4]),
-            "PassRate": float(row[3]),
-            "RushRate": 100 - float(row[3]),
+        "Receiving": {
+            pos: {year: load_csv_data(f"dvoa/{year}/{pos.lower()}_receiving_dvoa.csv", config.process_dvoa_yearly)
+                  for year in config.YEARS}
+            for pos in ["WR", "RB", "TE"]
         }
     }
+    
+    return (nfl_teams, def_pass_dvoa, def_rush_dvoa, adjusted_rush_yards, adjusted_sack_rate,
+            play_rates, home_field_adv, home_field_avg_tmp, dvoa, matchups, oline_delta)
 
-
-play_rates = load_csv_data('misc/play_rates.csv',
-                           lambda reader: {row[0]: create_play_rate_entry(row) for row in reader})
-home_field_adv = load_csv_data("misc/home_adv.csv",
-                               lambda reader: {row[0]: (float(row[1]), float(row[2])) for row in reader})
-home_field_avg_tmp = load_csv_data("misc/avg_tmp.csv", lambda reader: {row[0]: float(row[1]) for row in reader})
-
-dvoa = {
-    "Passing": {year: load_csv_data(f"dvoa/{year}/passing_dvoa.csv",
-                                    lambda reader: {row[0]: (float(row[4]) * 100, float(row[6])) for row in reader})
-                for year in ["2023_playoffs", "2023", "2022", "2021", "2020"]},
-    "Rushing": {
-        "RB": {year: load_csv_data(f"dvoa/{year}/rb_rushing_dvoa.csv",
-                                   lambda reader: {row[0]: (float(row[4]) * 100, float(row[6])) for row in reader})
-               for year in ["2023_playoffs", "2023", "2022", "2021", "2020"]},
-        "QB": {year: load_csv_data(f"dvoa/{year}/qb_rushing_dvoa.csv",
-                                   lambda reader: {row[0]: (float(row[4]) * 100, float(row[6])) for row in reader})
-               for year in ["2023_playoffs", "2023", "2022", "2021", "2020"]},
-        "WR": {year: load_csv_data(f"dvoa/{year}/wr_rushing_dvoa.csv",
-                                   lambda reader: {row[0]: (float(row[4]) * 100, float(row[6])) for row in reader})
-               for year in ["2023_playoffs", "2023", "2022", "2021", "2020"]}
-    },
-    "Receiving": {
-        "WR": {year: load_csv_data(f"dvoa/{year}/wr_receiving_dvoa.csv",
-                                   lambda reader: {row[0]: (float(row[4]) * 100, float(row[6])) for row in reader})
-               for year in ["2023_playoffs", "2023", "2022", "2021", "2020"]},
-        "RB": {year: load_csv_data(f"dvoa/{year}/rb_receiving_dvoa.csv",
-                                   lambda reader: {row[0]: (float(row[4]) * 100, float(row[6])) for row in reader})
-               for year in ["2023_playoffs", "2023", "2022", "2021", "2020"]},
-        "TE": {year: load_csv_data(f"dvoa/{year}/te_receiving_dvoa.csv",
-                                   lambda reader: {row[0]: (float(row[4]) * 100, float(row[6])) for row in reader})
-               for year in ["2023_playoffs", "2023", "2022", "2021", "2020"]}
+def create_function_dict() -> Dict:
+    """
+    Create a dictionary of linear functions used in the projection model.
+    
+    Returns:
+        Dict: A dictionary of lambda functions for various calculations.
+    """
+    return {
+        "Pass": linear_function(-42.5, 0, 40, 10),
+        "Rush": linear_function(-12.5, 0, 25, 10),
+        "Rec": linear_function(-10, 0, 17.5, 10),
+        "OLPF": linear_function(15, 0, 5, 10),
+        "OLRF": linear_function(3.5, 0, 5, 10),
+        "DPF": linear_function(.35, 0, -.30, 10),
+        "DRF": linear_function(.07, 0, -.20, 10)
     }
-}
 
+def safe_float(value, default=0.0):
+    """Safely convert a value to float, returning a default if conversion fails."""
+    if value is None or value == '':
+        return default
+    try:
+        return float(value)
+    except ValueError:
+        return default
 
-def linear_function(x1, y1, x2, y2):
+def format_dvoa(dvoa_value):
+    """Format DVOA value, handling 'N/A' case."""
+    if dvoa_value == 'N/A':
+        return 'N/A    '  # Pad with spaces to align with float format
+    return f"{dvoa_value:>6.1f}%"
+
+def get_normalized_dvoa(num, dvoa_value, linear_func):
+    """Get normalized DVOA value using the provided linear function."""
+    dvoa_value = dvoa_value.strip()
+    if dvoa_value == 'N/A':
+        return 'N/A'
+    try:
+        dvoa_value = dvoa_value.replace("%","")
+        return round(num * linear_func(float(dvoa_value)),1)
+    except ValueError:
+        return 'N/A'
+
+def format_normalized_dvoa(value):
+    """Format normalized DVOA value, handling 'N/A' case."""
+    if value == 'N/A':
+        return 'N/A  '  # Pad with spaces to align with float format
+    return f"{value:>4.1f}"
+
+def win_pct_from_spread(in_spread: float) -> float:
     """
-    Create a linear function given two points on the line.
+    Calculate the implied win percentage from a point spread.
+    
+    Args:
+        spread (float): The point spread (negative for favorite, positive for underdog)
+    
+    Returns:
+        float: The implied win percentage
+    """
+    spread = -1*in_spread if in_spread < 0 else 1
+    win_pct = (0.00187033*(spread**4))-(0.0613893*(spread**3))+(0.568552*(spread**2))+(1.96375*spread) + 49.9791
+    if in_spread < 0:
+        return win_pct
+    else:
+        return 100 - win_pct
+
+def generate_game_analysis(matchup: Dict, team1: Team, team2: Team, betting_data: Dict, functions_dict: Dict) -> str:
+    """
+    Generate a detailed game analysis for a single matchup with formatted, evenly-spaced stats including DVOA.
 
     Args:
-        x1 (float): x-coordinate of the first point.
-        y1 (float): y-coordinate of the first point.
-        x2 (float): x-coordinate of the second point.
-        y2 (float): y-coordinate of the second point.
+        matchup (Dict): The matchup data.
+        team1 (Team): The home team.
+        team2 (Team): The away team.
+        betting_data (Dict): Betting related data for the matchup.
 
     Returns:
-        function: A lambda function representing the linear equation.
+        str: A formatted string containing the game analysis.
     """
-    m = (y2 - y1) / (x2 - x1)
-    return lambda x: m * x + (y1 - m * x1)
+    analysis = []
+    
+    # Game details
+    analysis.append(f"Game Analysis: {team1.abbreviation} vs {team2.abbreviation}")
+    analysis.append(f"Venue: {matchup['home']} ({'Dome' if matchup.get('dome') == 'yes' else 'Outdoor'})")
+    analysis.append(f"Field: {matchup.get('field', 'Unknown')}")
+    analysis.append(f"Weather: {'N/A (Dome)' if matchup.get('dome') == 'yes' else f"Temp: {matchup.get('temp', 'N/A')}°F, Wind: {matchup.get('wind', 'N/A')} mph, Precipitation: {matchup.get('weather', 'N/A')}%"}")
+    
+    # Win probabilities
+    analysis.append(f"\nWin Probabilities:")
+    analysis.append(f"{team1.abbreviation}: {betting_data['home_win_pct']:.1f}%")
+    analysis.append(f"{team2.abbreviation}: {betting_data['away_win_pct']:.1f}%")
+
+    for team, name in [(team1, "Home"), (team2, "Away")]:
+        analysis.append(f"\n{name} Team: {team.abbreviation}")
+        analysis.append(f"Projected Offensive Plays: {team.get_off_plays_per_60():.1f}")
+        analysis.append(f"Pass/Rush Split: {team.get_off_pass_rate():.1f}% / {team.get_off_rush_rate():.1f}%")
+        
+        # Full lineup
+        analysis.append("\nProjected Lineup:")
+        for pos in ['QB', 'RB', 'WR', 'TE']:
+            if pos in team.team_data:
+                analysis.append(f"  {pos}:")
+                for player, player_data in sorted(team.team_data[pos], key=lambda x: safe_float(x[1].get('fpts_half_ppr', 0)), reverse=True):
+                    if pos == 'QB':
+                        pass_att = safe_float(player_data.get('pass_att', 0))
+                        rush_att = safe_float(player_data.get('rush_att', 0))
+                        pass_dvoa = format_dvoa(team.pass_dvoa.get(player, 'N/A'))
+                        rush_dvoa = format_dvoa(team.qb_rush_dvoa.get(player, 'N/A'))
+                        norm_pass_dvoa = get_normalized_dvoa(pass_att, pass_dvoa, functions_dict['Pass'])
+                        norm_rush_dvoa = get_normalized_dvoa(rush_att, rush_dvoa, functions_dict['Rush'])
+                        if pass_att > 0 or rush_att > 0:
+                            analysis.append(f"    {player:<20} [Pass] Att: {pass_att:>4.1f}  Yds: {player_data.get('pass_yds', 'N/A'):>5}  TDs: {player_data.get('pass_td', 'N/A'):>3}  DVOA: {pass_dvoa}  Norm: {format_normalized_dvoa(norm_pass_dvoa)}")
+                            analysis.append(f"    {' '*20} [Rush] Att: {rush_att:>4.1f}  Yds: {player_data.get('rush_yds', 'N/A'):>5}  TDs: {player_data.get('rush_td', 'N/A'):>3}  DVOA: {rush_dvoa}  Norm: {format_normalized_dvoa(norm_rush_dvoa)}")
+                    elif pos == 'RB':
+                        rush_att = safe_float(player_data.get('rush_att', 0))
+                        rec_tgt = safe_float(player_data.get('rec_tgt', 0))
+                        rush_dvoa = format_dvoa(team.rb_rush_dvoa.get(player, 'N/A'))
+                        rec_dvoa = format_dvoa(team.rb_rec_dvoa.get(player, 'N/A'))
+                        norm_rec_dvoa = get_normalized_dvoa(rec_tgt, rec_dvoa, functions_dict['Rec'])
+                        norm_rush_dvoa = get_normalized_dvoa(rush_att, rush_dvoa, functions_dict['Rush'])
+                        if rush_att > 0 or rec_tgt > 0:
+                            analysis.append(f"    {player:<20} [Rush] Att: {rush_att:>4.1f}    ~       Yds: {player_data.get('rush_yds', 'N/A'):>4}  TDs: {player_data.get('rush_td', 'N/A'):>3}  DVOA: {rush_dvoa}  Norm: {format_normalized_dvoa(norm_rush_dvoa)}")
+                            analysis.append(f"    {' '*20} [Rec]  Tgt: {rec_tgt:>4.1f}  Rec: {player_data.get('rec', 'N/A'):>3}  Yds: {player_data.get('rec_yds', 'N/A'):>4}  TDs: {player_data.get('rec_td', 'N/A'):>2}  DVOA: {rec_dvoa}  Norm: {format_normalized_dvoa(norm_rec_dvoa)}")
+                    elif pos == 'WR':
+                        rec_tgt = safe_float(player_data.get('rec_tgt', 0))
+                        rush_att = safe_float(player_data.get('rush_att', 0))
+                        rec_dvoa = format_dvoa(team.wr_rec_dvoa.get(player, 'N/A'))
+                        rush_dvoa = format_dvoa(team.wr_rush_dvoa.get(player, 'N/A'))
+                        norm_rec_dvoa = get_normalized_dvoa(rec_tgt, rec_dvoa, functions_dict['Rec'])
+                        norm_rush_dvoa = get_normalized_dvoa(rush_att, rush_dvoa, functions_dict['Rush'])
+                        if rec_tgt > 0 or rush_att > 0:
+                            analysis.append(f"    {player:<20} [Rec]  Tgt: {rec_tgt:>4.1f}  Rec: {player_data.get('rec', 'N/A'):>3}  Yds: {player_data.get('rec_yds', 'N/A'):>4}  TDs: {player_data.get('rec_td', 'N/A'):>2}  DVOA: {rec_dvoa}  Norm: {format_normalized_dvoa(norm_rec_dvoa)}")
+                            analysis.append(f"    {' '*20} [Rush] Att: {rush_att:>4.1f}    ~       Yds: {player_data.get('rush_yds', 'N/A'):>4}  TDs: {player_data.get('rush_td', 'N/A'):>3}  DVOA: {rush_dvoa}  Norm: {format_normalized_dvoa(norm_rush_dvoa)}")
+                    else:  # TE
+                        rec_tgt = safe_float(player_data.get('rec_tgt', 0))
+                        rec_dvoa = format_dvoa(team.te_rec_dvoa.get(player, 'N/A'))
+                        norm_rec_dvoa = get_normalized_dvoa(rec_tgt, rec_dvoa, functions_dict['Rec'])
+                        if rec_tgt > 0:
+                            analysis.append(f"    {player:<20} Tgt: {rec_tgt:>4.1f}  Rec: {player_data.get('rec', 'N/A'):>3}  Yds: {player_data.get('rec_yds', 'N/A'):>4}  TDs: {player_data.get('rec_td', 'N/A'):>2}  DVOA: {rec_dvoa}  Norm: {format_normalized_dvoa(norm_rec_dvoa)}")
 
 
-functions_dict = {
-    "Pass": linear_function(-40, 0, 37.5, 10),
-    "Rush": linear_function(-15, 0, 22.5, 10),
-    "Rec": linear_function(-10, 0, 17.5, 10),
-    "OLPF": linear_function(85, 0, 20, 10),
-    "OLRF": linear_function(3.3, 0, 4.85, 10),
-    "DPF": linear_function(.35, 0, -.30, 10),
-    "DRF": linear_function(.07, 0, -.20, 10)
-}
+    # Betting analysis
+    analysis.append("\nBetting Analysis:")
+    analysis.append(f"Projected Score: {team1.abbreviation} {betting_data['h_pts']:.1f} - {team2.abbreviation} {betting_data['a_pts']:.1f}")
+    analysis.append(f"Spread: {team1.abbreviation} {betting_data['h_spread']} ({betting_data['h_ml']})")
+    analysis.append(f"Total: {betting_data['bet_total']} (O/U)")
+    
+    # Calculate implied win percentages from the spread
+    implied_home_win_pct = win_pct_from_spread(betting_data['h_spread'])
+    implied_away_win_pct = 100 - implied_home_win_pct
 
-matchups = load_json_data('misc/matchups_conference.json')
+    # Calculate edges
+    home_ml_edge = betting_data['home_win_pct'] - implied_home_win_pct
+    away_ml_edge = betting_data['away_win_pct'] - implied_away_win_pct
+    spread_edge = betting_data['h_spread_delta']
+    total_edge = betting_data['total_delta']
 
-data_for_df = []
-data_for_df_2 = []
-data_for_df_3 = []
-data_for_df_4 = []
+    # Display detailed edge calculations
+    analysis.append("\nDetailed Edge Calculations:")
+    
+    analysis.append(f"{team1.abbreviation} Moneyline Edge:")
+    analysis.append(f"  Projected Win%: {betting_data['home_win_pct']:.1f}%")
+    analysis.append(f"  Implied Win% from Spread: {implied_home_win_pct:.1f}%")
+    analysis.append(f"  Edge: {home_ml_edge:.1f}% ({team1.abbreviation} {'overvalued' if home_ml_edge < 0 else 'undervalued'})")
 
+    analysis.append(f"\n{team2.abbreviation} Moneyline Edge:")
+    analysis.append(f"  Projected Win%: {betting_data['away_win_pct']:.1f}%")
+    analysis.append(f"  Implied Win% from Spread: {implied_away_win_pct:.1f}%")
+    analysis.append(f"  Edge: {away_ml_edge:.1f}% ({team2.abbreviation} {'overvalued' if away_ml_edge < 0 else 'undervalued'})")
 
-def get_pct_from_wind(wind):
+    analysis.append(f"\nSpread Edge:")
+    analysis.append(f"  Projected Spread: {betting_data['spread']:.1f}")
+    analysis.append(f"  Actual Spread: {betting_data['h_spread']}")
+    analysis.append(f"  Edge: {spread_edge:.1f} points ({'favoring ' + team1.abbreviation if spread_edge > 0 else 'favoring ' + team2.abbreviation})")
+
+    analysis.append(f"\nTotal Edge:")
+    analysis.append(f"  Projected Total: {betting_data['proj_total']:.1f}")
+    analysis.append(f"  Actual Total: {betting_data['bet_total']}")
+    analysis.append(f"  Edge: {total_edge:.1f} points ({'Over' if total_edge > 0 else 'Under'})")
+
+    # Betting recommendations with explanations
+    analysis.append("\nBetting Recommendations:")
+    recommendations = []
+
+    # Moneyline recommendation
+    if abs(home_ml_edge) > 3 or abs(away_ml_edge) > 3:
+        if home_ml_edge > away_ml_edge:
+            rec_team = team1.abbreviation
+            edge = home_ml_edge
+        else:
+            rec_team = team2.abbreviation
+            edge = away_ml_edge
+        recommendations.append(f"Moneyline: Consider {rec_team}")
+        analysis.append(f"- Moneyline on {rec_team}: The model projects a {edge:.1f}% edge, which is significant (>3%). This suggests value in the {rec_team} moneyline bet.")
+    else:
+        analysis.append("- Moneyline: No strong recommendation. The projected edge is not significant enough (<3%).")
+
+    # Spread recommendation
+    if abs(spread_edge) > 1.5:
+        rec_team = f"{team1.abbreviation} {betting_data['h_spread']}" if spread_edge > 0 else f"{team2.abbreviation} {betting_data['a_spread']}"
+        recommendations.append(f"Spread: Consider {rec_team}")
+        analysis.append(f"- Spread on {rec_team}: The model projects a {abs(spread_edge):.1f} point edge, which is significant (>1.5 points). This suggests value in this spread bet.")
+    else:
+        analysis.append("- Spread: No strong recommendation. The projected edge is not significant enough (<1.5 points).")
+
+    # Total recommendation
+    if abs(total_edge) > 3:
+        rec = "Over" if total_edge > 0 else "Under"
+        recommendations.append(f"Total: Consider {rec}")
+        analysis.append(f"- Total {rec}: The model projects the total to be {abs(total_edge):.1f} points {'higher' if rec == 'Over' else 'lower'} than the line, which is significant (>3 points). This suggests value in the {rec} bet.")
+    else:
+        analysis.append("- Total: No strong recommendation. The projected difference from the line is not significant enough (<3 points).")
+
+    if recommendations:
+        analysis.append("\nSummary of Recommendations:")
+        for rec in recommendations:
+            analysis.append(f"- {rec}")
+    else:
+        analysis.append("\nNo strong betting recommendations for this game based on the model's projections.")
+
+    return "\n".join(analysis)
+
+def process_matchup(matchup: Dict, nfl_teams: Dict, def_pass_dvoa: Dict, dvoa: Dict,
+                    adjusted_rush_yards: Dict, adjusted_sack_rate: Dict, def_rush_dvoa: Dict,
+                    play_rates: Dict, functions_dict: Dict, home_field_adv: Dict,
+                    home_field_avg_tmp: Dict, oline_delta: Dict) -> Tuple[Dict, Dict, Dict, Dict]:
     """
-    Calculate a percentage modifier based on wind speed.
-
-    Args:
-        wind (float): Wind speed in units (e.g., miles per hour).
-
-    Returns:
-        float: A percentage modifier based on the wind speed.
+    Process a single matchup and calculate various statistics and projections.
     """
-    return 0.999 + (0.00317 * wind) + (-1 * (0.000458 * (wind ** 2)))
+    logger.info(f"Processing matchup: {matchup['home']} vs {matchup['away']}")
+    logger.debug(f"Available team abbreviations in nfl_teams: {list(nfl_teams.keys())}")
+    
+    team1 = Team(matchup['home'], nfl_teams[matchup['home']], def_pass_dvoa, dvoa,
+                 adjusted_rush_yards, adjusted_sack_rate, def_rush_dvoa, play_rates, functions_dict, oline_delta)
+    team2 = Team(matchup['away'], nfl_teams[matchup['away']], def_pass_dvoa, dvoa,
+                 adjusted_rush_yards, adjusted_sack_rate, def_rush_dvoa, play_rates, functions_dict, oline_delta)
 
+    # Calculate various metrics for both teams
+    hp, ap = team1.get_off_pass_value(), team2.get_off_pass_value()
+    hpd, apd = team1.get_def_pass_value(), team2.get_def_pass_value()
+    hr, ar = team1.get_off_rush_value(), team2.get_off_rush_value()
+    hrd, ard = team1.get_def_rush_value(), team2.get_def_rush_value()
+    
+    logger.debug(f"{matchup['home']} offensive pass: {hp:.2f}, defensive pass: {hpd:.2f}")
+    logger.debug(f"{matchup['away']} offensive pass: {ap:.2f}, defensive pass: {apd:.2f}")
+    logger.debug(f"{matchup['home']} offensive rush: {hr:.2f}, defensive rush: {hrd:.2f}")
+    logger.debug(f"{matchup['away']} offensive rush: {ar:.2f}, defensive rush: {ard:.2f}")
 
-def get_pct_from_precip(precip):
-    """
-    Calculate a percentage modifier based on precipitation.
-
-    Args:
-        precip (float): Precipitation level (e.g., inches).
-
-    Returns:
-        float: A percentage modifier based on the precipitation level.
-    """
-    return 0.0025 * precip
-
-
-def get_pct_from_temp_delta(delta):
-    """
-    Calculate a percentage modifier based on temperature change.
-
-    Args:
-        delta (float): Temperature change in units (e.g., degrees).
-
-    Returns:
-        float: A percentage modifier based on the temperature change.
-    """
-    return 1 - (0.000664 + (0.00148 * delta) + (0.0000375 * (delta ** 2)))
-
-
-# Process matchups
-for matchup in matchups:
-    team1 = Team(
-        matchup['home'],
-        nfl_teams[matchup['home']],
-        def_pass_dvoa,
-        dvoa,
-        adjusted_rush_yards,
-        adjusted_sack_rate,
-        def_rush_dvoa,
-        play_rates,
-        functions_dict
-    )
-    team2 = Team(
-        matchup['away'],
-        nfl_teams[matchup['away']],
-        def_pass_dvoa,
-        dvoa,
-        adjusted_rush_yards,
-        adjusted_sack_rate,
-        def_rush_dvoa,
-        play_rates,
-        functions_dict
-    )
-
-    team1.print_lineup()
-    print()
-    team2.print_lineup()
-    print()
-
-    neutral = True if matchup["neutral"] == "yes" else False
-
-    precip_delta = get_pct_from_precip(matchup["weather"]) if matchup["weather"] else 0
-    wind_delta = get_pct_from_wind(matchup["wind"]) if matchup["wind"] else 1
-    game_temp = 72.5 if not matchup["temp"] else matchup["temp"]
-    home_avg_tmp = home_field_avg_tmp[matchup["home"]]
-    away_avg_tmp = home_field_avg_tmp[matchup["away"]]
-
-    hp = team1.get_off_pass_value()
-    ap = team2.get_off_pass_value()
-    hpd = team1.get_def_pass_value()
-    apd = team2.get_def_pass_value()
-    hr = team1.get_off_rush_value()
-    ar = team2.get_off_rush_value()
-    hrd = team1.get_def_rush_value()
-    ard = team2.get_def_rush_value()
-
+    # Apply weather effects
+    precip_delta = get_pct_from_precip(matchup.get("weather"))
+    wind_delta = get_pct_from_wind(matchup.get("wind"))
+    logger.debug(f"Weather effects - Precipitation delta: {precip_delta:.4f}, Wind delta: {wind_delta:.4f}")
+    
     hp -= hp * precip_delta
     ap -= ap * precip_delta
-    hp_delta = hp - apd
-    hr_delta = hr - ard
-    ap_delta = ap - hpd
-    ar_delta = ar - hrd
+    logger.debug(f"Adjusted offensive pass values after weather: {matchup['home']}: {hp:.2f}, {matchup['away']}: {ap:.2f}")
 
+    # Calculate offensive and defensive deltas
+    hp_delta, hr_delta = hp - apd, hr - ard
+    ap_delta, ar_delta = ap - hpd, ar - hrd
+    logger.debug(f"{matchup['home']} pass delta: {hp_delta:.2f}, rush delta: {hr_delta:.2f}")
+    logger.debug(f"{matchup['away']} pass delta: {ap_delta:.2f}, rush delta: {ar_delta:.2f}")
+
+    # Calculate pass and rush rate deltas
     home_pass_rate_delta = (team1.get_off_pass_rate() + team2.get_def_pass_rate()) / 2
     home_rush_rate_delta = (team1.get_off_rush_rate() + team2.get_def_rush_rate()) / 2
     away_pass_rate_delta = (team2.get_off_pass_rate() + team1.get_def_pass_rate()) / 2
     away_rush_rate_delta = (team2.get_off_rush_rate() + team1.get_def_rush_rate()) / 2
+    logger.debug(f"{matchup['home']} pass rate delta: {home_pass_rate_delta:.2f}, rush rate delta: {home_rush_rate_delta:.2f}")
+    logger.debug(f"{matchup['away']} pass rate delta: {away_pass_rate_delta:.2f}, rush rate delta: {away_rush_rate_delta:.2f}")
 
+    # Calculate offensive values
     h_off = ((hp_delta * home_pass_rate_delta) + (hr_delta * home_rush_rate_delta)) / 100
     a_off = ((ap_delta * away_pass_rate_delta) + (ar_delta * away_rush_rate_delta)) / 100
+    logger.debug(f"Offensive values: {matchup['home']}: {h_off:.2f}, {matchup['away']}: {a_off:.2f}")
 
-    h_pts = 22.5 + (1.23 * h_off) + (0.0692 * (h_off ** 2)) + (0.0242 * (h_off ** 3)) + (0.000665 * (h_off ** 4))
-    a_pts = 22.5 + (1.23 * a_off) + (0.0692 * (a_off ** 2)) + (0.0242 * (a_off ** 3)) + (0.000665 * (a_off ** 4))
+    # Calculate projected points
+    h_pts = calculate_projected_points(h_off)
+    a_pts = calculate_projected_points(a_off)
+    logger.debug(f"Initial projected points: {matchup['home']}: {h_pts:.2f}, {matchup['away']}: {a_pts:.2f}")
 
-    h_pts = (h_pts * wind_delta) * get_pct_from_temp_delta(abs(home_avg_tmp - game_temp))
-    a_pts = (a_pts * wind_delta) * get_pct_from_temp_delta(abs(away_avg_tmp - game_temp))
-
-    if neutral:
-        f_h_pts = h_pts
-        f_a_pts = a_pts
-
+    # Apply weather and temperature effects
+    game_temp = matchup.get("temp")
+    if game_temp is not None:
+        logger.debug(f"Game temperature: {game_temp}")
+        h_temp_delta = abs(home_field_avg_tmp[matchup['home']] - game_temp)
+        a_temp_delta = abs(home_field_avg_tmp[matchup['away']] - game_temp)
+        logger.debug(f"Temperature deltas: {matchup['home']}: {h_temp_delta:.2f}, {matchup['away']}: {a_temp_delta:.2f}")
+        
+        h_temp_effect = get_pct_from_temp_delta(h_temp_delta)
+        a_temp_effect = get_pct_from_temp_delta(a_temp_delta)
+        logger.debug(f"Temperature effects: {matchup['home']}: {h_temp_effect:.4f}, {matchup['away']}: {a_temp_effect:.4f}")
+        
+        h_pts = (h_pts * wind_delta) * h_temp_effect
+        a_pts = (a_pts * wind_delta) * a_temp_effect
     else:
-        h_adv, h_adv_def = home_field_adv[matchup['home']]
-        a_adv, a_adv_def = home_field_adv[matchup['away']]
-        a_adv = a_adv * -1
-        a_adv_def = a_adv_def * -1
+        logger.debug("No game temperature provided, applying only wind effect")
+        h_pts *= wind_delta
+        a_pts *= wind_delta
+    
+    logger.debug(f"Projected points after weather/temp effects: {matchup['home']}: {h_pts:.2f}, {matchup['away']}: {a_pts:.2f}")
 
-        h_adv = h_adv + a_adv_def
-        a_adv = a_adv + h_adv_def
+    # Apply home field advantage
+    logger.debug("Applying home field advantage (outdoor game)")
+    h_adv, h_adv_def = home_field_adv[matchup['home']]
+    a_adv, a_adv_def = home_field_adv[matchup['away']]
+    logger.debug(f"Home field advantage factors: {matchup['home']} offense: {h_adv:.4f}, defense: {h_adv_def:.4f}")
+    logger.debug(f"Away field disadvantage factors: {matchup['away']} offense: {a_adv:.4f}, defense: {a_adv_def:.4f}")
+    
+    h_pts *= (1 + h_adv + a_adv_def)
+    a_pts *= (1 + (a_adv * -1) + (h_adv_def * -1))
 
-        f_h_pts = h_pts * (1 + h_adv)
-        f_a_pts = a_pts * (1 + a_adv)
+    logger.debug(f"Final projected points: {matchup['home']}: {h_pts:.2f}, {matchup['away']}: {a_pts:.2f}")
 
-    home_win_pct = (-0.0303 * (f_a_pts - f_h_pts) + 0.5) * 100
-    if home_win_pct >= 100:
-        home_win_pct = 99.9
-    if home_win_pct <= 0:
-        home_win_pct = 0.1
+    # Calculate win percentages and betting data
+    home_win_pct = calculate_win_percentage(a_pts - h_pts)
     away_win_pct = 100 - home_win_pct
+    logger.debug(f"Win percentages: {matchup['home']}: {home_win_pct:.2f}%, {matchup['away']}: {away_win_pct:.2f}%")
 
-    h_ml = matchup['betting_lines']['home_ml']
-    a_ml = matchup['betting_lines']['away_ml']
-    h_spread = matchup['betting_lines']['home_spread']
-    a_spread = matchup['betting_lines']['away_spread']
+    betting_data = calculate_betting_data(matchup, h_pts, a_pts, home_win_pct, away_win_pct)
 
-    proj_total = (f_h_pts + f_a_pts)
+    # Generate detailed game analysis
+    game_analysis = generate_game_analysis(matchup, team1, team2, betting_data, functions_dict)
+
+    # Prepare data for DataFrames
+    df_data = prepare_df_data(matchup, team1, team2, h_off, a_off, h_pts, a_pts,
+                              home_win_pct, away_win_pct, betting_data)
+    df2_data = prepare_df2_data(matchup, hp_delta, hr_delta, ap_delta, ar_delta)
+    df3_data = prepare_df3_data(matchup, team1, team2)
+    df4_data = prepare_df4_data(matchup, h_pts, a_pts)
+
+    logger.info(f"Finished processing matchup: {matchup['home']} vs {matchup['away']}")
+    return df_data, df2_data, df3_data, df4_data, game_analysis
+
+def calculate_projected_points(off_value: float) -> float:
+    """Calculate projected points based on offensive value."""
+    return 22.5 + (1.23 * off_value) + (0.0692 * (off_value ** 2)) + (0.0242 * (off_value ** 3)) + (0.000665 * (off_value ** 4))
+
+def calculate_win_percentage(point_difference: float) -> float:
+    """Calculate win percentage based on point difference."""
+    win_pct = (-0.0303 * point_difference + 0.5) * 100
+    return max(min(win_pct, 99.9), 0.1)
+
+def calculate_betting_data(matchup: Dict, h_pts: float, a_pts: float, home_win_pct: float, away_win_pct: float) -> Dict:
+    """Calculate various betting-related data for the matchup."""
+    h_ml, a_ml = matchup['betting_lines']['home_ml'], matchup['betting_lines']['away_ml']
+    h_spread, a_spread = matchup['betting_lines']['home_spread'], matchup['betting_lines']['away_spread']
     bet_total = matchup['betting_lines']['total']
-    over_under_bet = "O" if proj_total > bet_total else "U"
 
-    implied_h_win_pct = (-1 * h_ml) / ((-1 * h_ml) + 100) * 100 if h_ml < 0 else (100 / (h_ml + 100) * 100)
-    implied_a_win_pct = (-1 * a_ml) / ((-1 * a_ml) + 100) * 100 if a_ml < 0 else (100 / (a_ml + 100) * 100)
+    proj_total = h_pts + a_pts
+    spread = a_pts - h_pts
 
-    spread = f_a_pts - f_h_pts
-
-    h_spread_delta = h_spread - spread
-    a_spread_delta = a_spread + spread
+    implied_h_win_pct = calculate_implied_win_percentage(h_ml)
+    implied_a_win_pct = calculate_implied_win_percentage(a_ml)
 
     h_win_pct_delta = home_win_pct - implied_h_win_pct
     a_win_pct_delta = away_win_pct - implied_a_win_pct
 
-    ml_bet = "~"
-    spread_bet = "~"
-    total_bet = "~"
-
-    if h_win_pct_delta > 3:
-        ml_bet = f"H: {5 * round(((h_win_pct_delta / 20) * (home_win_pct / 100)) * 100)}"
-    elif a_win_pct_delta > 3:
-        ml_bet = f"A: {5 * round(((a_win_pct_delta / 20) * (away_win_pct / 100)) * 100)}"
-
-    if h_spread_delta > 1.5:
-        spread_bet = f"H: {5 * round(h_spread_delta * 7.5)}"
-    elif a_spread_delta > 1.5:
-        spread_bet = f"A: {5 * round(a_spread_delta * 7.5)}"
+    h_spread_delta = h_spread - spread
+    a_spread_delta = a_spread + spread
 
     total_delta = proj_total - bet_total
 
-    if abs(total_delta) >= 3:
-        total_bet = f"{5 * round(abs(total_delta) * 15 / 5)}"
+    return {
+        'h_ml': h_ml, 'a_ml': a_ml, 'h_spread': h_spread, 'a_spread': a_spread,
+        'bet_total': bet_total, 'proj_total': proj_total, 'spread': spread,
+        'implied_h_win_pct': implied_h_win_pct, 'implied_a_win_pct': implied_a_win_pct,
+        'h_win_pct_delta': h_win_pct_delta, 'a_win_pct_delta': a_win_pct_delta,
+        'h_spread_delta': h_spread_delta, 'a_spread_delta': a_spread_delta,
+        'total_delta': total_delta, 'h_pts': h_pts, 'a_pts': a_pts,
+        'home_win_pct': home_win_pct, 'away_win_pct': away_win_pct  # Added these two lines
+    }
 
-    data_for_df_3.append({
-        "Team": matchup['home'],
-        "QB DVOA": round(team1.generate_qb_value(), 1),
-        "QB Val": round(team1.get_qb_value(), 1),
-        "Rush DVOA": round(team1.generate_rushing_value(), 1),
-        "Rush Val": round(team1.get_rushing_value(), 1),
-        "Rec DVOA": round(team1.generate_rec_value(), 1),
-        "Rec Val": round(team1.get_rec_value(), 1),
-        "OL Pass Val": round(team1.get_ol_pass_value(), 1),
-        "OL Rush Val": round(team1.get_ol_rush_value(), 1),
-        "Off Pass Val": round(team1.get_off_pass_value(), 1),
-        "Off Rush Val": round(team1.get_off_rush_value(), 1),
-        "Def Pass Val": round(team1.get_def_pass_value(), 1),
-        "Def Rush Val": round(team1.get_def_rush_value(), 1)
-    })
-    data_for_df_3.append({
-        "Team": matchup['away'],
-        "QB DVOA": round(team2.generate_qb_value(), 1),
-        "QB Val": round(team2.get_qb_value(), 1),
-        "Rush DVOA": round(team2.generate_rushing_value(), 1),
-        "Rush Val": round(team2.get_rushing_value(), 1),
-        "Rec DVOA": round(team2.generate_rec_value(), 1),
-        "Rec Val": round(team2.get_rec_value(), 1),
-        "OL Pass Val": round(team2.get_ol_pass_value(), 1),
-        "OL Rush Val": round(team2.get_ol_rush_value(), 1),
-        "Off Pass Val": round(team2.get_off_pass_value(), 1),
-        "Off Rush Val": round(team2.get_off_rush_value(), 1),
-        "Def Pass Val": round(team2.get_def_pass_value(), 1),
-        "Def Rush Val": round(team2.get_def_rush_value(), 1)
-    })
+def calculate_implied_win_percentage(money_line: int) -> float:
+    """Calculate implied win percentage from money line odds."""
+    if money_line < 0:
+        return (-1 * money_line) / ((-1 * money_line) + 100) * 100
+    else:
+        return 100 / (money_line + 100) * 100
 
-    data_for_df_2.append({
+def prepare_df_data(matchup: Dict, team1: Team, team2: Team, h_off: float, a_off: float,
+                    h_pts: float, a_pts: float, home_win_pct: float, away_win_pct: float,
+                    betting_data: Dict) -> Dict:
+    """Prepare data for the main DataFrame."""
+    return {
+        "Home": matchup['home'],
+        "Away": matchup['away'],
+        "H_O": round(h_off, 1),
+        "A_O": round(a_off, 1),
+        "HP": round(h_pts),
+        "AP": round(a_pts),
+        "Spread": round(betting_data['spread'], 1),
+        "H Win %": round(home_win_pct, 1),
+        "A Win %": round(away_win_pct, 1),
+        "H ML": betting_data['h_ml'],
+        "A ML": betting_data['a_ml'],
+        "~H Win %": round(betting_data['implied_h_win_pct'], 1),
+        "~A Win %": round(betting_data['implied_a_win_pct'], 1),
+        "~HD": round(betting_data['h_win_pct_delta'], 1),
+        "~AD": round(betting_data['a_win_pct_delta'], 1),
+        "H Spread": betting_data['h_spread'],
+        "A Spread": betting_data['a_spread'],
+        "~HSD": round(betting_data['h_spread_delta'], 1),
+        "~ASD": round(betting_data['a_spread_delta'], 1),
+        "PrjTotal": round(betting_data['proj_total'], 1),
+        "Total": betting_data['bet_total'],
+        "~TD": round(betting_data['total_delta'], 1),
+        "O/U": "O" if betting_data['proj_total'] > betting_data['bet_total'] else "U",
+        "ML Bet": calculate_bet("ML", betting_data['h_win_pct_delta'], home_win_pct, away_win_pct),
+        "Spr Bet": calculate_bet("Spread", betting_data['h_spread_delta']),
+        "Tot Bet": calculate_bet("Total", betting_data['total_delta'])
+    }
+
+
+def prepare_df2_data(matchup: Dict, hp_delta: float, hr_delta: float, ap_delta: float, ar_delta: float) -> Dict:
+    """Prepare data for the second DataFrame."""
+    return {
         "Home": matchup['home'],
         "Away": matchup['away'],
         "H Pass Adv": round(hp_delta, 1) * 10,
         "H Rush Adv": round(hr_delta, 1) * 10,
         "A Pass Adv": round(ap_delta, 1) * 10,
         "A Rush Adv": round(ar_delta, 1) * 10,
-    })
+    }
 
-    data_for_df.append({
+def prepare_df3_data(matchup: Dict, team1: Team, team2: Team) -> List[Dict]:
+    """Prepare data for the third DataFrame."""
+    return [
+        create_team_data_dict(matchup['home'], team1),
+        create_team_data_dict(matchup['away'], team2)
+    ]
+
+def create_team_data_dict(team_name: str, team: Team) -> Dict:
+    """Create a dictionary of team data for DataFrame 3."""
+    return {
+        "Team": team_name,
+        "QB DVOA": round(team.generate_qb_value(), 1),
+        "QB Val": round(team.get_qb_value(), 1),
+        "Rush DVOA": round(team.generate_rushing_value(), 1),
+        "Rush Val": round(team.get_rushing_value(), 1),
+        "Rec DVOA": round(team.generate_rec_value(), 1),
+        "Rec Val": round(team.get_rec_value(), 1),
+        "OL Pass Val": round(team.get_ol_pass_value(), 1),
+        "OL Rush Val": round(team.get_ol_rush_value(), 1),
+        "Off Pass Val": round(team.get_off_pass_value(), 1),
+        "Off Rush Val": round(team.get_off_rush_value(), 1),
+        "Def Pass Val": round(team.get_def_pass_value(), 1),
+        "Def Rush Val": round(team.get_def_rush_value(), 1)
+    }
+
+def prepare_df4_data(matchup: Dict, h_pts: float, a_pts: float) -> Dict:
+    """Prepare data for the fourth DataFrame."""
+    return {
         "Home": matchup['home'],
+        "HP": round(h_pts),
+        "AP": round(a_pts),
         "Away": matchup['away'],
-        "H_O": round(h_off, 1),
-        "A_O": round(a_off, 1),
-        "HP": round(f_h_pts),
-        "AP": round(f_a_pts),
-        "Spread": round(spread),
-        "H Win %": round(home_win_pct, 1),
-        "A Win %": round(away_win_pct, 1),
-        "H ML": h_ml,
-        "A ML": a_ml,
-        "~H Win %": round(implied_h_win_pct, 1),
-        "~A Win %": round(implied_a_win_pct, 1),
-        "~HD": round(h_win_pct_delta, 1),
-        "~AD": round(a_win_pct_delta, 1),
-        "H Spread": h_spread,
-        "A Spread": a_spread,
-        "~HSD": round(h_spread_delta, 1),
-        "~ASD": round(a_spread_delta, 1),
-        "PrjTotal": round(f_h_pts + f_a_pts, 1),
-        "Total": matchup['betting_lines']['total'],
-        "~TD": round(proj_total - bet_total, 1),
-        "O/U": over_under_bet,
-        "ML Bet": ml_bet,
-        "Spr Bet": spread_bet,
-        "Tot Bet": total_bet
-    })
+        "Total": round(h_pts + a_pts, 1)
+    }
 
-    data_for_df_4.append({
-        "Home": matchup['home'],
-        "HP": round(f_h_pts),
-        "AP": round(f_a_pts),
-        "Away": matchup['away'],
-        "Total": round(proj_total, 1)
-    })
+def calculate_bet(bet_type: str, delta: float, home_win_pct: float = 0, away_win_pct: float = 0) -> str:
+    """Calculate bet recommendation based on delta."""
+    if bet_type == "ML":
+        if delta > 3:
+            return f"H: {5 * round(((delta / 20) * (home_win_pct / 100)) * 100)}"
+        elif delta < -3:
+            return f"A: {5 * round(((-delta / 20) * (away_win_pct / 100)) * 100)}"
+    elif bet_type == "Spread":
+        if abs(delta) > 1.5:
+            side = "H" if delta > 0 else "A"
+            return f"{side}: {5 * round(abs(delta) * 7.5)}"
+    elif bet_type == "Total" and abs(delta) >= 3:
+        return f"{5 * round(abs(delta) * 15 / 5)}"
+    return "~"
 
-# Step 3: Create a DataFrame
-df = pd.DataFrame(data_for_df)
-df2 = pd.DataFrame(data_for_df_2)
-df3 = pd.DataFrame(data_for_df_3)
-df4 = pd.DataFrame(data_for_df_4)
+def main():
+    """Main function to run the NFL projection model."""
+    # Load and process all necessary data
+    (nfl_teams, def_pass_dvoa, def_rush_dvoa, adjusted_rush_yards, adjusted_sack_rate,
+     play_rates, home_field_adv, home_field_avg_tmp, dvoa, matchups, oline_delta) = load_and_process_data()
 
-# Step 4: Print the DataFrame
+    # Create function dictionary
+    functions_dict = create_function_dict()
 
-print(df2.to_string(index=False))
-print()
-print(df3.to_string(index=False))
-print()
-print(df.to_string(index=False))
-print()
-print(df4.to_string(index=False))
-print()
+    # Initialize lists to store data for DataFrames
+    data_for_df = []
+    data_for_df_2 = []
+    data_for_df_3 = []
+    data_for_df_4 = []
+    game_analyses = []
+
+    # Process each matchup
+    for matchup in matchups:
+        df_data, df2_data, df3_data, df4_data, game_analysis = process_matchup(
+            matchup, nfl_teams, def_pass_dvoa, dvoa, adjusted_rush_yards, adjusted_sack_rate,
+            def_rush_dvoa, play_rates, functions_dict, home_field_adv, home_field_avg_tmp, oline_delta
+        )
+        
+        data_for_df.append(df_data)
+        data_for_df_2.append(df2_data)
+        data_for_df_3.extend(df3_data)
+        data_for_df_4.append(df4_data)
+        game_analyses.append(game_analysis)
+
+    # Create DataFrames
+    df = pd.DataFrame(data_for_df)
+    df2 = pd.DataFrame(data_for_df_2)
+    df3 = pd.DataFrame(data_for_df_3)
+    df4 = pd.DataFrame(data_for_df_4)
+
+    # Print detailed game analyses
+    print("\nDetailed Game Analyses:")
+    for analysis in game_analyses:
+        print("\n" + "="*50)
+        print(analysis)
+        print("="*50)
+
+    # Display results
+    print("\nDataFrame 1:")
+    print(df.to_string(index=False))
+    print("\nDataFrame 2:")
+    print(df2.to_string(index=False))
+    print("\nDataFrame 3:")
+    print(df3.to_string(index=False))
+    print("\nDataFrame 4:")
+    print(df4.to_string(index=False))
+
+if __name__ == "__main__":
+    main()

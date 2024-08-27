@@ -1,0 +1,4324 @@
+{
+  "qb": [
+    {
+      "name": "Jalen Hurts",
+      "wins": 3,
+      "losses": 2,
+      "opponents": [
+        "Josh Allen",
+        "Patrick Mahomes",
+        "Joe Burrow",
+        "Anthony Richardson",
+        "C.J. Stroud"
+      ]
+    },
+    {
+      "name": "Josh Allen",
+      "wins": 5,
+      "losses": 0,
+      "opponents": [
+        "Jalen Hurts",
+        "Lamar Jackson",
+        "C.J. Stroud",
+        "Brock Purdy",
+        "Tua Tagovailoa"
+      ]
+    },
+    {
+      "name": "Patrick Mahomes",
+      "wins": 4,
+      "losses": 1,
+      "opponents": [
+        "Lamar Jackson",
+        "Jalen Hurts",
+        "Jordan Love",
+        "C.J. Stroud",
+        "Brock Purdy"
+      ]
+    },
+    {
+      "name": "Lamar Jackson",
+      "wins": 4,
+      "losses": 1,
+      "opponents": [
+        "Patrick Mahomes",
+        "Josh Allen",
+        "Kyler Murray",
+        "Dak Prescott",
+        "Jared Goff"
+      ]
+    },
+    {
+      "name": "C.J. Stroud",
+      "wins": 2,
+      "losses": 3,
+      "opponents": [
+        "Dak Prescott",
+        "Anthony Richardson",
+        "Josh Allen",
+        "Patrick Mahomes",
+        "Jalen Hurts"
+      ]
+    },
+    {
+      "name": "Dak Prescott",
+      "wins": 2,
+      "losses": 3,
+      "opponents": [
+        "C.J. Stroud",
+        "Joe Burrow",
+        "Anthony Richardson",
+        "Lamar Jackson",
+        "Jordan Love"
+      ]
+    },
+    {
+      "name": "Anthony Richardson",
+      "wins": 2,
+      "losses": 3,
+      "opponents": [
+        "Joe Burrow",
+        "C.J. Stroud",
+        "Dak Prescott",
+        "Jalen Hurts",
+        "Russell Wilson"
+      ]
+    },
+    {
+      "name": "Joe Burrow",
+      "wins": 2,
+      "losses": 3,
+      "opponents": [
+        "Anthony Richardson",
+        "Dak Prescott",
+        "Jalen Hurts",
+        "Jayden Daniels",
+        "Drake Maye"
+      ]
+    },
+    {
+      "name": "Jordan Love",
+      "wins": 3,
+      "losses": 2,
+      "opponents": [
+        "Kyler Murray",
+        "Brock Purdy",
+        "Patrick Mahomes",
+        "Trevor Lawrence",
+        "Dak Prescott"
+      ]
+    },
+    {
+      "name": "Kyler Murray",
+      "wins": 3,
+      "losses": 2,
+      "opponents": [
+        "Jordan Love",
+        "Jayden Daniels",
+        "Lamar Jackson",
+        "Justin Herbert",
+        "Deshaun Watson"
+      ]
+    },
+    {
+      "name": "Jayden Daniels",
+      "wins": 1,
+      "losses": 4,
+      "opponents": [
+        "Brock Purdy",
+        "Kyler Murray",
+        "Justin Herbert",
+        "Joe Burrow",
+        "Derek Carr"
+      ]
+    },
+    {
+      "name": "Brock Purdy",
+      "wins": 3,
+      "losses": 2,
+      "opponents": [
+        "Jayden Daniels",
+        "Jordan Love",
+        "Jared Goff",
+        "Josh Allen",
+        "Patrick Mahomes"
+      ]
+    },
+    {
+      "name": "Jared Goff",
+      "wins": 3,
+      "losses": 2,
+      "opponents": [
+        "Caleb Williams",
+        "Trevor Lawrence",
+        "Brock Purdy",
+        "Russell Wilson",
+        "Lamar Jackson"
+      ]
+    },
+    {
+      "name": "Caleb Williams",
+      "wins": 4,
+      "losses": 1,
+      "opponents": [
+        "Jared Goff",
+        "Justin Herbert",
+        "Trevor Lawrence",
+        "Drake Maye",
+        "Kirk Cousins"
+      ]
+    },
+    {
+      "name": "Trevor Lawrence",
+      "wins": 2,
+      "losses": 3,
+      "opponents": [
+        "Justin Herbert",
+        "Jared Goff",
+        "Caleb Williams",
+        "Jordan Love",
+        "Bryce Young"
+      ]
+    },
+    {
+      "name": "Justin Herbert",
+      "wins": 2,
+      "losses": 3,
+      "opponents": [
+        "Trevor Lawrence",
+        "Caleb Williams",
+        "Jayden Daniels",
+        "Kyler Murray",
+        "Gardner Minshew II"
+      ]
+    },
+    {
+      "name": "Tua Tagovailoa",
+      "wins": 4,
+      "losses": 1,
+      "opponents": [
+        "Deshaun Watson",
+        "Kirk Cousins",
+        "Matthew Stafford",
+        "Bo Nix",
+        "Josh Allen"
+      ]
+    },
+    {
+      "name": "Deshaun Watson",
+      "wins": 2,
+      "losses": 3,
+      "opponents": [
+        "Tua Tagovailoa",
+        "Geno Smith",
+        "Will Levis",
+        "Bryce Young",
+        "Kyler Murray"
+      ]
+    },
+    {
+      "name": "Kirk Cousins",
+      "wins": 3,
+      "losses": 2,
+      "opponents": [
+        "Geno Smith",
+        "Tua Tagovailoa",
+        "Baker Mayfield",
+        "Aaron Rodgers",
+        "Caleb Williams"
+      ]
+    },
+    {
+      "name": "Geno Smith",
+      "wins": 3,
+      "losses": 2,
+      "opponents": [
+        "Kirk Cousins",
+        "Deshaun Watson",
+        "Aaron Rodgers",
+        "Gardner Minshew II",
+        "Baker Mayfield"
+      ]
+    },
+    {
+      "name": "Baker Mayfield",
+      "wins": 2,
+      "losses": 3,
+      "opponents": [
+        "Aaron Rodgers",
+        "Will Levis",
+        "Kirk Cousins",
+        "Sam Darnold",
+        "Geno Smith"
+      ]
+    },
+    {
+      "name": "Aaron Rodgers",
+      "wins": 3,
+      "losses": 2,
+      "opponents": [
+        "Baker Mayfield",
+        "Matthew Stafford",
+        "Geno Smith",
+        "Kirk Cousins",
+        "Daniel Jones"
+      ]
+    },
+    {
+      "name": "Matthew Stafford",
+      "wins": 4,
+      "losses": 1,
+      "opponents": [
+        "Will Levis",
+        "Aaron Rodgers",
+        "Tua Tagovailoa",
+        "Daniel Jones",
+        "Bo Nix"
+      ]
+    },
+    {
+      "name": "Will Levis",
+      "wins": 2,
+      "losses": 3,
+      "opponents": [
+        "Matthew Stafford",
+        "Baker Mayfield",
+        "Deshaun Watson",
+        "Derek Carr",
+        "Sam Darnold"
+      ]
+    },
+    {
+      "name": "Sam Darnold",
+      "wins": 1,
+      "losses": 4,
+      "opponents": [
+        "Derek Carr",
+        "Bo Nix",
+        "Daniel Jones",
+        "Baker Mayfield",
+        "Will Levis"
+      ]
+    },
+    {
+      "name": "Derek Carr",
+      "wins": 0,
+      "losses": 5,
+      "opponents": [
+        "Sam Darnold",
+        "Daniel Jones",
+        "Bryce Young",
+        "Will Levis",
+        "Jayden Daniels"
+      ]
+    },
+    {
+      "name": "Daniel Jones",
+      "wins": 2,
+      "losses": 3,
+      "opponents": [
+        "Bo Nix",
+        "Derek Carr",
+        "Sam Darnold",
+        "Matthew Stafford",
+        "Aaron Rodgers"
+      ]
+    },
+    {
+      "name": "Bo Nix",
+      "wins": 3,
+      "losses": 2,
+      "opponents": [
+        "Daniel Jones",
+        "Sam Darnold",
+        "Drake Maye",
+        "Tua Tagovailoa",
+        "Matthew Stafford"
+      ]
+    },
+    {
+      "name": "Bryce Young",
+      "wins": 1,
+      "losses": 4,
+      "opponents": [
+        "Russell Wilson",
+        "Gardner Minshew II",
+        "Derek Carr",
+        "Deshaun Watson",
+        "Trevor Lawrence"
+      ]
+    },
+    {
+      "name": "Russell Wilson",
+      "wins": 2,
+      "losses": 3,
+      "opponents": [
+        "Bryce Young",
+        "Drake Maye",
+        "Gardner Minshew II",
+        "Jared Goff",
+        "Anthony Richardson"
+      ]
+    },
+    {
+      "name": "Drake Maye",
+      "wins": 2,
+      "losses": 3,
+      "opponents": [
+        "Gardner Minshew II",
+        "Russell Wilson",
+        "Bo Nix",
+        "Caleb Williams",
+        "Joe Burrow"
+      ]
+    },
+    {
+      "name": "Gardner Minshew II",
+      "wins": 1,
+      "losses": 4,
+      "opponents": [
+        "Drake Maye",
+        "Bryce Young",
+        "Russell Wilson",
+        "Geno Smith",
+        "Justin Herbert"
+      ]
+    }
+  ],
+  "rb": [
+    {
+      "name": "Christian McCaffrey",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Breece Hall",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Bijan Robinson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jonathan Taylor",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Saquon Barkley",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Derrick Henry",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kyren Williams",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jahmyr Gibbs",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Travis Etienne Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Isiah Pacheco",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "De'Von Achane",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "James Cook",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Rachaad White",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Josh Jacobs",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Joe Mixon",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kenneth Walker III",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Alvin Kamara",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "James Conner",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "David Montgomery",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Rhamondre Stevenson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Aaron Jones",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Najee Harris",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Zamir White",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "D'Andre Swift",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Raheem Mostert",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tony Pollard",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Javonte Williams",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brian Robinson Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Devin Singletary",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jaylen Warren",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Zack Moss",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyjae Spears",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Austin Ekeler",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chase Brown",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jonathon Brooks",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ezekiel Elliott",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Nick Chubb",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Gus Edwards",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jerome Ford",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Zach Charbonnet",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chuba Hubbard",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "J.K. Dobbins",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Trey Benson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ty Chandler",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Blake Corum",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyler Allgeier",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Antonio Gibson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Rico Dowdle",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jaleel McLaughlin",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Khalil Herbert",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ray Davis",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kendre Miller",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyrone Tracy Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "MarShawn Lloyd",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Bucky Irving",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Alexander Mattison",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Braelon Allen",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Clyde Edwards-Helaire",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Elijah Mitchell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jamaal Williams",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jaylen Wright",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "D'Onta Foreman",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kenneth Gainwell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Samaje Perine",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Roschon Johnson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Justice Hill",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dameon Pierce",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Miles Sanders",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "AJ Dillon",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tank Bigsby",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kimani Vidal",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Keaton Mitchell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chase Edmonds",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Audric Estime",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Trey Sermon",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Eric Gray",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Will Shipley",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Emari Demercado",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jordan Mason",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kyle Juszczyk",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dylan Laube",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Deneric Prince",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ty Johnson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chris Rodriguez Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Isaac Guerendo",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Deuce Vaughn",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Evan Hull",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kevin Harris",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Royce Freeman",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Michael Carter",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Isaiah Davis",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Rasheen Ali",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kendall Milton",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "D'Ernest Johnson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cordarrelle Patterson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Nyheim Hines",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Hunter Luepke",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Carson Steele",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jase McClellan",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Pierre Strong Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ameer Abdullah",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Craig Reynolds",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jeff Wilson Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ronnie Rivers",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Nick Bawden",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Julius Chestnut",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Joshua Kelley",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jeremy McNichols",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cam Akers",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Isaiah Spiller",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Blake Watson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Frank Gore Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Emanuel Wilson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Israel Abanikanda",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jaret Patterson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyler Goodson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "DeWayne McBride",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Trayveon Williams",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Boston Scott",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jawhar Jordan",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dare Ogunbowale",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kenny McIntosh",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Avery Williams",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Raheem Blackshear",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jordan Mims",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dante Miller",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Carlos Washington Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Matt Breida",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chris Evans",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Alec Ingold",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kene Nwangwu",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "JaMycal Hasty",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ke'Shawn Vaughn",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Zonovan Knight",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cody Schrader",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "DeeJay Dallas",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Reggie Gilliam",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Travis Homer",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Malik Davis",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Myles Gaskin",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Daijun Edwards",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Keilan Robinson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chris Brooks",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Michael Burton",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "James Robinson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "La'Mical Perine",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Emani Bailey",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Sean Tucker",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Patrick Taylor Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Hassan Haskins",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Zach Evans",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Deon Jackson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Adam Prentice",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Patrick Ricard",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Keaontay Ingram",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "C.J. Ham",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Snoop Conner",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Khari Blasingame",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Elijah Dotson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jermar Jefferson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Spencer Brown",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "J.J. Taylor",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jake Funk",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "John Kelly",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Gary Brightwell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jakob Johnson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Darrynton Evans",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyrion Davis-Price",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mike Boone",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Troy Hairston",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brittain Brown",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Louis Rees-Zammit",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jonathan Ward",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jabari Small",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Salvon Ahmed",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Demetric Felton",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Anthony McFarland Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Austin Jones",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jashaun Corbin",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tony Jones",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Rashaad Penny",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ben Mason",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "George Holani",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "D.J. Williams",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyler Badie",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dillon Johnson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Zander Horvath",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jacob Saylors",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Lew Nichols",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Xazavian Valladay",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ellis Merriweather",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Owen Wright",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Henry Pearson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Sione Vaki",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Michael Wiley",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Andrew Beck",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    }
+  ],
+  "te": [
+    {
+      "name": "Travis Kelce",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Sam LaPorta",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mark Andrews",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Trey McBride",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "George Kittle",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dalton Kincaid",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kyle Pitts",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Evan Engram",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jake Ferguson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "David Njoku",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brock Bowers",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dallas Goedert",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dalton Schultz",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Pat Freiermuth",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyler Conklin",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "T.J. Hockenson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Hunter Henry",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cole Kmet",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Luke Musgrave",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Noah Fant",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Juwan Johnson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cade Otton",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chigoziem Okonkwo",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jonnu Smith",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Isaiah Likely",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mike Gesicki",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ben Sinnott",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Zach Ertz",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Michael Mayer",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Greg Dulcich",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dawson Knox",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tucker Kraft",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Theo Johnson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ja'Tavion Sanders",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Hayden Hurst",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Colby Parkinson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Gerald Everett",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyler Higbee",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kylen Granson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Daniel Bellinger",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Noah Gray",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Will Dissly",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tommy Tremble",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Donald Parham Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tanner Hudson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mo Alie-Cox",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brevin Jordan",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Adam Trautman",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Austin Hooper",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Josh Oliver",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Durham Smythe",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jelani Woods",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jeremy Ruckert",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Johnny Mundt",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Josh Whyle",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Elijah Higgins",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "AJ Barner",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jaheim Bell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brock Wright",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Foster Moreau",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Erick All Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Robert Tonyan",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Will Mallory",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Drew Ogletree",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Lucas Krull",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Darnell Washington",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cade Stover",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jared Wiley",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tip Reiman",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Davis Allen",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Connor Heyward",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Irv Smith",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Luke Schoonmaker",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jordan Akins",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Drew Sample",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Pharaoh Brown",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Teagan Quitoriano",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Travis Vokolek",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Stone Smartt",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ben Sims",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Luke Farrell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cole Turner",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brayden Willis",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Payne Durham",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tanner McLachlan",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cameron Latu",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brenton Strange",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Lawrence Cager",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Devin Culp",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Armani Rogers",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Peyton Hendershot",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ian Thomas",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Grant Calcaterra",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jack Stoll",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "John FitzPatrick",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dallin Holker",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "MyCole Pruitt",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Quintin Morris",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Matt Sokol",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Charlie Woerner",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ross Dwelley",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "John Bates",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Harrison Bryant",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Logan Thomas",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "James Mitchell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Eric Saubert",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Charlie Kolar",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cole Fotheringham",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Hunter Long",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kenny Yeboah",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jody Fortson Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Nick Vannett",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Albert Okwuegbunam Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Josiah Deguara",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ko Kieft",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tucker Fisk",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jesper Horsted",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Julian Hill",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Shane Zylstra",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chris Manhertz",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mitchell Wilcox",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dalton Keene",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tre' McKitty",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brady Russell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Eric Tomlinson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "John Stephens Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Marcedes Lewis",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Nate Adkins",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Zack Kuntz",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jordan Matthews",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyler Davis",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Zach Gentry",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Rodney Williams",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Nick Muse",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyler Mabry",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Stephen Carlson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Sean McKeon",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Anthony Firkser",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyree Jackson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Giovanni Ricci",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Feleipe Franks",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Stephen Sullivan",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "David Wells",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "C.J. Uzomah",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Darren Waller",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Parker Hesse",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tommy Sweeney",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Zach Heins",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brevyn Spann-Ford",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kevin Rader",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mason Pline",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "David Martin-Robinson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jake Tonges",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tanner Conner",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Noah Togiai",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Austin Stogner",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    }
+  ],
+  "wr": [
+    {
+      "name": "CeeDee Lamb",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyreek Hill",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Amon-Ra St. Brown",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ja'Marr Chase",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Justin Jefferson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "A.J. Brown",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Puka Nacua",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Garrett Wilson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chris Olave",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Marvin Harrison Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mike Evans",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Davante Adams",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Nico Collins",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Drake London",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "DK Metcalf",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Deebo Samuel Sr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cooper Kupp",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brandon Aiyuk",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "DeVonta Smith",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jaylen Waddle",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "DJ Moore",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Malik Nabers",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Michael Pittman Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Amari Cooper",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tee Higgins",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Stefon Diggs",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "George Pickens",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tank Dell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Terry McLaurin",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Zay Flowers",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Calvin Ridley",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chris Godwin",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Christian Kirk",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Rashee Rice",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jayden Reed",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "DeAndre Hopkins",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Diontae Johnson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Keenan Allen",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Courtland Sutton",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Christian Watson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Xavier Worthy",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jaxon Smith-Njigba",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jordan Addison",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyler Lockett",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brian Thomas Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Rome Odunze",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ladd McConkey",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jerry Jeudy",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Keon Coleman",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jameson Williams",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jakobi Meyers",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Marquise Brown",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mike Williams",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Joshua Palmer",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Curtis Samuel",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brandin Cooks",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Khalil Shakir",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Gabe Davis",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Rashid Shaheed",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Romeo Doubs",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Adam Thielen",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Demarcus Robinson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Michael Wilson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ja'Lynn Polk",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Darnell Mooney",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Demario Douglas",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Wan'Dale Robinson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dontayvion Wicks",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Adonai Mitchell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Josh Downs",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Rashod Bateman",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tim Patrick",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Xavier Legette",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Darius Slayton",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "DJ Chark",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyler Boyd",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kendrick Bourne",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jalin Hyatt",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ricky Pearsall",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jermaine Burton",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Roman Wilson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jalen Tolbert",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Malachi Corley",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jalen McMillan",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Greg Dortch",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Odell Beckham Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Quentin Johnston",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jahan Dotson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Luke McCaffrey",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Elijah Moore",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tre Tucker",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Marvin Mims Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Andrei Iosivas",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Josh Reynolds",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dyami Brown",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ray-Ray McCloud III",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Troy Franklin",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "A.T. Perry",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Zay Jones",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Treylon Burks",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jonathan Mingo",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Alec Pierce",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kalif Raymond",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jalen Nailor",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Javon Baker",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Van Jefferson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Nelson Agholor",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jauan Jennings",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Olamide Zaccheaus",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Trey Palmer",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "KaVontae Turpin",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Calvin Austin III",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cedrick Wilson Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Noah Brown",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cedric Tillman",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Parker Washington",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Xavier Gipson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Devontez Walker",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "K.J. Osborn",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Trenton Irwin",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Malik Washington",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jake Bobo",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mack Hollins",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Bo Melton",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brandon Johnson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brenden Rice",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Lil'Jordan Humphrey",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Justin Watson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Brandon Powell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tutu Atwell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Isaiah Hodgins",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kadarius Toney",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "KhaDarel Hodge",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jordan Whittington",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyquan Thornton",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Allen Lazard",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyler Scott",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Donovan Peoples-Jones",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Marquez Valdes-Scantling",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Derius Davis",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Casey Washington",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ryan Flournoy",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Russell Gage",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Quez Watkins",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mecole Hardman",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Nick Westbrook-Ikhine",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Johnny Wilson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jalen Brooks",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Parris Campbell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Skyy Moore",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Robert Woods",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Bub Means",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mason Tipton",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Devaughn Vele",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jacob Cowing",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Nikko Remigio",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tejhaun Palmer",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Charlie Jones",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Allen Robinson II",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jamison Crowder",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cornelius Johnson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Xavier Hutchinson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jamari Thrash",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Braxton Berrios",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tahj Washington",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "David Bell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Antoine Green",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Deonte Harty",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Marcus Rosemy-Jacksaint",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Isaiah McKenzie",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Laviska Shenault Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "John Metchie III",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ainias Smith",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "D.J. Montgomery",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Robbie Chosen",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Devin Duvernay",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Anthony Gould",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Trent Sherfield Sr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jalen Guyton",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "David Moore",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Rakim Jarrett",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ihmir Smith-Marsette",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Michael Woods II",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chris Moore",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Terrace Marshall Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Sterling Shepard",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kyle Philips",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ashton Dulin",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Justyn Ross",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ben Skowronek",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Joshua Cephus",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jalen Reagor",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chris Conley",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Isaiah Williams",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Ronnie Bell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "KJ Hamler",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chris Blair",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Danny Gray",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kayshon Boutte",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jason Brownlee",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Malik Heath",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Zach Pascal",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tim Jones",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Nsimba Webster",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Equanimeous St. Brown",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dareke Young",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Damiere Byrd",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Justin Shorter",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dee Eskridge",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Scotty Miller",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "River Cracraft",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tre'Quan Smith",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tylan Wallace",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Samori Toure",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Racey McMath",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Collin Johnson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyler Johnson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dax Milne",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Josh Ali",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Martavis Bryant",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Velus Jones Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Easop Winston Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Denzel Mims",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "DJ Turner",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jha'Quan Jackson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Elijah Cooks",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Miles Boykin",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Phillip Dorsett",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jaelon Darden",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Malik Taylor",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Britain Covey",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tom Kennedy",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Erik Ezukanma",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Trishton Jackson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Byron Pringle",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Colton Dowell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kristian Wilkerson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Maurice Alexander",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Braylon Sanders",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Seth Williams",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "N'Keal Harry",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Anthony Schwartz",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Simi Fehoko",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cody White",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Daurice Fountain",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Lance McCutcheon",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Andy Isabella",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jacob Harris",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Montrell Washington",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kaden Davis",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyrie Cleveland",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Stanley Morgan Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Irvin Charles",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dez Fitzpatrick",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "James Proche II",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mason Kinsey",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "DeAndre Carter",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Juwann Winfree",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jalen Virgil",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Andre Baccellia",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kawaan Baker",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "David Sills",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mike Strachan",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dante Pettis",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Rondale Moore",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "John Ross",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Gunner Olszewski",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Quintez Cephus",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Mitchell Tinsley",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Steven Sims",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Keith Kirkwood",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jalen Coker",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Malik Cunningham",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Deven Thompkins",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Joseph Ngata",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyrell Shavers",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Xavier Smith",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "DeVante Parker",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Shi Smith",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jakeem Grant",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kendric Pryor",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Cam Sims",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Trent Taylor",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tay Martin",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Tyron Billy-Johnson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dan Chisena",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Marquez Callaway",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Alex Bachman",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Chase Claypool",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Dennis Houston",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "JuJu Smith-Schuster",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jalen Camp",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Jeff Smith",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Shedrick Jackson",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Keelan Doss",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Austin Trammell",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Michael Bandy",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "James Washington",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Daylen Baldwin",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Michael Gallup",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Kwamie Lassiter II",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Austin Watkins Jr.",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    },
+    {
+      "name": "Bryce Ford-Wheaton",
+      "wins": 0,
+      "losses": 0,
+      "opponents": []
+    }
+  ]
+}
