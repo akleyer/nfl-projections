@@ -3,6 +3,7 @@ import json
 from typing import Dict, List, Callable, Tuple, Any
 import config
 import logging
+import pprint as pp
 
 logger = logging.getLogger(__name__)
 
@@ -76,6 +77,27 @@ def load_position_data(file_path: str) -> Dict[str, List[Tuple[str, Dict]]]:
             team_data[team].append((player, row))
     return team_data
 
+def load_ftn_position_data(file_path: str) -> Dict[str, List[Tuple[str, Dict]]]:
+    """
+    Load and process data for a specific position from a CSV file.
+
+    Args:
+        file_path (str): Path to the CSV file.
+
+    Returns:
+        Dict[str, List[Tuple[str, Dict]]]: Processed position data.
+    """
+    team_data = {}
+    with open(file_path, newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            team = row['Tm']
+            player = row['Player']
+            if team not in team_data:
+                team_data[team] = []
+            team_data[team].append((player, row))
+    return team_data
+
 def load_all_position_data() -> Dict[str, Dict[str, List[Tuple[str, Dict]]]]:
     """
     Load and process data for all positions.
@@ -93,7 +115,16 @@ def load_all_position_data() -> Dict[str, Dict[str, List[Tuple[str, Dict]]]]:
             if team not in all_data:
                 all_data[team] = {p: [] for p in config.POSITIONS}
             all_data[team][pos] = players
-        
+
+        pos_data_2 = load_ftn_position_data(getattr(config, "QB_FILE_2"))
+        for team, players in pos_data_2.items():
+            for player, player_data in all_data[team][pos]:
+                for p, p_data in players:
+                    if p == player or config.get_dvoa_player_map(player) == p:
+                        player_data['PaFD'] = p_data['PaFD']
+                        player_data['RuFD'] = p_data['RuFD']
+                        player_data['ReFD'] = p_data['ReFD']
+                            
         logger.info(f"Loaded {sum(len(players) for players in pos_data.values())} players for position {pos}")
 
     logger.info(f"Total teams loaded: {len(all_data)}")

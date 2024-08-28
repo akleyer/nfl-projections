@@ -6,6 +6,8 @@ import config
 import pandas as pd
 import logging
 import pprint as pp
+from season_projection import run_season_projection
+
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, 
@@ -80,16 +82,14 @@ def safe_float(value, default=0.0):
 def format_dvoa(dvoa_value):
     """Format DVOA value, handling 'N/A' case."""
     if dvoa_value == 'N/A':
-        return 'N/A    '  # Pad with spaces to align with float format
+        return 'N/A'  # Pad with spaces to align with float format
     return f"{dvoa_value:>6.1f}%"
 
 def get_normalized_dvoa(num, dvoa_value, linear_func):
     """Get normalized DVOA value using the provided linear function."""
-    dvoa_value = dvoa_value.strip()
     if dvoa_value == 'N/A':
         return 'N/A'
     try:
-        dvoa_value = dvoa_value.replace("%","")
         return round(num * linear_func(float(dvoa_value)),1)
     except ValueError:
         return 'N/A'
@@ -116,6 +116,19 @@ def win_pct_from_spread(in_spread: float) -> float:
         return win_pct
     else:
         return 100 - win_pct
+
+def calc_fantasy_pts_pass(yds, td, intc, fd):
+    return ((yds/25) + (td*4) + (fd/5)) - (intc)
+    
+def calc_fantasy_pts_rush(yds, td, fd):
+    return (yds/10) + (td*6) + (fd/2)
+
+def calc_fantasy_pts_rec(rec, yds, td, fd):
+    return (rec/2) + (yds/10) + (td*6) + (fd*0.3)
+
+def calc_special_teams(yds, td):
+    return (yds/25) + (td*6)
+
 
 def generate_game_analysis(matchup: Dict, team1: Team, team2: Team, betting_data: Dict, functions_dict: Dict) -> str:
     """
@@ -153,44 +166,87 @@ def generate_game_analysis(matchup: Dict, team1: Team, team2: Team, betting_data
         for pos in ['QB', 'RB', 'WR', 'TE']:
             if pos in team.team_data:
                 analysis.append(f"  {pos}:")
-                for player, player_data in sorted(team.team_data[pos], key=lambda x: safe_float(x[1].get('fpts_half_ppr', 0)), reverse=True):
+                for player, player_data in sorted(team.team_data[pos], key=lambda x: safe_float(x[1].get('fpts_ppr', 0)), reverse=True):
                     if pos == 'QB':
                         pass_att = safe_float(player_data.get('pass_att', 0))
+                        pass_yds = safe_float(player_data.get('pass_yds', 0))
+                        pass_tds = safe_float(player_data.get('pass_td',  0))
+                        pass_int = safe_float(player_data.get('pass_int', 0))
+                        pass_fds = safe_float(player_data.get('PaFD',     0)) / 17
                         rush_att = safe_float(player_data.get('rush_att', 0))
-                        pass_dvoa = format_dvoa(team.pass_dvoa.get(player, 'N/A'))
-                        rush_dvoa = format_dvoa(team.qb_rush_dvoa.get(player, 'N/A'))
+                        rush_yds = safe_float(player_data.get('rush_yds', 0))
+                        rush_fds = safe_float(player_data.get('RuFD',     0)) / 17
+                        rush_tds = safe_float(player_data.get('rush_td',  0))
+                        fntsy_pts_pass = calc_fantasy_pts_pass(pass_yds, pass_tds, pass_int, pass_fds)
+                        fntsy_pts_rush = calc_fantasy_pts_rush(rush_yds, rush_tds, rush_fds)
+                        tot_fntsy_pts = round(fntsy_pts_pass + fntsy_pts_rush, 2)
+                        mapped_player = config.get_dvoa_player_map(player)
+                        pass_dvoa = safe_float(team.pass_dvoa.get(mapped_player, 0))
+                        rush_dvoa = safe_float(team.qb_rush_dvoa.get(mapped_player, 0))
                         norm_pass_dvoa = get_normalized_dvoa(pass_att, pass_dvoa, functions_dict['Pass'])
                         norm_rush_dvoa = get_normalized_dvoa(rush_att, rush_dvoa, functions_dict['Rush'])
-                        if pass_att > 0 or rush_att > 0:
-                            analysis.append(f"    {player:<20} [Pass] Att: {pass_att:>4.1f}  Yds: {player_data.get('pass_yds', 'N/A'):>5}  TDs: {player_data.get('pass_td', 'N/A'):>3}  DVOA: {pass_dvoa}  Norm: {format_normalized_dvoa(norm_pass_dvoa)}")
-                            analysis.append(f"    {' '*20} [Rush] Att: {rush_att:>4.1f}  Yds: {player_data.get('rush_yds', 'N/A'):>5}  TDs: {player_data.get('rush_td', 'N/A'):>3}  DVOA: {rush_dvoa}  Norm: {format_normalized_dvoa(norm_rush_dvoa)}")
+                        if pass_att > 3 or rush_att > 0.5:
+                            analysis.append(f"{' '*5}{player} ({tot_fntsy_pts})")
+                            analysis.append(f"{' '*7}[Pass] Att: {pass_att:>4.1f} | Yds: {pass_yds:>5.1f} | TDs: {pass_tds:>4.1f} | FD: {pass_fds:>4.1f} | DVOA: {pass_dvoa:>4.1f} | Norm: {norm_pass_dvoa:>5.1f}")
+                            analysis.append(f"{' '*7}[Rush] Att: {rush_att:>4.1f} | Yds: {rush_yds:>5.1f} | TDs: {rush_tds:>4.1f} | FD: {rush_fds:>4.1f} | DVOA: {rush_dvoa:>4.1f} | Norm: {norm_rush_dvoa:>5.1f}")
                     elif pos == 'RB':
                         rush_att = safe_float(player_data.get('rush_att', 0))
+                        rush_yds = safe_float(player_data.get('rush_yds', 0))
+                        rush_tds = safe_float(player_data.get('rush_td', 0))
+                        rush_fds = safe_float(player_data.get('RuFD',     0)) / 17
+                        rec_rec = safe_float(player_data.get('rec', 0))
                         rec_tgt = safe_float(player_data.get('rec_tgt', 0))
-                        rush_dvoa = format_dvoa(team.rb_rush_dvoa.get(player, 'N/A'))
-                        rec_dvoa = format_dvoa(team.rb_rec_dvoa.get(player, 'N/A'))
+                        rec_yds = safe_float(player_data.get('rec_yds', 0))
+                        rec_tds = safe_float(player_data.get('rec_td', 0))
+                        rec_fds = safe_float(player_data.get('ReFD', 0)) / 17
+                        rush_dvoa = safe_float(team.rb_rush_dvoa.get(player, 0))
+                        rec_dvoa = safe_float(team.rb_rec_dvoa.get(player, 0))
+                        fntsy_pts_rush = calc_fantasy_pts_rush(rush_yds, rush_tds, rush_fds)
+                        fntsy_pts_rec = calc_fantasy_pts_rec(rec_rec, rec_yds, rec_tds, rec_fds)
+                        tot_fntsy_pts = round(fntsy_pts_rush + fntsy_pts_rec, 2)
                         norm_rec_dvoa = get_normalized_dvoa(rec_tgt, rec_dvoa, functions_dict['Rec'])
                         norm_rush_dvoa = get_normalized_dvoa(rush_att, rush_dvoa, functions_dict['Rush'])
-                        if rush_att > 0 or rec_tgt > 0:
-                            analysis.append(f"    {player:<20} [Rush] Att: {rush_att:>4.1f}    ~       Yds: {player_data.get('rush_yds', 'N/A'):>4}  TDs: {player_data.get('rush_td', 'N/A'):>3}  DVOA: {rush_dvoa}  Norm: {format_normalized_dvoa(norm_rush_dvoa)}")
-                            analysis.append(f"    {' '*20} [Rec]  Tgt: {rec_tgt:>4.1f}  Rec: {player_data.get('rec', 'N/A'):>3}  Yds: {player_data.get('rec_yds', 'N/A'):>4}  TDs: {player_data.get('rec_td', 'N/A'):>2}  DVOA: {rec_dvoa}  Norm: {format_normalized_dvoa(norm_rec_dvoa)}")
+                        if rush_att > 0.5 or rec_tgt > 0.1:
+                            analysis.append(f"{' '*5}{player} ({tot_fntsy_pts})")
+                            analysis.append(f"{' '*7}[Rush] Att: {rush_att:>4.1f} |{' '*11}| Yds: {rush_yds:>5.1f} | TDs: {rush_tds:>4.1f} | FD: {rush_fds:>4.1f} | DVOA: {rush_dvoa:>4.1f} | Norm: {norm_rush_dvoa:>5.1f}")
+                            analysis.append(f"{' '*7}[Rec]  Tgt: {rec_tgt:>4.1f} | Rec: {rec_rec:>4.1f} | Yds: {rec_yds:>5.1f} | TDs: {rec_tds:>4.1f} | FD: {rec_fds:>4.1f} | DVOA: {rec_dvoa:>4.1f} | Norm: {norm_rec_dvoa:>5.1f}")
+                            analysis.append("")
                     elif pos == 'WR':
-                        rec_tgt = safe_float(player_data.get('rec_tgt', 0))
                         rush_att = safe_float(player_data.get('rush_att', 0))
-                        rec_dvoa = format_dvoa(team.wr_rec_dvoa.get(player, 'N/A'))
-                        rush_dvoa = format_dvoa(team.wr_rush_dvoa.get(player, 'N/A'))
+                        rush_yds = safe_float(player_data.get('rush_yds', 0))
+                        rush_tds = safe_float(player_data.get('rush_td', 0))
+                        rush_fds = safe_float(player_data.get('RuFD',     0)) / 17
+                        rec_rec = safe_float(player_data.get('rec', 0))
+                        rec_tgt = safe_float(player_data.get('rec_tgt', 0))
+                        rec_yds = safe_float(player_data.get('rec_yds', 0))
+                        rec_tds = safe_float(player_data.get('rec_td', 0))
+                        rec_fds = safe_float(player_data.get('ReFD', 0)) / 17
+                        rush_dvoa = safe_float(team.rb_rush_dvoa.get(player, 0))
+                        rec_dvoa = safe_float(team.rb_rec_dvoa.get(player, 0))
+                        fntsy_pts_rush = calc_fantasy_pts_rush(rush_yds, rush_tds, rush_fds)
+                        fntsy_pts_rec = calc_fantasy_pts_rec(rec_rec, rec_yds, rec_tds, rec_fds)
+                        tot_fntsy_pts = round(fntsy_pts_rush + fntsy_pts_rec, 2)
                         norm_rec_dvoa = get_normalized_dvoa(rec_tgt, rec_dvoa, functions_dict['Rec'])
                         norm_rush_dvoa = get_normalized_dvoa(rush_att, rush_dvoa, functions_dict['Rush'])
-                        if rec_tgt > 0 or rush_att > 0:
-                            analysis.append(f"    {player:<20} [Rec]  Tgt: {rec_tgt:>4.1f}  Rec: {player_data.get('rec', 'N/A'):>3}  Yds: {player_data.get('rec_yds', 'N/A'):>4}  TDs: {player_data.get('rec_td', 'N/A'):>2}  DVOA: {rec_dvoa}  Norm: {format_normalized_dvoa(norm_rec_dvoa)}")
-                            analysis.append(f"    {' '*20} [Rush] Att: {rush_att:>4.1f}    ~       Yds: {player_data.get('rush_yds', 'N/A'):>4}  TDs: {player_data.get('rush_td', 'N/A'):>3}  DVOA: {rush_dvoa}  Norm: {format_normalized_dvoa(norm_rush_dvoa)}")
+                        if rush_att > 0.5 or rec_tgt > 0.1:
+                            analysis.append(f"{' '*5}{player} ({tot_fntsy_pts})")
+                            analysis.append(f"{' '*7}[Rec]  Tgt: {rec_tgt:>4.1f} | Rec: {rec_rec:>4.1f} | Yds: {rec_yds:>5.1f} | TDs: {rec_tds:>4.1f} | FD: {rec_fds:>4.1f} | DVOA: {rec_dvoa:>4.1f} | Norm: {norm_rec_dvoa:>5.1f}")
+                            analysis.append(f"{' '*7}[Rush] Att: {rush_att:>4.1f} |{' '*11}| Yds: {rush_yds:>5.1f} | TDs: {rush_tds:>4.1f} | FD: {rush_fds:>4.1f} | DVOA: {rush_dvoa:>4.1f} | Norm: {norm_rush_dvoa:>5.1f}")
+                            analysis.append("")
                     else:  # TE
+                        rec_rec = safe_float(player_data.get('rec', 0))
                         rec_tgt = safe_float(player_data.get('rec_tgt', 0))
-                        rec_dvoa = format_dvoa(team.te_rec_dvoa.get(player, 'N/A'))
+                        rec_yds = safe_float(player_data.get('rec_yds', 0))
+                        rec_tds = safe_float(player_data.get('rec_td', 0))
+                        rec_fds = safe_float(player_data.get('ReFD', 0)) / 17
+                        rec_dvoa = safe_float(team.rb_rec_dvoa.get(player, 0))
+                        fntsy_pts_rec = calc_fantasy_pts_rec(rec_rec, rec_yds, rec_tds, rec_fds)
+                        tot_fntsy_pts = round(fntsy_pts_rec, 2)
                         norm_rec_dvoa = get_normalized_dvoa(rec_tgt, rec_dvoa, functions_dict['Rec'])
-                        if rec_tgt > 0:
-                            analysis.append(f"    {player:<20} Tgt: {rec_tgt:>4.1f}  Rec: {player_data.get('rec', 'N/A'):>3}  Yds: {player_data.get('rec_yds', 'N/A'):>4}  TDs: {player_data.get('rec_td', 'N/A'):>2}  DVOA: {rec_dvoa}  Norm: {format_normalized_dvoa(norm_rec_dvoa)}")
-
+                        if rec_tgt > 0.1:
+                            analysis.append(f"{' '*5}{player} ({tot_fntsy_pts})")
+                            analysis.append(f"{' '*7}[Rec]  Tgt: {rec_tgt:>4.1f} | Rec: {rec_rec:>4.1f} | Yds: {rec_yds:>5.1f} | TDs: {rec_tds:>4.1f} | FD: {rec_fds:>4.1f} | DVOA: {rec_dvoa:>4.1f} | Norm: {norm_rec_dvoa:>5.1f}")
+                            analysis.append("")                    
 
     # Betting analysis
     analysis.append("\nBetting Analysis:")

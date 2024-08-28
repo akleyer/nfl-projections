@@ -1,6 +1,6 @@
 import logging
 from typing import Dict, List, Tuple, Callable, Optional
-from config import get_standard_team_abbr
+from config import get_standard_team_abbr, get_dvoa_player_map
 
 # Set up logging
 logger = logging.getLogger(__name__)
@@ -74,18 +74,20 @@ class Team:
 
         for year, players in dvoa_tmp.items():
             for player, stats in players.items():
+                mapped_player = get_dvoa_player_map(player)
                 dvoa_val, num = stats
-                if player not in final_dvoa_tracker:
-                    final_dvoa_tracker[player] = [0, 0]
+                if mapped_player not in final_dvoa_tracker:
+                    final_dvoa_tracker[mapped_player] = [0, 0]
                 for i, target_year in enumerate(years):
                     if year == target_year:
                         weighted_dvoa = dvoa_val * (num / weight_factors[i])
-                        final_dvoa_tracker[player][0] += weighted_dvoa
-                        final_dvoa_tracker[player][1] += (num / weight_factors[i])
+                        final_dvoa_tracker[mapped_player][0] += weighted_dvoa
+                        final_dvoa_tracker[mapped_player][1] += (num / weight_factors[i])
 
         for player, values in final_dvoa_tracker.items():
+            mapped_player = get_dvoa_player_map(player)
             weighted_dvoa, num = values
-            final_dvoa[player] = weighted_dvoa / num if num else 0
+            final_dvoa[mapped_player] = weighted_dvoa / num if num else 0
 
         return final_dvoa
 
@@ -93,7 +95,8 @@ class Team:
         """Generate the quarterback value based on DVOA."""
         if "QB" in self.team_data and self.team_data["QB"]:
             qb_name = self.team_data["QB"][0][0]
-            return self.pass_dvoa.get(qb_name, 0.0)
+            mapped_player = get_dvoa_player_map(qb_name)
+            return self.pass_dvoa.get(mapped_player, 0.0)
         return 0.0
 
     def get_qb_value(self) -> float:

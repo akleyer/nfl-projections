@@ -2,6 +2,7 @@ from typing import Dict, List, Tuple
 
 # File paths
 QB_FILE = "projections/2024/week1/qb.csv"
+QB_FILE_2 = "projections/2024/season/ftn_qb.csv"
 WR_FILE = "projections/2024/week1/wr.csv"
 RB_FILE = "projections/2024/week1/rb.csv"
 TE_FILE = "projections/2024/week1/te.csv"
@@ -22,6 +23,14 @@ TEAM_ABBR_MAPPING = {
    
     # Add any other necessary mappings here
 }
+
+# Player mapping for dvoa
+PLAYER_DVOA_MAPPING = {
+    'Gardner Minshew II': 'Gardner Minshew'
+}
+
+def get_dvoa_player_map(name: str) -> str:
+    return PLAYER_DVOA_MAPPING.get(name, name)
 
 def get_standard_team_abbr(abbr: str) -> str:
     """
