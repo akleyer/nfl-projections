@@ -1,231 +1,140 @@
-import logging
-from typing import Dict, List, Tuple, Callable, Optional
-from config import get_standard_team_abbr, get_dvoa_player_map
+"""
+Team Module
+-----------
+This module defines the Team class, which represents a football team and provides methods
+to calculate various offensive and defensive values based on player projections and DVOA data.
+"""
 
-logger = logging.getLogger(__name__)
+from typing import Callable, Dict, List, Tuple
+
+from projections import Projections
+
+import config
 
 class Team:
-    def __init__(self,
-                 team_abbreviation: str,
-                 team_data: Dict[str, List[Tuple[str, Dict]]],
-                 defensive_pass_dvoa: Dict[str, float],
-                 dvoa_data: Dict[str, Dict],
-                 adjusted_rush_yards: Dict[str, float],
-                 adjusted_sack_rate: Dict[str, float],
-                 defensive_rush_dvoa: Dict[str, float],
-                 play_rates: Dict[str, Dict],
-                 functions: Dict[str, Callable],
-                 oline_delta: Dict[str, float]
-                 ):
-        """
-        Initialize a Team object representing an NFL team.
-        """
-        self.abbreviation = get_standard_team_abbr(team_abbreviation)
-        self.team_data = team_data
-        self.dvoa_data = dvoa_data
-        self.pass_dvoa = self._get_weighted_dvoa(dvoa_data["Passing"])
-        self.rb_rush_dvoa = self._get_weighted_dvoa(dvoa_data["Rushing"]["RB"])
-        self.qb_rush_dvoa = self._get_weighted_dvoa(dvoa_data["Rushing"]["QB"])
-        self.wr_rush_dvoa = self._get_weighted_dvoa(dvoa_data["Rushing"]["WR"])
-        self.te_rec_dvoa = self._get_weighted_dvoa(dvoa_data["Receiving"]["TE"])
-        self.rb_rec_dvoa = self._get_weighted_dvoa(dvoa_data["Receiving"]["RB"])
-        self.wr_rec_dvoa = self._get_weighted_dvoa(dvoa_data["Receiving"]["WR"])
-        self.offensive_line_pass_efficiency = adjusted_sack_rate
-        self.offensive_line_rush_efficiency = adjusted_rush_yards
-        self.defensive_pass_dvoa = defensive_pass_dvoa
-        self.defensive_rush_dvoa = defensive_rush_dvoa
-        self.play_rates = play_rates
-        self.qb_function = functions["Pass"]
-        self.rush_function = functions["Rush"]
-        self.rec_function = functions["Rec"]
-        self.ol_pass_function = functions["OLPF"]
-        self.ol_rush_function = functions["OLRF"]
-        self.defensive_pass_function = functions["DPF"]
-        self.defensive_rush_function = functions["DRF"]
-        self.oline_delta = oline_delta
+    """Represents a football team."""
+
+    __slots__ = ['team_name', 'dvoa', 'team_projections', 'dave_off', 'dave_def', 'dave_st']
+
+    def __init__(self, team_name: str, projections: Projections, dvoa: Dict, dave: Dict):
+        self.team_name = team_name
+        self.dvoa = dvoa
+        self.team_projections = projections.get_team_projections(self.team_name)
+        self.dave_off, self.dave_def, self.dave_st = self._get_dave_values(dave)
 
     @staticmethod
-    def _get_weighted_dvoa(dvoa_tmp: Dict[str, Dict[str, Tuple[float, float]]]) -> Dict[str, float]:
-        """
-        Calculate weighted DVOA for players based on historical data.
-        """
-        final_dvoa = {}
-        final_dvoa_tracker = {}
-        years = ["2024", "2023", "2022", "2021", "2020"]
-        weight_factors = [1, 2, 4, 8, 16]
+    def _create_function_dict() -> Dict[str, Callable[[float], float]]:
+        """Create a dictionary of linear functions used in the projection model."""
+        def create_linear_function(x1: float, y1: float, x2: float, y2: float) -> Callable[[float], float]:
+            slope = (y2 - y1) / (x2 - x1)
+            return lambda x: slope * x + (y1 - slope * x1)
 
-        for year, players in dvoa_tmp.items():
-            for player, stats in players.items():
-                mapped_player = get_dvoa_player_map(player)
-                dvoa_val, num_plays = stats
-                if mapped_player not in final_dvoa_tracker:
-                    final_dvoa_tracker[mapped_player] = [0, 0]
-                for i, target_year in enumerate(years):
-                    if year == target_year:
-                        weighted_dvoa = dvoa_val * (num_plays / weight_factors[i])
-                        final_dvoa_tracker[mapped_player][0] += weighted_dvoa
-                        final_dvoa_tracker[mapped_player][1] += (num_plays / weight_factors[i])
+        return {
+            "Pass": create_linear_function(-.60, 0, .40, 10),
+            "Rush": create_linear_function(-.10, 0, .20, 10),
+            "Rec": create_linear_function(-.15, 0, .30, 10),
+            "OLPF": create_linear_function(.15, 0, .04, 10),
+            "OLRF": create_linear_function(3.3, 0, 4.75, 10),
+            "DPF": create_linear_function(.35, 0, -.30, 10),
+            "DRF": create_linear_function(.07, 0, -.30, 10),
+            "DAVE DEF": create_linear_function(9, 0, -9, 10),
+            "DAVE OFF": create_linear_function(-17, 0, 17, 10)
+        }
 
-        for player, values in final_dvoa_tracker.items():
-            mapped_player = get_dvoa_player_map(player)
-            weighted_dvoa, num_plays = values
-            final_dvoa[mapped_player] = weighted_dvoa / num_plays if num_plays else 0
+    def get_total_passing_value(self) -> float:
+        """Calculate the total passing value based on QB, receiving, OL pass, and rushing values."""
+        qb_value = self._get_passing_value()
+        receiving_value = self._get_receiving_value()
+        ol_pass_value = self._get_offensive_line_pass_value()
+        rushing_value = self._get_rushing_value()
 
-        return final_dvoa
+        weights = {'qb': 0.50, 'rec': 0.30, 'ol': 0.15, 'rush': 0.05}
+        offensive_pass_value = sum(
+            value * weights[key] for key, value in {
+                'qb': qb_value, 'rec': receiving_value, 'ol': ol_pass_value, 'rush': rushing_value
+            }.items()
+        )
 
-    def generate_qb_value(self) -> float:
-        """Generate the quarterback value based on DVOA."""
-        if "QB" in self.team_data and self.team_data["QB"]:
-            qb_name = self.team_data["QB"][0][0]
-            mapped_player = get_dvoa_player_map(qb_name)
-            return self.pass_dvoa.get(mapped_player, 0.0)
-        return 0.0
+        return offensive_pass_value
 
-    def get_qb_value(self) -> float:
-        """Get the quarterback value considering a threshold."""
-        dvoa_tmp = self.generate_qb_value()
-        qb_val = self.qb_function(dvoa_tmp)
-        return max(0, qb_val) if qb_val <= -5 else qb_val
+    def get_total_rushing_value(self) -> float:
+        """Calculate the total rushing value based on rushing and OL rush values."""
+        ol_rush_value = self._get_offensive_line_rush_value()
+        rushing_value = self._get_rushing_value()
 
-    def get_offensive_line_pass_value(self) -> float:
-        """Get the offensive line pass value."""
-        resting_starters = []  # Add logic for resting starters if needed
-        multiplier = 0.70 if self.abbreviation in resting_starters else 1.0
-        avg_val = (self.ol_pass_function(self.offensive_line_pass_efficiency[self.abbreviation]) + self.oline_delta[self.abbreviation]) / 2
-        return avg_val * multiplier
+        weights = {'rushing': 0.65, 'ol_rush': 0.35}
+        offensive_rush_value = sum(
+            value * weights[key] for key, value in {
+                'rushing': rushing_value, 'ol_rush': ol_rush_value
+            }.items()
+        )
 
-    def get_offensive_line_rush_value(self) -> float:
-        """Get the offensive line rush value."""
-        resting_starters = []  # Add logic for resting starters if needed
-        multiplier = 0.70 if self.abbreviation in resting_starters else 1.0
-        avg_val = (self.ol_rush_function(self.offensive_line_rush_efficiency[self.abbreviation]) + self.oline_delta[self.abbreviation]) / 2
-        return avg_val * multiplier
+        return offensive_rush_value
 
-    def get_defensive_pass_value(self) -> float:
+    def _get_passing_value(self) -> float:
+        """Calculate the passing value based on QB projections and DVOA."""
+        total_passing_att = sum(
+            player_data.get_proj_passing_att() for _, player_position, player_data in self.team_projections
+            if player_position == "QB"
+        )
+        total_contribution = sum(
+            player_data.get_passing_dvoa(self.dvoa) * player_data.get_proj_passing_att()
+            for _, player_position, player_data in self.team_projections if player_position == "QB"
+        )
+        return self._create_function_dict()["Pass"](total_contribution / total_passing_att)
+
+    def _get_receiving_value(self) -> float:
+        """Calculate the receiving value based on WR, RB, and TE projections and DVOA."""
+        total_targets = sum(
+            player_data.get_proj_targets() for _, player_position, player_data in self.team_projections
+            if player_position in ["WR", "RB", "TE"]
+        )
+        total_contribution = sum(
+            player_data.get_receiving_dvoa(self.dvoa) * player_data.get_proj_targets()
+            for _, player_position, player_data in self.team_projections if player_position in ["WR", "RB", "TE"]
+        )
+        return self._create_function_dict()["Rec"](total_contribution / total_targets)
+
+    def _get_offensive_line_pass_value(self) -> float:
+        """Get the offensive line pass value based on DVOA."""
+        return self._create_function_dict()["OLPF"](self.dvoa["2023"]["OL Pass"][self.team_name][0])
+
+    def _get_offensive_line_rush_value(self) -> float:
+        """Get the offensive line rush value based on DVOA."""
+        return self._create_function_dict()["OLRF"](self.dvoa["2023"]["OL Run"][self.team_name][0])
+
+    def _get_rushing_value(self) -> float:
+        """Calculate the rushing value based on RB and WR projections and DVOA."""
+        total_attempts = sum(
+            player_data.get_proj_attempts() for _, player_position, player_data in self.team_projections
+            if player_position in ["WR", "RB"]
+        )
+        total_contribution = sum(
+            player_data.get_rushing_dvoa(self.dvoa) * player_data.get_proj_attempts()
+            for _, player_position, player_data in self.team_projections if player_position in ["WR", "RB"]
+        )
+        return self._create_function_dict()["Rush"](total_contribution / total_attempts)
+
+    def get_total_passing_value_def(self) -> float:
         """Get the defensive pass value with potential multiplier."""
-        resting_starters = []  # Add logic for resting starters if needed
-        multiplier = 0.70 if self.abbreviation in resting_starters else 1.0
+        return self._create_function_dict()["DPF"](self.dvoa["2023"]["Defense Pass"][self.team_name][0])
 
-        std_abbr = get_standard_team_abbr(self.abbreviation)
-        def_pass_value = self.defensive_pass_dvoa.get(std_abbr, 0.0)
-
-        return self.defensive_pass_function(def_pass_value) * multiplier
-
-    def get_defensive_rush_value(self) -> float:
+    def get_total_rushing_value_def(self) -> float:
         """Get the defensive rush value with potential multiplier."""
-        resting_starters = []  # Add logic for resting starters if needed
-        multiplier = 0.70 if self.abbreviation in resting_starters else 1.0
+        return self._create_function_dict()["DRF"](self.dvoa["2023"]["Defense Pass"][self.team_name][0])
 
-        std_abbr = get_standard_team_abbr(self.abbreviation)
-        def_rush_value = self.defensive_rush_dvoa.get(std_abbr, 0.0)
+    def get_def_dave_normalized(self) -> float:
+        """Get the normalized defensive DAVE value."""
+        return self._create_function_dict()["DAVE DEF"](float(self.dave_def))
 
-        return self.defensive_rush_function(def_rush_value) * multiplier
+    def get_off_dave_normalized(self) -> float:
+        """Get the normalized offensive DAVE value."""
+        return self._create_function_dict()["DAVE OFF"](float(self.dave_off))
 
-    def get_offensive_pass_value(self) -> float:
-        """Get the offensive pass value combining various factors."""
-        qb_value = self.get_qb_value()
-        receiving_value = self.get_receiving_value()
-        ol_pass_value = self.get_offensive_line_pass_value()
-        rushing_value = self.get_rushing_value()
-        return (qb_value * 0.55) + (receiving_value * 0.30) + (ol_pass_value * 0.1) + (rushing_value * 0.05)
+    def _get_dave_values(self, dave_data: Dict) -> Tuple[float, float, float]:
+        """Get the DAVE values for the team."""
+        return dave_data[self.team_name][0]
 
-    def get_offensive_rush_value(self) -> float:
-        """Get the offensive rush value combining rushing and OL factors."""
-        rushing_value = self.get_rushing_value()
-        ol_rush_value = self.get_offensive_line_rush_value()
-        return (rushing_value * 0.65) + (ol_rush_value * 0.35)
-
-    def get_play_rates(self) -> Dict[str, Dict[str, float]]:
-        """Get the play rates for the team."""
-        return self.play_rates[self.abbreviation]
-
-    def get_offensive_plays_per_60(self) -> float:
-        """Get the offensive plays per 60 minutes."""
-        return self.get_play_rates()["OFFENSE"]["PlaysPer60"]
-
-    def get_defensive_plays_per_60(self) -> float:
-        """Get the defensive plays per 60 minutes."""
-        return self.get_play_rates()["DEFENSE"]["PlaysPer60"]
-
-    def get_offensive_pass_rate(self) -> float:
-        """Get the offensive pass rate."""
-        return self.get_play_rates()["OFFENSE"]["PassRate"]
-
-    def get_defensive_pass_rate(self) -> float:
-        """Get the defensive pass rate."""
-        return self.get_play_rates()["DEFENSE"]["PassRate"]
-
-    def get_offensive_rush_rate(self) -> float:
-        """Get the offensive rush rate."""
-        return self.get_play_rates()["OFFENSE"]["RushRate"]
-
-    def get_defensive_rush_rate(self) -> float:
-        """Get the defensive rush rate."""
-        return self.get_play_rates()["DEFENSE"]["RushRate"]
-
-    def safe_float(self, value: Optional[str], default: float = 0.0) -> float:
-        """Safely convert a value to float, returning a default if conversion fails."""
-        if value is None or value == '':
-            return default
-        try:
-            return float(value)
-        except ValueError:
-            logger.warning(f"Could not convert '{value}' to float. Using default value {default}")
-            return default
-
-    def generate_rushing_value(self) -> float:
-        """Generate the total rushing value for the team."""
-        total_dvoa, total_attempts = 0, 0
-        for position, dvoa_dict in [('RB', self.rb_rush_dvoa), ('WR', self.wr_rush_dvoa), ('QB', self.qb_rush_dvoa)]:
-            if position in self.team_data:
-                for player, data in self.team_data[position]:
-                    attempts = self.safe_float(data.get('rush_att', '0'))
-                    player_dvoa = dvoa_dict.get(player, 0.0)
-                    total_dvoa += attempts * player_dvoa
-                    total_attempts += attempts
-        result = total_dvoa / total_attempts if total_attempts else 0
-        return result
-
-    def get_rushing_value(self) -> float:
-        """Get the rushing value for the team."""
-        total_dvoa = self.generate_rushing_value()
-        return self.rush_function(total_dvoa)
-
-    def generate_receiving_value(self) -> float:
-        """Generate the total receiving value for the team."""
-        total_dvoa, total_targets = 0, 0
-        for position, dvoa_dict in [('RB', self.rb_rec_dvoa), ('WR', self.wr_rec_dvoa), ('TE', self.te_rec_dvoa)]:
-            if position in self.team_data:
-                for player, data in self.team_data[position]:
-                    targets = self.safe_float(data.get('rec_tgt', '0'))
-                    player_dvoa = dvoa_dict.get(player, 0.0)
-                    total_dvoa += targets * player_dvoa
-                    total_targets += targets
-        result = total_dvoa / total_targets if total_targets else 0
-        return result
-
-    def get_receiving_value(self) -> float:
-        """Get the receiving value for the team."""
-        total_dvoa = self.generate_receiving_value()
-        return self.rec_function(total_dvoa)
-
-    @staticmethod
-    def _calculate_total_dvoa(players: List[Tuple[str, Dict]], dvoa_dict: Dict[str, float], 
-                              total_dvoa: float, total: float, att_or_targets_index: int) -> Tuple[float, float]:
-        """
-        Calculate the total DVOA for a group of players.
-        """
-        for player, data in players:
-            att_or_targets = float(data[att_or_targets_index])
-            player_dvoa = dvoa_dict.get(player, 0.0)
-            total_dvoa += att_or_targets * player_dvoa
-            total += att_or_targets
-        return total_dvoa, total
-
-    def print_lineup(self):
-        """Print the team's lineup."""
-        print(self.abbreviation)
-        for pos, players in self.team_data.items():
-            for player, data in players:
-                if float(data.get('att', 0)) or float(data.get('targets', 0)):
-                    print(f"{pos:<5}{player:<15}")
+    def get_pass_rates(self, pass_rate_data: Dict) -> Tuple[float, float]:
+        """Get the pass rates for the team."""
+        return pass_rate_data[self.team_name][0]

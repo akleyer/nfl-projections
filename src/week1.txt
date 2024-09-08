@@ -1,0 +1,2722 @@
+
+Detailed Game Analyses:
+
+==================================================
+Game Analysis: KC vs BAL
+Venue: KC (Outdoor)
+Field: grass
+Weather: Temp: 83°F, Wind: 7 mph, Precipitation: 22%
+
+Win Probabilities:
+KC: 42.7%
+BAL: 57.3%
+
+Home Team: KC
+Projected Offensive Plays: 64.2
+Pass/Rush Split: 61.0% / 39.0%
+
+Projected Lineup:
+  QB:
+     Patrick Mahomes (21.09)
+       [Pass] Att: 37.2 | Yds: 265.7 | TDs:  1.9 | FD:  0.7 | DVOA: 25.9 | Norm: 319.4
+       [Rush] Att:  4.6 | Yds:  22.5 | TDs:  0.2 | FD:  0.1 | DVOA: 53.1 | Norm:  96.8
+  RB:
+     Isiah Pacheco (12.82)
+       [Rush] Att: 14.6 |           | Yds:  64.5 | TDs:  0.5 | FD:  0.2 | DVOA:  7.0 | Norm:  82.4
+       [Rec]  Tgt:  3.3 | Rec:  2.6 | Yds:  16.9 | TDs:  0.1 | FD:  0.0 | DVOA:  1.5 | Norm:  12.1
+
+     Samaje Perine (5.28)
+       [Rush] Att:  4.0 |           | Yds:  16.4 | TDs:  0.1 | FD:  0.0 | DVOA:  4.4 | Norm:  18.9
+       [Rec]  Tgt:  2.2 | Rec:  1.9 | Yds:  15.1 | TDs:  0.1 | FD:  0.0 | DVOA: 28.4 | Norm:  21.2
+
+     Carson Steele (1.23)
+       [Rush] Att:  1.5 |           | Yds:   5.6 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   5.0
+       [Rec]  Tgt:  0.4 | Rec:  0.3 | Yds:   2.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.5
+
+  WR:
+     Rashee Rice (11.3)
+       [Rec]  Tgt:  7.8 | Rec:  5.5 | Yds:  60.6 | TDs:  0.4 | FD:  0.1 | DVOA:  0.0 | Norm:  26.0
+       [Rush] Att:  0.1 |           | Yds:   0.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Xavier Worthy (9.31)
+       [Rec]  Tgt:  5.8 | Rec:  3.6 | Yds:  49.8 | TDs:  0.4 | FD:  0.1 | DVOA:  0.0 | Norm:  19.2
+       [Rush] Att:  0.2 |           | Yds:   1.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.5
+
+     Justin Watson (3.58)
+       [Rec]  Tgt:  2.8 | Rec:  1.5 | Yds:  19.2 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   9.3
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Kadarius Toney (2.4)
+       [Rec]  Tgt:  2.2 | Rec:  1.0 | Yds:  10.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   7.3
+       [Rush] Att:  0.4 |           | Yds:   2.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+
+     JuJu Smith-Schuster (1.6)
+       [Rec]  Tgt:  0.8 | Rec:  0.7 | Yds:   6.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.5
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Skyy Moore (1.93)
+       [Rec]  Tgt:  1.1 | Rec:  0.8 | Yds:   9.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.8
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Mecole Hardman (1.79)
+       [Rec]  Tgt:  1.9 | Rec:  1.0 | Yds:   8.9 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   6.2
+       [Rush] Att:  0.1 |           | Yds:   0.7 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+  TE:
+     Travis Kelce (12.06)
+       [Rec]  Tgt:  7.6 | Rec:  5.8 | Yds:  61.2 | TDs:  0.5 | FD:  0.1 | DVOA:  0.0 | Norm:  25.3
+
+     Noah Gray (2.56)
+       [Rec]  Tgt:  2.0 | Rec:  1.4 | Yds:  12.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   6.8
+
+     Irv Smith (1.78)
+       [Rec]  Tgt:  0.9 | Rec:  0.8 | Yds:   7.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.0
+
+     Jared Wiley (1.26)
+       [Rec]  Tgt:  0.6 | Rec:  0.4 | Yds:   4.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.8
+
+     Peyton Hendershot (0.68)
+       [Rec]  Tgt:  1.1 | Rec:  0.4 | Yds:   4.8 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   3.7
+
+
+Away Team: BAL
+Projected Offensive Plays: 63.3
+Pass/Rush Split: 49.7% / 50.3%
+
+Projected Lineup:
+  QB:
+     Lamar Jackson (20.66)
+       [Pass] Att: 30.5 | Yds: 220.5 | TDs:  1.4 | FD:  0.6 | DVOA: 13.4 | Norm: 223.8
+       [Rush] Att:  8.7 | Yds:  50.1 | TDs:  0.3 | FD:  0.1 | DVOA: 31.3 | Norm: 119.0
+  RB:
+     Derrick Henry (12.86)
+       [Rush] Att: 16.2 |           | Yds:  69.7 | TDs:  0.6 | FD:  0.2 | DVOA:  0.3 | Norm:  55.8
+       [Rec]  Tgt:  1.7 | Rec:  1.3 | Yds:   9.4 | TDs:  0.1 | FD:  0.0 | DVOA:  2.7 | Norm:   6.7
+
+     Justice Hill (3.94)
+       [Rush] Att:  3.2 |           | Yds:  14.2 | TDs:  0.1 | FD:  0.0 | DVOA:  4.3 | Norm:  15.0
+       [Rec]  Tgt:  1.9 | Rec:  1.4 | Yds:   9.1 | TDs:  0.1 | FD:  0.0 | DVOA: -14.2 | Norm:   0.3
+
+     Rasheen Ali (0.78)
+       [Rush] Att:  1.2 |           | Yds:   4.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   4.2
+       [Rec]  Tgt:  0.4 | Rec:  0.3 | Yds:   1.8 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+
+  WR:
+     Zay Flowers (10.03)
+       [Rec]  Tgt:  6.9 | Rec:  4.8 | Yds:  55.6 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  23.2
+       [Rush] Att:  0.3 |           | Yds:   2.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.2
+
+     Rashod Bateman (5.83)
+       [Rec]  Tgt:  4.3 | Rec:  2.6 | Yds:  32.5 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  14.5
+       [Rush] Att:  0.1 |           | Yds:   0.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Nelson Agholor (3.56)
+       [Rec]  Tgt:  2.8 | Rec:  1.6 | Yds:  18.1 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   9.2
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Devontez Walker (1.88)
+       [Rec]  Tgt:  0.9 | Rec:  0.7 | Yds:   9.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.0
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Deonte Harty (0.85)
+       [Rec]  Tgt:  0.6 | Rec:  0.3 | Yds:   3.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.0
+       [Rush] Att:  0.1 |           | Yds:   0.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Tylan Wallace (0.76)
+       [Rec]  Tgt:  0.4 | Rec:  0.2 | Yds:   3.3 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.5
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Mark Andrews (9.81)
+       [Rec]  Tgt:  6.5 | Rec:  4.5 | Yds:  51.2 | TDs:  0.4 | FD:  0.1 | DVOA:  0.0 | Norm:  21.5
+
+     Isaiah Likely (4.27)
+       [Rec]  Tgt:  3.0 | Rec:  1.9 | Yds:  21.1 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   9.8
+
+     Charlie Kolar (0.68)
+       [Rec]  Tgt:  0.3 | Rec:  0.2 | Yds:   2.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.2
+
+
+Betting Analysis:
+Projected Score: KC 17.9 - BAL 20.3
+Spread: KC -3 (-155)
+Total: 47 (O/U)
+
+Detailed Edge Calculations:
+KC Moneyline Edge:
+  Projected Win%: 42.7%
+  Implied Win% from Spread: 59.5%
+  Edge: -16.8% (KC overvalued)
+
+BAL Moneyline Edge:
+  Projected Win%: 57.3%
+  Implied Win% from Spread: 40.5%
+  Edge: 16.8% (BAL undervalued)
+
+Spread Edge:
+  Projected Spread: 2.4
+  Actual Spread: -3
+  Edge: -5.4 points (favoring BAL)
+
+Total Edge:
+  Projected Total: 38.2
+  Actual Total: 47
+  Edge: -8.8 points (Under)
+
+Betting Recommendations:
+- Moneyline on BAL: The model projects a 16.8% edge, which is significant (>3%). This suggests value in the BAL moneyline bet.
+- Spread on BAL 3: The model projects a 5.4 point edge, which is significant (>1.5 points). This suggests value in this spread bet.
+- Total Under: The model projects the total to be 8.8 points lower than the line, which is significant (>3 points). This suggests value in the Under bet.
+
+Summary of Recommendations:
+- Moneyline: Consider BAL (130) | Risk 8.4u ($84.0) to win 11 units ($110)
+- Spread: Consider BAL 3 | Risk 2.7u ($27.0) to win 2.5u ($25.0)
+- Total: Consider Under 47 | Risk 4.4u ($44.0) to win 4.0u ($40.0)
+==================================================
+
+==================================================
+Game Analysis: ATL vs PIT
+Venue: ATL (Dome)
+Field: turf
+Weather: N/A (Dome)
+
+Win Probabilities:
+ATL: 56.2%
+PIT: 43.8%
+
+Home Team: ATL
+Projected Offensive Plays: 64.5
+Pass/Rush Split: 51.8% / 48.2%
+
+Projected Lineup:
+  QB:
+     Kirk Cousins (16.58)
+       [Pass] Att: 32.9 | Yds: 242.4 | TDs:  1.6 | FD:  0.7 | DVOA: 10.6 | Norm: 231.8
+       [Rush] Att:  1.6 | Yds:   4.5 | TDs:  0.1 | FD:  0.0 | DVOA: -9.1 | Norm:   0.5
+  RB:
+     Bijan Robinson (15.57)
+       [Rush] Att: 15.4 |           | Yds:  68.5 | TDs:  0.5 | FD:  0.2 | DVOA:  0.9 | Norm:  56.1
+       [Rec]  Tgt:  4.7 | Rec:  3.7 | Yds:  28.9 | TDs:  0.2 | FD:  0.1 | DVOA: 12.0 | Norm:  28.2
+
+     Tyler Allgeier (6.31)
+       [Rush] Att:  8.1 |           | Yds:  30.8 | TDs:  0.2 | FD:  0.1 | DVOA:  4.4 | Norm:  38.8
+       [Rec]  Tgt:  1.4 | Rec:  1.1 | Yds:   8.3 | TDs:  0.1 | FD:  0.0 | DVOA: 10.1 | Norm:   7.5
+
+     Jase McClellan (0.67)
+       [Rush] Att:  0.7 |           | Yds:   3.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+       [Rec]  Tgt:  0.2 | Rec:  0.2 | Yds:   2.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.8
+
+     Avery Williams (0.72)
+       [Rush] Att:  0.6 |           | Yds:   2.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.2
+       [Rec]  Tgt:  0.2 | Rec:  0.1 | Yds:   1.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.5
+
+  WR:
+     Drake London (11.77)
+       [Rec]  Tgt:  8.2 | Rec:  5.4 | Yds:  66.0 | TDs:  0.4 | FD:  0.2 | DVOA:  0.0 | Norm:  27.5
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Darnell Mooney (6.49)
+       [Rec]  Tgt:  4.9 | Rec:  2.8 | Yds:  35.2 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  16.3
+       [Rush] Att:  0.1 |           | Yds:   0.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Ray-Ray McCloud III (3.75)
+       [Rec]  Tgt:  3.4 | Rec:  1.9 | Yds:  19.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:  11.3
+       [Rush] Att:  0.4 |           | Yds:   2.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+
+     KhaDarel Hodge (2.1)
+       [Rec]  Tgt:  1.1 | Rec:  0.9 | Yds:  10.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.7
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Casey Washington (1.28)
+       [Rec]  Tgt:  0.7 | Rec:  0.4 | Yds:   4.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.2
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Kyle Pitts (9.65)
+       [Rec]  Tgt:  6.8 | Rec:  4.5 | Yds:  53.0 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  22.5
+
+     Charlie Woerner (0.95)
+       [Rec]  Tgt:  0.5 | Rec:  0.4 | Yds:   4.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.7
+
+
+Away Team: PIT
+Projected Offensive Plays: 60.4
+Pass/Rush Split: 52.7% / 47.3%
+
+Projected Lineup:
+  QB:
+     Russell Wilson (14.62)
+       [Pass] Att: 29.7 | Yds: 201.4 | TDs:  1.1 | FD:  0.4 | DVOA: -5.8 | Norm: 160.9
+       [Rush] Att:  4.2 | Yds:  18.0 | TDs:  0.1 | FD:  0.0 | DVOA: 18.2 | Norm:  39.4
+     Justin Fields (0.62)
+       [Pass] Att:  0.0 | Yds:   6.3 | TDs:  0.0 | FD:  0.2 | DVOA: -23.0 | Norm:   0.0
+       [Rush] Att:  0.6 | Yds:   3.0 | TDs:  0.0 | FD:  0.0 | DVOA: 14.4 | Norm:   4.9
+  RB:
+     Najee Harris (10.15)
+       [Rush] Att: 13.6 |           | Yds:  55.3 | TDs:  0.3 | FD:  0.1 | DVOA: -3.9 | Norm:  27.7
+       [Rec]  Tgt:  2.4 | Rec:  1.8 | Yds:   9.6 | TDs:  0.1 | FD:  0.0 | DVOA: -9.6 | Norm:   2.8
+
+     Jaylen Warren (8.83)
+       [Rush] Att:  8.4 |           | Yds:  36.7 | TDs:  0.2 | FD:  0.1 | DVOA:  5.0 | Norm:  42.0
+       [Rec]  Tgt:  3.5 | Rec:  2.8 | Yds:  19.1 | TDs:  0.1 | FD:  0.1 | DVOA: -8.0 | Norm:   5.4
+
+     Cordarrelle Patterson (2.46)
+       [Rush] Att:  1.6 |           | Yds:   7.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.4 | Norm:   5.5
+       [Rec]  Tgt:  1.1 | Rec:  0.7 | Yds:   5.0 | TDs:  0.1 | FD:  0.0 | DVOA: -1.6 | Norm:   3.1
+
+  WR:
+     George Pickens (9.94)
+       [Rec]  Tgt:  7.3 | Rec:  4.2 | Yds:  59.1 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  24.3
+       [Rush] Att:  0.2 |           | Yds:   0.8 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.5
+
+     Roman Wilson (3.42)
+       [Rec]  Tgt:  2.2 | Rec:  1.4 | Yds:  17.6 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:   7.5
+       [Rush] Att:  0.1 |           | Yds:   0.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Van Jefferson (4.18)
+       [Rec]  Tgt:  3.3 | Rec:  1.8 | Yds:  23.6 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:  11.2
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Calvin Austin III (3.73)
+       [Rec]  Tgt:  2.8 | Rec:  1.8 | Yds:  20.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   9.3
+       [Rush] Att:  0.3 |           | Yds:   1.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.0
+
+     Scotty Miller (0.46)
+       [Rec]  Tgt:  0.5 | Rec:  0.2 | Yds:   3.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.7
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Pat Freiermuth (5.49)
+       [Rec]  Tgt:  4.9 | Rec:  2.9 | Yds:  28.4 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  16.3
+
+     Darnell Washington (1.95)
+       [Rec]  Tgt:  1.2 | Rec:  0.9 | Yds:   9.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   4.2
+
+     Connor Heyward (1.17)
+       [Rec]  Tgt:  0.8 | Rec:  0.6 | Yds:   5.9 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.7
+
+
+Betting Analysis:
+Projected Score: ATL 23.7 - PIT 21.6
+Spread: ATL -3 (-170)
+Total: 42 (O/U)
+
+Detailed Edge Calculations:
+ATL Moneyline Edge:
+  Projected Win%: 56.2%
+  Implied Win% from Spread: 59.5%
+  Edge: -3.3% (ATL overvalued)
+
+PIT Moneyline Edge:
+  Projected Win%: 43.8%
+  Implied Win% from Spread: 40.5%
+  Edge: 3.3% (PIT undervalued)
+
+Spread Edge:
+  Projected Spread: -2.1
+  Actual Spread: -3
+  Edge: -0.9 points (favoring PIT)
+
+Total Edge:
+  Projected Total: 45.3
+  Actual Total: 42
+  Edge: 3.3 points (Over)
+
+Betting Recommendations:
+- Moneyline on PIT: The model projects a 3.3% edge, which is significant (>3%). This suggests value in the PIT moneyline bet.
+- Spread: No strong recommendation. The projected edge is not significant enough (<1.5 points).
+- Total Over: The model projects the total to be 3.3 points higher than the line, which is significant (>3 points). This suggests value in the Over bet.
+
+Summary of Recommendations:
+- Moneyline: Consider PIT (143) | Risk 1.6u ($16.0) to win 2 units ($20)
+- Total: Consider Over 42 | Risk 1.7u ($17.0) to win 1.5u ($15.0)
+==================================================
+
+==================================================
+Game Analysis: BUF vs ARI
+Venue: BUF (Outdoor)
+Field: turf
+Weather: Temp: 55°F, Wind: 12 mph, Precipitation: 28%
+
+Win Probabilities:
+BUF: 99.9%
+ARI: 0.1%
+
+Home Team: BUF
+Projected Offensive Plays: 65.6
+Pass/Rush Split: 53.8% / 46.2%
+
+Projected Lineup:
+  QB:
+     Josh Allen (23.67)
+       [Pass] Att: 33.8 | Yds: 255.4 | TDs:  1.8 | FD:  0.6 | DVOA: 24.3 | Norm: 284.4
+       [Rush] Att:  6.8 | Yds:  34.4 | TDs:  0.6 | FD:  0.1 | DVOA: 57.7 | Norm: 154.6
+  RB:
+     James Cook (12.85)
+       [Rush] Att: 13.9 |           | Yds:  63.0 | TDs:  0.3 | FD:  0.2 | DVOA: 10.7 | Norm:  96.1
+       [Rec]  Tgt:  3.2 | Rec:  2.7 | Yds:  21.0 | TDs:  0.2 | FD:  0.1 | DVOA: 30.0 | Norm:  32.5
+
+     Ray Davis (4.67)
+       [Rush] Att:  5.3 |           | Yds:  23.7 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  17.8
+       [Rec]  Tgt:  1.1 | Rec:  0.9 | Yds:   6.4 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.5
+
+     Ty Johnson (2.48)
+       [Rush] Att:  1.6 |           | Yds:   7.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.4 | Norm:   5.7
+       [Rec]  Tgt:  0.9 | Rec:  0.7 | Yds:   5.2 | TDs:  0.1 | FD:  0.0 | DVOA:  3.1 | Norm:   3.6
+
+  WR:
+     Curtis Samuel (7.28)
+       [Rec]  Tgt:  4.9 | Rec:  3.5 | Yds:  36.0 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  16.3
+       [Rush] Att:  0.7 |           | Yds:   4.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+
+     Khalil Shakir (8.35)
+       [Rec]  Tgt:  5.3 | Rec:  3.5 | Yds:  46.5 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  17.8
+       [Rush] Att:  0.2 |           | Yds:   0.9 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+     Keon Coleman (7.98)
+       [Rec]  Tgt:  5.1 | Rec:  3.3 | Yds:  43.8 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  17.0
+       [Rush] Att:  0.2 |           | Yds:   0.9 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.5
+
+     Mack Hollins (2.93)
+       [Rec]  Tgt:  1.9 | Rec:  1.1 | Yds:  14.9 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   6.2
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Marquez Valdes-Scantling (2.14)
+       [Rec]  Tgt:  1.4 | Rec:  0.6 | Yds:   9.3 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   4.5
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Damiere Byrd (0.52)
+       [Rec]  Tgt:  0.4 | Rec:  0.2 | Yds:   4.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Dalton Kincaid (10.42)
+       [Rec]  Tgt:  6.9 | Rec:  5.4 | Yds:  52.9 | TDs:  0.4 | FD:  0.1 | DVOA:  0.0 | Norm:  23.0
+
+     Dawson Knox (3.92)
+       [Rec]  Tgt:  2.5 | Rec:  1.9 | Yds:  17.8 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   8.5
+
+     Quintin Morris (0.54)
+       [Rec]  Tgt:  0.4 | Rec:  0.2 | Yds:   1.6 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+
+
+Away Team: ARI
+Projected Offensive Plays: 62.4
+Pass/Rush Split: 56.7% / 43.3%
+
+Projected Lineup:
+  QB:
+     Kyler Murray (18.66)
+       [Pass] Att: 33.8 | Yds: 229.8 | TDs:  1.3 | FD:  0.6 | DVOA:  0.9 | Norm: 205.4
+       [Rush] Att:  6.1 | Yds:  33.0 | TDs:  0.2 | FD:  0.1 | DVOA: -27.9 | Norm: -36.1
+  RB:
+     James Conner (11.38)
+       [Rush] Att: 13.4 |           | Yds:  57.3 | TDs:  0.4 | FD:  0.1 | DVOA: 10.5 | Norm:  91.6
+       [Rec]  Tgt:  3.0 | Rec:  2.3 | Yds:  14.2 | TDs:  0.1 | FD:  0.0 | DVOA:  5.1 | Norm:  13.4
+
+     Trey Benson (4.98)
+       [Rush] Att:  5.6 |           | Yds:  22.2 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  18.7
+       [Rec]  Tgt:  1.1 | Rec:  1.0 | Yds:   7.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.8
+
+     Emari Demercado (1.17)
+       [Rush] Att:  1.1 |           | Yds:   4.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.7 | Norm:   3.8
+       [Rec]  Tgt:  0.9 | Rec:  0.6 | Yds:   4.0 | TDs:  0.0 | FD:  0.0 | DVOA: -28.1 | Norm:  -2.6
+
+     DeeJay Dallas (0.43)
+       [Rush] Att:  0.4 |           | Yds:   1.7 | TDs:  0.0 | FD:  0.0 | DVOA:  1.0 | Norm:   1.5
+       [Rec]  Tgt:  0.4 | Rec:  0.2 | Yds:   1.5 | TDs:  0.0 | FD:  0.0 | DVOA: -5.2 | Norm:   0.9
+
+  WR:
+     Marvin Harrison Jr. (11.76)
+       [Rec]  Tgt:  8.4 | Rec:  5.3 | Yds:  65.9 | TDs:  0.4 | FD:  0.2 | DVOA:  0.0 | Norm:  28.0
+       [Rush] Att:  0.2 |           | Yds:   0.7 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.5
+
+     Michael Wilson (6.11)
+       [Rec]  Tgt:  4.8 | Rec:  2.8 | Yds:  34.9 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  16.0
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Greg Dortch (5.2)
+       [Rec]  Tgt:  4.7 | Rec:  2.8 | Yds:  27.9 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  15.5
+       [Rush] Att:  0.2 |           | Yds:   1.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+     Chris Moore (1.23)
+       [Rec]  Tgt:  1.1 | Rec:  0.5 | Yds:   6.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.7
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Zach Pascal (0.95)
+       [Rec]  Tgt:  0.6 | Rec:  0.3 | Yds:   4.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.8
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Trey McBride (10.21)
+       [Rec]  Tgt:  7.9 | Rec:  5.5 | Yds:  53.5 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  26.3
+
+     Elijah Higgins (1.99)
+       [Rec]  Tgt:  1.2 | Rec:  0.9 | Yds:   9.3 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   4.2
+
+     Tip Reiman (0.96)
+       [Rec]  Tgt:  0.8 | Rec:  0.4 | Yds:   4.3 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.7
+
+
+Betting Analysis:
+Projected Score: BUF 42.6 - ARI 19.3
+Spread: BUF -6.5 (-305)
+Total: 48 (O/U)
+
+Detailed Edge Calculations:
+BUF Moneyline Edge:
+  Projected Win%: 99.9%
+  Implied Win% from Spread: 73.2%
+  Edge: 26.7% (BUF undervalued)
+
+ARI Moneyline Edge:
+  Projected Win%: 0.1%
+  Implied Win% from Spread: 26.8%
+  Edge: -26.7% (ARI overvalued)
+
+Spread Edge:
+  Projected Spread: -23.3
+  Actual Spread: -6.5
+  Edge: 16.8 points (favoring BUF)
+
+Total Edge:
+  Projected Total: 61.9
+  Actual Total: 48
+  Edge: 13.9 points (Over)
+
+Betting Recommendations:
+- Moneyline on BUF: The model projects a 26.7% edge, which is significant (>3%). This suggests value in the BUF moneyline bet.
+- Spread on BUF -6.5: The model projects a 16.8 point edge, which is significant (>1.5 points). This suggests value in this spread bet.
+- Total Over: The model projects the total to be 13.9 points higher than the line, which is significant (>3 points). This suggests value in the Over bet.
+
+Summary of Recommendations:
+- Moneyline: Consider BUF (-305) | Risk 13.3u ($133.0) to win 4.0 units ($40.0)
+- Spread: Consider BUF -6.5 | Risk 8.4u ($84.0) to win 7.6u ($76.0)
+- Total: Consider Over 48 | Risk 7.0u ($70.0) to win 6.4u ($64.0)
+==================================================
+
+==================================================
+Game Analysis: CHI vs TEN
+Venue: CHI (Outdoor)
+Field: grass
+Weather: Temp: 69°F, Wind: 9 mph, Precipitation: 0%
+
+Win Probabilities:
+CHI: 65.0%
+TEN: 35.0%
+
+Home Team: CHI
+Projected Offensive Plays: 65.7
+Pass/Rush Split: 51.6% / 48.4%
+
+Projected Lineup:
+  QB:
+     Caleb Williams (18.68)
+       [Pass] Att: 34.0 | Yds: 242.7 | TDs:  1.6 | FD:  0.6 | DVOA:  0.0 | Norm: 203.7
+       [Rush] Att:  4.2 | Yds:  19.8 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:  14.2
+  RB:
+     D'Andre Swift (9.97)
+       [Rush] Att: 10.1 |           | Yds:  45.6 | TDs:  0.3 | FD:  0.1 | DVOA:  3.3 | Norm:  44.7
+       [Rec]  Tgt:  3.1 | Rec:  2.3 | Yds:  14.5 | TDs:  0.1 | FD:  0.0 | DVOA: -14.2 | Norm:   0.5
+
+     Khalil Herbert (5.36)
+       [Rush] Att:  7.3 |           | Yds:  30.8 | TDs:  0.2 | FD:  0.1 | DVOA:  5.3 | Norm:  37.3
+       [Rec]  Tgt:  0.6 | Rec:  0.6 | Yds:   4.4 | TDs:  0.1 | FD:  0.0 | DVOA: -6.0 | Norm:   1.3
+
+     Roschon Johnson (3.8)
+       [Rush] Att:  3.9 |           | Yds:  16.5 | TDs:  0.1 | FD:  0.0 | DVOA:  1.7 | Norm:  15.0
+       [Rec]  Tgt:  1.4 | Rec:  1.1 | Yds:   7.0 | TDs:  0.1 | FD:  0.0 | DVOA: -9.3 | Norm:   1.7
+
+     Travis Homer (0.42)
+       [Rush] Att:  0.5 |           | Yds:   1.9 | TDs:  0.0 | FD:  0.0 | DVOA:  1.0 | Norm:   1.8
+       [Rec]  Tgt:  0.2 | Rec:  0.2 | Yds:   1.3 | TDs:  0.0 | FD:  0.0 | DVOA:  4.2 | Norm:   0.9
+
+  WR:
+     DJ Moore (11.63)
+       [Rec]  Tgt:  7.4 | Rec:  4.9 | Yds:  66.3 | TDs:  0.4 | FD:  0.2 | DVOA:  0.0 | Norm:  24.7
+       [Rush] Att:  0.1 |           | Yds:   1.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Keenan Allen (10.33)
+       [Rec]  Tgt:  6.9 | Rec:  4.9 | Yds:  54.2 | TDs:  0.4 | FD:  0.1 | DVOA:  0.0 | Norm:  23.0
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Rome Odunze (8.41)
+       [Rec]  Tgt:  6.0 | Rec:  3.7 | Yds:  47.2 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  19.8
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Tyler Scott (0.92)
+       [Rec]  Tgt:  0.6 | Rec:  0.3 | Yds:   4.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.0
+       [Rush] Att:  0.1 |           | Yds:   0.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Velus Jones Jr. (0.43)
+       [Rec]  Tgt:  0.2 | Rec:  0.2 | Yds:   1.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.8
+       [Rush] Att:  0.2 |           | Yds:   1.8 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.8
+
+  TE:
+     Cole Kmet (5.91)
+       [Rec]  Tgt:  4.3 | Rec:  2.9 | Yds:  26.4 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  14.3
+
+     Gerald Everett (3.16)
+       [Rec]  Tgt:  2.1 | Rec:  1.6 | Yds:  14.7 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   7.2
+
+
+Away Team: TEN
+Projected Offensive Plays: 59.2
+Pass/Rush Split: 55.9% / 44.1%
+
+Projected Lineup:
+  QB:
+     Will Levis (15.59)
+       [Pass] Att: 33.6 | Yds: 231.9 | TDs:  1.2 | FD:  0.6 | DVOA: -10.7 | Norm: 165.7
+       [Rush] Att:  3.2 | Yds:  10.7 | TDs:  0.2 | FD:  0.0 | DVOA: -11.5 | Norm:  -1.7
+  RB:
+     Tony Pollard (9.63)
+       [Rush] Att: 12.0 |           | Yds:  49.0 | TDs:  0.3 | FD:  0.1 | DVOA: -0.2 | Norm:  39.4
+       [Rec]  Tgt:  2.6 | Rec:  2.0 | Yds:  12.8 | TDs:  0.1 | FD:  0.0 | DVOA: -13.2 | Norm:   1.1
+
+     Tyjae Spears (8.43)
+       [Rush] Att:  8.7 |           | Yds:  36.0 | TDs:  0.2 | FD:  0.1 | DVOA:  1.9 | Norm:  34.5
+       [Rec]  Tgt:  3.2 | Rec:  2.5 | Yds:  17.4 | TDs:  0.1 | FD:  0.1 | DVOA: -8.7 | Norm:   4.5
+
+  WR:
+     Calvin Ridley (9.7)
+       [Rec]  Tgt:  7.3 | Rec:  4.2 | Yds:  56.4 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  24.5
+       [Rush] Att:  0.2 |           | Yds:   1.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+     DeAndre Hopkins (8.99)
+       [Rec]  Tgt:  7.1 | Rec:  4.2 | Yds:  50.4 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  23.5
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Tyler Boyd (5.64)
+       [Rec]  Tgt:  4.1 | Rec:  2.7 | Yds:  30.2 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  13.7
+       [Rush] Att:  0.1 |           | Yds:   0.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Treylon Burks (2.98)
+       [Rec]  Tgt:  2.2 | Rec:  1.1 | Yds:  14.1 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   7.3
+       [Rush] Att:  0.2 |           | Yds:   1.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+     Nick Westbrook-Ikhine (1.43)
+       [Rec]  Tgt:  0.7 | Rec:  0.5 | Yds:   6.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Kyle Philips (1.02)
+       [Rec]  Tgt:  1.2 | Rec:  0.7 | Yds:   6.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   4.0
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Jha'Quan Jackson (0.79)
+       [Rec]  Tgt:  1.1 | Rec:  0.5 | Yds:   5.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   3.7
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Chigoziem Okonkwo (5.48)
+       [Rec]  Tgt:  3.8 | Rec:  2.8 | Yds:  28.6 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  12.8
+
+     Josh Whyle (2.08)
+       [Rec]  Tgt:  1.8 | Rec:  1.0 | Yds:  10.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   5.8
+
+
+Betting Analysis:
+Projected Score: CHI 22.9 - TEN 17.9
+Spread: CHI -4 (-190)
+Total: 45 (O/U)
+
+Detailed Edge Calculations:
+CHI Moneyline Edge:
+  Projected Win%: 65.0%
+  Implied Win% from Spread: 63.5%
+  Edge: 1.5% (CHI undervalued)
+
+TEN Moneyline Edge:
+  Projected Win%: 35.0%
+  Implied Win% from Spread: 36.5%
+  Edge: -1.5% (TEN overvalued)
+
+Spread Edge:
+  Projected Spread: -4.9
+  Actual Spread: -4
+  Edge: 0.9 points (favoring CHI)
+
+Total Edge:
+  Projected Total: 40.8
+  Actual Total: 45
+  Edge: -4.2 points (Under)
+
+Betting Recommendations:
+- Moneyline: No strong recommendation. The projected edge is not significant enough (<3%).
+- Spread: No strong recommendation. The projected edge is not significant enough (<1.5 points).
+- Total Under: The model projects the total to be 4.2 points lower than the line, which is significant (>3 points). This suggests value in the Under bet.
+
+Summary of Recommendations:
+- Total: Consider Under 45 | Risk 2.1u ($21.0) to win 1.9u ($19.0)
+==================================================
+
+==================================================
+Game Analysis: CIN vs NE
+Venue: CIN (Outdoor)
+Field: turf
+Weather: Temp: 68°F, Wind: 5 mph, Precipitation: 0%
+
+Win Probabilities:
+CIN: 48.1%
+NE: 51.9%
+
+Home Team: CIN
+Projected Offensive Plays: 61.7
+Pass/Rush Split: 64.2% / 35.8%
+
+Projected Lineup:
+  QB:
+     Joe Burrow (19.2)
+       [Pass] Att: 34.7 | Yds: 257.1 | TDs:  1.9 | FD:  0.7 | DVOA:  8.0 | Norm: 235.9
+       [Rush] Att:  3.3 | Yds:  11.2 | TDs:  0.2 | FD:  0.0 | DVOA:  6.1 | Norm:  18.0
+  RB:
+     Zack Moss (9.62)
+       [Rush] Att: 11.9 |           | Yds:  48.7 | TDs:  0.3 | FD:  0.1 | DVOA:  4.0 | Norm:  55.7
+       [Rec]  Tgt:  2.1 | Rec:  1.7 | Yds:  11.2 | TDs:  0.1 | FD:  0.0 | DVOA:  9.2 | Norm:  11.3
+
+     Chase Brown (8.28)
+       [Rush] Att:  8.9 |           | Yds:  38.4 | TDs:  0.2 | FD:  0.1 | DVOA: -3.9 | Norm:  18.2
+       [Rec]  Tgt:  2.7 | Rec:  2.1 | Yds:  15.4 | TDs:  0.1 | FD:  0.0 | DVOA: 22.1 | Norm:  22.3
+
+     Trayveon Williams (0.7)
+       [Rush] Att:  0.6 |           | Yds:   2.5 | TDs:  0.1 | FD:  0.0 | DVOA: -0.3 | Norm:   1.8
+       [Rec]  Tgt:  0.1 | Rec:  0.1 | Yds:   0.9 | TDs:  0.0 | FD:  0.0 | DVOA: -7.4 | Norm:   0.1
+
+  WR:
+     Ja'Marr Chase (14.22)
+       [Rec]  Tgt:  8.8 | Rec:  6.2 | Yds:  79.3 | TDs:  0.5 | FD:  0.2 | DVOA:  0.0 | Norm:  29.2
+       [Rush] Att:  0.2 |           | Yds:   0.9 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+     Tee Higgins (10.75)
+       [Rec]  Tgt:  7.2 | Rec:  4.5 | Yds:  60.7 | TDs:  0.4 | FD:  0.1 | DVOA:  0.0 | Norm:  23.8
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Andrei Iosivas (5.5)
+       [Rec]  Tgt:  3.5 | Rec:  2.3 | Yds:  28.2 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:  11.7
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Jermaine Burton (2.76)
+       [Rec]  Tgt:  1.5 | Rec:  1.1 | Yds:  13.1 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:   4.8
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Trenton Irwin (1.93)
+       [Rec]  Tgt:  1.1 | Rec:  0.8 | Yds:   9.4 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.7
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Charlie Jones (0.67)
+       [Rec]  Tgt:  0.4 | Rec:  0.2 | Yds:   2.6 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Mike Gesicki (4.12)
+       [Rec]  Tgt:  2.8 | Rec:  2.2 | Yds:  21.0 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:   9.2
+
+     Tanner Hudson (2.45)
+       [Rec]  Tgt:  1.8 | Rec:  1.3 | Yds:  11.9 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   6.0
+
+     Tanner McLachlan (1.6)
+       [Rec]  Tgt:  1.1 | Rec:  0.7 | Yds:   6.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.7
+
+     Drew Sample (1.66)
+       [Rec]  Tgt:  1.2 | Rec:  0.8 | Yds:   6.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   4.0
+
+     Erick All Jr. (0.39)
+       [Rec]  Tgt:  0.3 | Rec:  0.2 | Yds:   2.9 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.0
+
+
+Away Team: NE
+Projected Offensive Plays: 60.1
+Pass/Rush Split: 59.0% / 41.0%
+
+Projected Lineup:
+  QB:
+     Jacoby Brissett (12.73)
+       [Pass] Att: 31.8 | Yds: 208.6 | TDs:  0.8 | FD:  0.1 | DVOA:  4.4 | Norm: 204.8
+       [Rush] Att:  3.0 | Yds:  13.1 | TDs:  0.1 | FD:  0.0 | DVOA:  8.6 | Norm:  18.9
+  RB:
+     Rhamondre Stevenson (10.06)
+       [Rush] Att: 13.1 |           | Yds:  51.7 | TDs:  0.3 | FD:  0.1 | DVOA: -0.5 | Norm:  41.5
+       [Rec]  Tgt:  3.0 | Rec:  2.1 | Yds:  13.4 | TDs:  0.1 | FD:  0.0 | DVOA: -26.8 | Norm:  -8.0
+
+     Antonio Gibson (6.22)
+       [Rush] Att:  6.7 |           | Yds:  25.9 | TDs:  0.1 | FD:  0.1 | DVOA: -3.4 | Norm:  14.5
+       [Rec]  Tgt:  3.0 | Rec:  1.9 | Yds:  14.3 | TDs:  0.1 | FD:  0.0 | DVOA:  7.0 | Norm:  14.7
+
+  WR:
+     Demario Douglas (7.35)
+       [Rec]  Tgt:  5.3 | Rec:  3.5 | Yds:  41.6 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:  17.7
+       [Rush] Att:  0.4 |           | Yds:   2.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+
+     Ja'Lynn Polk (6.05)
+       [Rec]  Tgt:  4.9 | Rec:  2.8 | Yds:  34.2 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  16.3
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     K.J. Osborn (4.44)
+       [Rec]  Tgt:  4.0 | Rec:  2.1 | Yds:  24.6 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  13.3
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Tyquan Thornton (2.57)
+       [Rec]  Tgt:  2.2 | Rec:  1.1 | Yds:  13.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   7.3
+       [Rush] Att:  0.1 |           | Yds:   0.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Javon Baker (1.98)
+       [Rec]  Tgt:  1.4 | Rec:  0.8 | Yds:   9.6 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   4.5
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Kayshon Boutte (0.64)
+       [Rec]  Tgt:  0.9 | Rec:  0.3 | Yds:   4.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   3.0
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Jalen Reagor (0.65)
+       [Rec]  Tgt:  0.5 | Rec:  0.0 | Yds:   6.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.7
+       [Rush] Att:  0.1 |           | Yds:   0.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+  TE:
+     Hunter Henry (5.57)
+       [Rec]  Tgt:  4.4 | Rec:  2.8 | Yds:  29.8 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  14.7
+
+     Jaheim Bell (1.16)
+       [Rec]  Tgt:  1.0 | Rec:  0.6 | Yds:   5.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.3
+
+     Austin Hooper (2.07)
+       [Rec]  Tgt:  1.3 | Rec:  1.0 | Yds:   9.6 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   4.3
+
+
+Betting Analysis:
+Projected Score: CIN 21.8 - NE 22.4
+Spread: CIN -7.5 (-400)
+Total: 40.5 (O/U)
+
+Detailed Edge Calculations:
+CIN Moneyline Edge:
+  Projected Win%: 48.1%
+  Implied Win% from Spread: 76.7%
+  Edge: -28.6% (CIN overvalued)
+
+NE Moneyline Edge:
+  Projected Win%: 51.9%
+  Implied Win% from Spread: 23.3%
+  Edge: 28.6% (NE undervalued)
+
+Spread Edge:
+  Projected Spread: 0.6
+  Actual Spread: -7.5
+  Edge: -8.1 points (favoring NE)
+
+Total Edge:
+  Projected Total: 44.2
+  Actual Total: 40.5
+  Edge: 3.7 points (Over)
+
+Betting Recommendations:
+- Moneyline on NE: The model projects a 28.6% edge, which is significant (>3%). This suggests value in the NE moneyline bet.
+- Spread on NE 7.5: The model projects a 8.1 point edge, which is significant (>1.5 points). This suggests value in this spread bet.
+- Total Over: The model projects the total to be 3.7 points higher than the line, which is significant (>3 points). This suggests value in the Over bet.
+
+Summary of Recommendations:
+- Moneyline: Consider NE (310) | Risk 14.3u ($143.0) to win 44 units ($440)
+- Spread: Consider NE 7.5 | Risk 4.1u ($41.0) to win 3.7u ($37.0)
+- Total: Consider Over 40.5 | Risk 1.9u ($19.0) to win 1.7u ($17.0)
+==================================================
+
+==================================================
+Game Analysis: IND vs HOU
+Venue: IND (Dome)
+Field: turf
+Weather: N/A (Dome)
+
+Win Probabilities:
+IND: 57.7%
+HOU: 42.3%
+
+Home Team: IND
+Projected Offensive Plays: 64.5
+Pass/Rush Split: 57.2% / 42.8%
+
+Projected Lineup:
+  QB:
+     Anthony Richardson (20.71)
+       [Pass] Att: 32.0 | Yds: 224.7 | TDs:  1.2 | FD:  0.5 | DVOA:  1.0 | Norm: 195.1
+       [Rush] Att:  7.8 | Yds:  42.7 | TDs:  0.5 | FD:  0.1 | DVOA:  3.5 | Norm:  35.3
+  RB:
+     Jonathan Taylor (14.2)
+       [Rush] Att: 17.7 |           | Yds:  75.7 | TDs:  0.6 | FD:  0.2 | DVOA: 10.0 | Norm: 117.9
+       [Rec]  Tgt:  2.8 | Rec:  2.2 | Yds:  15.6 | TDs:  0.1 | FD:  0.0 | DVOA: -7.1 | Norm:   4.9
+
+     Trey Sermon (2.11)
+       [Rush] Att:  2.4 |           | Yds:   9.8 | TDs:  0.1 | FD:  0.0 | DVOA:  1.1 | Norm:   8.9
+       [Rec]  Tgt:  0.6 | Rec:  0.4 | Yds:   3.1 | TDs:  0.0 | FD:  0.0 | DVOA: -6.3 | Norm:   1.2
+
+     Tyler Goodson (1.03)
+       [Rush] Att:  0.9 |           | Yds:   4.2 | TDs:  0.0 | FD:  0.0 | DVOA:  2.4 | Norm:   3.9
+       [Rec]  Tgt:  0.8 | Rec:  0.5 | Yds:   3.5 | TDs:  0.0 | FD:  0.0 | DVOA: -7.1 | Norm:   1.3
+
+  WR:
+     Michael Pittman Jr. (11.35)
+       [Rec]  Tgt:  8.2 | Rec:  5.7 | Yds:  63.5 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  27.3
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Adonai Mitchell (5.62)
+       [Rec]  Tgt:  4.2 | Rec:  2.5 | Yds:  31.6 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  13.8
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Josh Downs (5.97)
+       [Rec]  Tgt:  5.0 | Rec:  2.9 | Yds:  32.3 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  16.7
+       [Rush] Att:  0.1 |           | Yds:   0.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Alec Pierce (4.15)
+       [Rec]  Tgt:  3.2 | Rec:  1.7 | Yds:  23.7 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  10.5
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Ashton Dulin (1.01)
+       [Rec]  Tgt:  0.5 | Rec:  0.4 | Yds:   5.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.7
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Anthony Gould (0.81)
+       [Rec]  Tgt:  0.7 | Rec:  0.3 | Yds:   3.4 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.2
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+  TE:
+     Kylen Granson (3.98)
+       [Rec]  Tgt:  2.7 | Rec:  1.9 | Yds:  21.2 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   9.0
+
+     Will Mallory (2.04)
+       [Rec]  Tgt:  0.7 | Rec:  0.9 | Yds:   9.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+
+     Mo Alie-Cox (1.7)
+       [Rec]  Tgt:  0.8 | Rec:  0.7 | Yds:   7.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.7
+
+     Drew Ogletree (1.51)
+       [Rec]  Tgt:  1.1 | Rec:  0.5 | Yds:   6.6 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.5
+
+
+Away Team: HOU
+Projected Offensive Plays: 62.6
+Pass/Rush Split: 58.6% / 41.4%
+
+Projected Lineup:
+  QB:
+     C.J. Stroud (20.46)
+       [Pass] Att: 35.6 | Yds: 279.8 | TDs:  1.9 | FD:  0.7 | DVOA: 26.4 | Norm: 307.7
+       [Rush] Att:  2.2 | Yds:   9.7 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   7.5
+  RB:
+     Joe Mixon (12.18)
+       [Rush] Att: 14.7 |           | Yds:  58.9 | TDs:  0.5 | FD:  0.2 | DVOA:  4.1 | Norm:  69.2
+       [Rec]  Tgt:  3.1 | Rec:  2.5 | Yds:  16.8 | TDs:  0.1 | FD:  0.0 | DVOA: 17.9 | Norm:  22.6
+
+     Dameon Pierce (3.03)
+       [Rush] Att:  4.4 |           | Yds:  16.8 | TDs:  0.1 | FD:  0.1 | DVOA: -16.0 | Norm:  -8.8
+       [Rec]  Tgt:  0.8 | Rec:  0.6 | Yds:   4.2 | TDs:  0.0 | FD:  0.0 | DVOA: -2.8 | Norm:   2.0
+
+     Cam Akers (2.05)
+       [Rush] Att:  2.3 |           | Yds:   8.8 | TDs:  0.1 | FD:  0.0 | DVOA: -6.7 | Norm:   2.5
+       [Rec]  Tgt:  0.6 | Rec:  0.4 | Yds:   3.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.4 | Norm:   2.0
+
+     Dare Ogunbowale (0.52)
+       [Rush] Att:  0.3 |           | Yds:   1.6 | TDs:  0.0 | FD:  0.0 | DVOA: -0.6 | Norm:   1.1
+       [Rec]  Tgt:  0.6 | Rec:  0.3 | Yds:   2.1 | TDs:  0.0 | FD:  0.0 | DVOA: -12.7 | Norm:   0.3
+
+     Jawhar Jordan (0.8)
+       [Rush] Att:  1.2 |           | Yds:   5.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   4.0
+       [Rec]  Tgt:  0.3 | Rec:  0.2 | Yds:   1.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.0
+
+  WR:
+     Nico Collins (11.77)
+       [Rec]  Tgt:  7.2 | Rec:  4.8 | Yds:  68.7 | TDs:  0.4 | FD:  0.2 | DVOA:  0.0 | Norm:  24.2
+       [Rush] Att:  0.1 |           | Yds:   0.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Stefon Diggs (11.25)
+       [Rec]  Tgt:  7.4 | Rec:  5.1 | Yds:  62.4 | TDs:  0.4 | FD:  0.1 | DVOA:  0.0 | Norm:  24.8
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Tank Dell (10.1)
+       [Rec]  Tgt:  6.2 | Rec:  4.2 | Yds:  55.5 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  20.5
+       [Rush] Att:  0.6 |           | Yds:   3.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.0
+
+     Noah Brown (3.09)
+       [Rec]  Tgt:  2.2 | Rec:  1.3 | Yds:  18.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   7.3
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     John Metchie III (1.33)
+       [Rec]  Tgt:  1.0 | Rec:  0.6 | Yds:   7.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.3
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Robert Woods (1.61)
+       [Rec]  Tgt:  1.1 | Rec:  0.8 | Yds:   8.9 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.8
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Xavier Hutchinson (0.67)
+       [Rec]  Tgt:  0.4 | Rec:  0.2 | Yds:   2.4 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Steven Sims (0.21)
+       [Rec]  Tgt:  0.2 | Rec:  0.0 | Yds:   1.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+       [Rush] Att:  0.1 |           | Yds:   0.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+  TE:
+     Dalton Schultz (7.04)
+       [Rec]  Tgt:  4.7 | Rec:  3.3 | Yds:  35.7 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  15.7
+
+     Cade Stover (1.39)
+       [Rec]  Tgt:  1.0 | Rec:  0.7 | Yds:   7.3 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.3
+
+     Brevin Jordan (2.26)
+       [Rec]  Tgt:  1.4 | Rec:  0.8 | Yds:   9.5 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   4.7
+
+
+Betting Analysis:
+Projected Score: IND 24.7 - HOU 22.2
+Spread: IND 3 (143)
+Total: 48.5 (O/U)
+
+Detailed Edge Calculations:
+IND Moneyline Edge:
+  Projected Win%: 57.7%
+  Implied Win% from Spread: 47.5%
+  Edge: 10.2% (IND undervalued)
+
+HOU Moneyline Edge:
+  Projected Win%: 42.3%
+  Implied Win% from Spread: 52.5%
+  Edge: -10.2% (HOU overvalued)
+
+Spread Edge:
+  Projected Spread: -2.6
+  Actual Spread: 3
+  Edge: 5.6 points (favoring IND)
+
+Total Edge:
+  Projected Total: 46.9
+  Actual Total: 48.5
+  Edge: -1.6 points (Under)
+
+Betting Recommendations:
+- Moneyline on IND: The model projects a 10.2% edge, which is significant (>3%). This suggests value in the IND moneyline bet.
+- Spread on IND 3: The model projects a 5.6 point edge, which is significant (>1.5 points). This suggests value in this spread bet.
+- Total: No strong recommendation. The projected difference from the line is not significant enough (<3 points).
+
+Summary of Recommendations:
+- Moneyline: Consider IND (143) | Risk 5.1u ($51.0) to win 7.0 units ($70.0)
+- Spread: Consider IND 3 | Risk 2.8u ($28.0) to win 2.5u ($25.0)
+==================================================
+
+==================================================
+Game Analysis: MIA vs JAC
+Venue: MIA (Outdoor)
+Field: grass
+Weather: Temp: 89°F, Wind: 8 mph, Precipitation: 33%
+
+Win Probabilities:
+MIA: 63.8%
+JAC: 36.2%
+
+Home Team: MIA
+Projected Offensive Plays: 62.8
+Pass/Rush Split: 56.6% / 43.4%
+
+Projected Lineup:
+  QB:
+     Tua Tagovailoa (18.51)
+       [Pass] Att: 34.2 | Yds: 270.2 | TDs:  1.8 | FD:  0.7 | DVOA: 31.9 | Norm: 314.2
+       [Rush] Att:  1.9 | Yds:   4.5 | TDs:  0.1 | FD:  0.0 | DVOA: -51.5 | Norm: -25.6
+  RB:
+     De'Von Achane (12.42)
+       [Rush] Att: 10.9 |           | Yds:  57.3 | TDs:  0.3 | FD:  0.1 | DVOA: 21.2 | Norm: 113.5
+       [Rec]  Tgt:  3.5 | Rec:  2.8 | Yds:  22.1 | TDs:  0.2 | FD:  0.0 | DVOA: 12.7 | Norm:  21.2
+
+     Raheem Mostert (9.9)
+       [Rush] Att: 10.8 |           | Yds:  48.5 | TDs:  0.5 | FD:  0.1 | DVOA: 15.6 | Norm:  91.7
+       [Rec]  Tgt:  1.8 | Rec:  1.6 | Yds:   9.1 | TDs:  0.1 | FD:  0.0 | DVOA:  6.7 | Norm:   8.5
+
+     Jaylen Wright (2.38)
+       [Rush] Att:  2.2 |           | Yds:  10.2 | TDs:  0.1 | FD:  0.1 | DVOA:  0.0 | Norm:   7.5
+       [Rec]  Tgt:  0.7 | Rec:  0.6 | Yds:   4.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+
+     Jeff Wilson Jr. (0.82)
+       [Rush] Att:  0.9 |           | Yds:   4.7 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   3.0
+       [Rec]  Tgt:  0.4 | Rec:  0.3 | Yds:   1.9 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+
+  WR:
+     Tyreek Hill (17.24)
+       [Rec]  Tgt:  9.8 | Rec:  7.0 | Yds:  99.0 | TDs:  0.6 | FD:  0.2 | DVOA:  0.0 | Norm:  32.7
+       [Rush] Att:  0.3 |           | Yds:   1.8 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.0
+
+     Jaylen Waddle (11.65)
+       [Rec]  Tgt:  7.1 | Rec:  4.8 | Yds:  66.7 | TDs:  0.4 | FD:  0.2 | DVOA:  0.0 | Norm:  23.7
+       [Rush] Att:  0.2 |           | Yds:   1.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+     Braxton Berrios (2.8)
+       [Rec]  Tgt:  2.0 | Rec:  1.5 | Yds:  14.4 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   6.7
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Malik Washington (3.41)
+       [Rec]  Tgt:  2.3 | Rec:  1.4 | Yds:  16.9 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   7.7
+       [Rush] Att:  0.2 |           | Yds:   1.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+  TE:
+     Jonnu Smith (5.38)
+       [Rec]  Tgt:  3.2 | Rec:  2.4 | Yds:  26.9 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  10.5
+
+     Durham Smythe (2.01)
+       [Rec]  Tgt:  1.5 | Rec:  0.9 | Yds:   9.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   5.0
+
+     Jody Fortson Jr. (1.17)
+       [Rec]  Tgt:  0.8 | Rec:  0.4 | Yds:   3.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.7
+
+     Julian Hill (0.54)
+       [Rec]  Tgt:  0.1 | Rec:  0.1 | Yds:   1.9 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   0.5
+
+
+Away Team: JAC
+Projected Offensive Plays: 65.5
+Pass/Rush Split: 59.0% / 41.0%
+
+Projected Lineup:
+  QB:
+     Trevor Lawrence (18.76)
+       [Pass] Att: 36.0 | Yds: 255.6 | TDs:  1.6 | FD:  0.6 | DVOA:  8.2 | Norm: 245.4
+       [Rush] Att:  3.9 | Yds:  17.9 | TDs:  0.2 | FD:  0.0 | DVOA: -3.9 | Norm:   8.0
+  RB:
+     Travis Etienne Jr. (13.45)
+       [Rush] Att: 15.1 |           | Yds:  61.6 | TDs:  0.5 | FD:  0.0 | DVOA:  0.0 | Norm:  50.5
+       [Rec]  Tgt:  3.9 | Rec:  3.0 | Yds:  21.6 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:  13.0
+
+     Tank Bigsby (2.67)
+       [Rush] Att:  3.9 |           | Yds:  14.7 | TDs:  0.1 | FD:  0.0 | DVOA: -5.1 | Norm:   6.4
+       [Rec]  Tgt:  0.6 | Rec:  0.5 | Yds:   3.3 | TDs:  0.0 | FD:  0.0 | DVOA: -8.5 | Norm:   0.9
+
+     D'Ernest Johnson (1.21)
+       [Rush] Att:  1.3 |           | Yds:   5.2 | TDs:  0.1 | FD:  0.0 | DVOA: -1.0 | Norm:   3.9
+       [Rec]  Tgt:  0.4 | Rec:  0.3 | Yds:   2.2 | TDs:  0.0 | FD:  0.0 | DVOA: 10.8 | Norm:   2.3
+
+  WR:
+     Christian Kirk (10.88)
+       [Rec]  Tgt:  7.4 | Rec:  4.8 | Yds:  59.7 | TDs:  0.4 | FD:  0.1 | DVOA:  0.0 | Norm:  24.7
+       [Rush] Att:  0.1 |           | Yds:   0.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Brian Thomas Jr. (9.27)
+       [Rec]  Tgt:  6.3 | Rec:  4.0 | Yds:  51.4 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  21.0
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Gabe Davis (7.34)
+       [Rec]  Tgt:  5.2 | Rec:  2.9 | Yds:  40.8 | TDs:  0.3 | FD:  0.0 | DVOA:  0.0 | Norm:  17.3
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Parker Washington (2.02)
+       [Rec]  Tgt:  0.9 | Rec:  0.9 | Yds:   9.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.0
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Devin Duvernay (1.52)
+       [Rec]  Tgt:  1.3 | Rec:  0.9 | Yds:   7.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   4.3
+       [Rush] Att:  0.1 |           | Yds:   0.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Tim Jones (0.48)
+       [Rec]  Tgt:  0.7 | Rec:  0.3 | Yds:   3.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Evan Engram (9.55)
+       [Rec]  Tgt:  6.8 | Rec:  5.3 | Yds:  47.6 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  22.5
+
+     Brenton Strange (0.83)
+       [Rec]  Tgt:  0.6 | Rec:  0.3 | Yds:   3.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.8
+
+     Luke Farrell (1.07)
+       [Rec]  Tgt:  0.7 | Rec:  0.3 | Yds:   5.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+
+
+Betting Analysis:
+Projected Score: MIA 25.5 - JAC 20.9
+Spread: MIA -3.5 (-178)
+Total: 49 (O/U)
+
+Detailed Edge Calculations:
+MIA Moneyline Edge:
+  Projected Win%: 63.8%
+  Implied Win% from Spread: 61.5%
+  Edge: 2.4% (MIA undervalued)
+
+JAC Moneyline Edge:
+  Projected Win%: 36.2%
+  Implied Win% from Spread: 38.5%
+  Edge: -2.4% (JAC overvalued)
+
+Spread Edge:
+  Projected Spread: -4.6
+  Actual Spread: -3.5
+  Edge: 1.1 points (favoring MIA)
+
+Total Edge:
+  Projected Total: 46.4
+  Actual Total: 49
+  Edge: -2.6 points (Under)
+
+Betting Recommendations:
+- Moneyline: No strong recommendation. The projected edge is not significant enough (<3%).
+- Spread: No strong recommendation. The projected edge is not significant enough (<1.5 points).
+- Total: No strong recommendation. The projected difference from the line is not significant enough (<3 points).
+
+No strong betting recommendations for this game based on the model's projections.
+==================================================
+
+==================================================
+Game Analysis: NO vs CAR
+Venue: NO (Dome)
+Field: turf
+Weather: N/A (Dome)
+
+Win Probabilities:
+NO: 74.7%
+CAR: 25.3%
+
+Home Team: NO
+Projected Offensive Plays: 65.9
+Pass/Rush Split: 57.8% / 42.2%
+
+Projected Lineup:
+  QB:
+     Derek Carr (15.01)
+       [Pass] Att: 32.8 | Yds: 232.2 | TDs:  1.4 | FD:  0.6 | DVOA:  9.2 | Norm: 226.7
+       [Rush] Att:  1.6 | Yds:   3.5 | TDs:  0.1 | FD:  0.0 | DVOA: -12.2 | Norm:  -1.1
+     Taysom Hill (3.19)
+       [Pass] Att:  0.0 | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.8 | Norm:   0.0
+       [Rush] Att:  3.9 | Yds:  19.7 | TDs:  0.2 | FD:  0.0 | DVOA: -4.5 | Norm:   7.2
+  RB:
+     Alvin Kamara (13.41)
+       [Rush] Att: 13.1 |           | Yds:  54.5 | TDs:  0.3 | FD:  0.1 | DVOA: -1.2 | Norm:  38.5
+       [Rec]  Tgt:  4.9 | Rec:  4.0 | Yds:  28.6 | TDs:  0.2 | FD:  0.1 | DVOA: -2.0 | Norm:  14.2
+
+     Jamaal Williams (5.19)
+       [Rush] Att:  7.2 |           | Yds:  26.7 | TDs:  0.2 | FD:  0.0 | DVOA: -6.6 | Norm:   8.2
+       [Rec]  Tgt:  1.0 | Rec:  0.8 | Yds:   5.7 | TDs:  0.1 | FD:  0.0 | DVOA: -14.2 | Norm:   0.2
+
+     Jordan Mims (0.51)
+       [Rush] Att:  0.8 |           | Yds:   3.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.5
+       [Rec]  Tgt:  0.1 | Rec:  0.2 | Yds:   0.8 | TDs:  0.0 | FD:  0.0 | DVOA: -5.1 | Norm:   0.2
+
+     Kene Nwangwu (0.55)
+       [Rush] Att:  1.3 |           | Yds:   4.0 | TDs:  0.0 | FD:  0.0 | DVOA: -1.4 | Norm:   3.7
+       [Rec]  Tgt:  0.2 | Rec:  0.1 | Yds:   1.0 | TDs:  0.0 | FD:  0.0 | DVOA: -3.3 | Norm:   0.5
+
+  WR:
+     Chris Olave (11.98)
+       [Rec]  Tgt:  8.3 | Rec:  5.3 | Yds:  68.4 | TDs:  0.4 | FD:  0.2 | DVOA:  0.0 | Norm:  27.7
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Rashid Shaheed (7.47)
+       [Rec]  Tgt:  4.8 | Rec:  3.0 | Yds:  39.5 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  16.0
+       [Rush] Att:  0.3 |           | Yds:   2.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.2
+
+     A.T. Perry (3.22)
+       [Rec]  Tgt:  2.1 | Rec:  1.2 | Yds:  16.9 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   7.2
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Cedrick Wilson Jr. (2.97)
+       [Rec]  Tgt:  2.3 | Rec:  1.4 | Yds:  16.6 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   7.7
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Bub Means (1.38)
+       [Rec]  Tgt:  0.7 | Rec:  0.4 | Yds:   5.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Juwan Johnson (5.3)
+       [Rec]  Tgt:  3.8 | Rec:  2.7 | Yds:  27.6 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  12.5
+
+     Foster Moreau (2.55)
+       [Rec]  Tgt:  2.3 | Rec:  1.4 | Yds:  12.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   7.7
+
+     Dallin Holker (1.77)
+       [Rec]  Tgt:  1.1 | Rec:  0.8 | Yds:   7.6 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.7
+
+
+Away Team: CAR
+Projected Offensive Plays: 65.4
+Pass/Rush Split: 60.2% / 39.8%
+
+Projected Lineup:
+  QB:
+     Bryce Young (13.78)
+       [Pass] Att: 31.5 | Yds: 206.1 | TDs:  0.9 | FD:  0.5 | DVOA: -55.9 | Norm:  12.9
+       [Rush] Att:  2.5 | Yds:  13.1 | TDs:  0.2 | FD:  0.0 | DVOA: 18.7 | Norm:  24.4
+  RB:
+     Chuba Hubbard (10.52)
+       [Rush] Att: 14.4 |           | Yds:  55.0 | TDs:  0.3 | FD:  0.1 | DVOA:  2.4 | Norm:  59.3
+       [Rec]  Tgt:  2.7 | Rec:  1.9 | Yds:  13.0 | TDs:  0.1 | FD:  0.0 | DVOA: -5.3 | Norm:   5.8
+
+     Miles Sanders (5.04)
+       [Rush] Att:  6.8 |           | Yds:  25.9 | TDs:  0.2 | FD:  0.1 | DVOA: -0.6 | Norm:  21.3
+       [Rec]  Tgt:  1.4 | Rec:  1.1 | Yds:   6.9 | TDs:  0.1 | FD:  0.0 | DVOA: -18.8 | Norm:  -1.2
+
+     Dillon Johnson (0.67)
+       [Rush] Att:  0.8 |           | Yds:   5.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.7
+       [Rec]  Tgt:  0.0 | Rec:  0.1 | Yds:   1.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Raheem Blackshear (1.19)
+       [Rush] Att:  1.2 |           | Yds:   5.0 | TDs:  0.1 | FD:  0.0 | DVOA: -0.7 | Norm:   3.9
+       [Rec]  Tgt:  0.5 | Rec:  0.3 | Yds:   2.5 | TDs:  0.0 | FD:  0.0 | DVOA:  3.3 | Norm:   2.0
+
+  WR:
+     Diontae Johnson (9.6)
+       [Rec]  Tgt:  7.8 | Rec:  4.5 | Yds:  54.6 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  26.0
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Adam Thielen (7.72)
+       [Rec]  Tgt:  6.1 | Rec:  4.0 | Yds:  41.6 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  20.3
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Jonathan Mingo (4.07)
+       [Rec]  Tgt:  4.2 | Rec:  2.2 | Yds:  23.4 | TDs:  0.1 | FD:  0.1 | DVOA:  0.0 | Norm:  14.2
+       [Rush] Att:  0.1 |           | Yds:   0.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Xavier Legette (3.99)
+       [Rec]  Tgt:  2.8 | Rec:  1.7 | Yds:  21.6 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:   9.3
+       [Rush] Att:  0.1 |           | Yds:   0.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     David Moore (0.73)
+       [Rec]  Tgt:  0.6 | Rec:  0.2 | Yds:   3.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.8
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Ja'Tavion Sanders (3.26)
+       [Rec]  Tgt:  2.6 | Rec:  1.5 | Yds:  15.7 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   8.7
+
+     Tommy Tremble (2.82)
+       [Rec]  Tgt:  1.7 | Rec:  1.4 | Yds:  12.4 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   5.7
+
+     Ian Thomas (0.9)
+       [Rec]  Tgt:  0.6 | Rec:  0.3 | Yds:   4.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.8
+
+
+Betting Analysis:
+Projected Score: NO 26.7 - CAR 18.6
+Spread: NO -4 (-205)
+Total: 42 (O/U)
+
+Detailed Edge Calculations:
+NO Moneyline Edge:
+  Projected Win%: 74.7%
+  Implied Win% from Spread: 63.5%
+  Edge: 11.2% (NO undervalued)
+
+CAR Moneyline Edge:
+  Projected Win%: 25.3%
+  Implied Win% from Spread: 36.5%
+  Edge: -11.2% (CAR overvalued)
+
+Spread Edge:
+  Projected Spread: -8.1
+  Actual Spread: -4
+  Edge: 4.1 points (favoring NO)
+
+Total Edge:
+  Projected Total: 45.3
+  Actual Total: 42
+  Edge: 3.3 points (Over)
+
+Betting Recommendations:
+- Moneyline on NO: The model projects a 11.2% edge, which is significant (>3%). This suggests value in the NO moneyline bet.
+- Spread on NO -4: The model projects a 4.1 point edge, which is significant (>1.5 points). This suggests value in this spread bet.
+- Total Over: The model projects the total to be 3.3 points higher than the line, which is significant (>3 points). This suggests value in the Over bet.
+
+Summary of Recommendations:
+- Moneyline: Consider NO (-205) | Risk 5.6u ($56.0) to win 3.0 units ($30.0)
+- Spread: Consider NO -4 | Risk 2.1u ($21.0) to win 1.9u ($19.0)
+- Total: Consider Over 42 | Risk 1.7u ($17.0) to win 1.5u ($15.0)
+==================================================
+
+==================================================
+Game Analysis: NYG vs MIN
+Venue: NYG (Outdoor)
+Field: turf
+Weather: Temp: 72°F, Wind: 9 mph, Precipitation: 0%
+
+Win Probabilities:
+NYG: 28.4%
+MIN: 71.6%
+
+Home Team: NYG
+Projected Offensive Plays: 61.9
+Pass/Rush Split: 57.2% / 42.8%
+
+Projected Lineup:
+  QB:
+     Daniel Jones (17.01)
+       [Pass] Att: 32.0 | Yds: 216.4 | TDs:  1.1 | FD:  0.6 | DVOA: -15.4 | Norm: 143.1
+       [Rush] Att:  5.9 | Yds:  27.6 | TDs:  0.2 | FD:  0.1 | DVOA: 14.2 | Norm:  47.9
+  RB:
+     Devin Singletary (10.97)
+       [Rush] Att: 14.1 |           | Yds:  55.5 | TDs:  0.4 | FD:  0.1 | DVOA: -2.2 | Norm:  36.5
+       [Rec]  Tgt:  2.8 | Rec:  2.0 | Yds:  13.2 | TDs:  0.1 | FD:  0.0 | DVOA: -7.4 | Norm:   4.7
+
+     Tyrone Tracy Jr. (3.17)
+       [Rush] Att:  3.6 |           | Yds:  14.5 | TDs:  0.1 | FD:  0.1 | DVOA:  0.0 | Norm:  12.0
+       [Rec]  Tgt:  1.2 | Rec:  0.9 | Yds:   6.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   4.0
+
+     Eric Gray (2.34)
+       [Rush] Att:  3.0 |           | Yds:  11.1 | TDs:  0.1 | FD:  0.0 | DVOA: -3.5 | Norm:   6.4
+       [Rec]  Tgt:  0.7 | Rec:  0.5 | Yds:   3.7 | TDs:  0.0 | FD:  0.0 | DVOA: -5.9 | Norm:   1.3
+
+  WR:
+     Malik Nabers (11.28)
+       [Rec]  Tgt:  8.4 | Rec:  5.2 | Yds:  61.8 | TDs:  0.4 | FD:  0.1 | DVOA:  0.0 | Norm:  28.2
+       [Rush] Att:  0.1 |           | Yds:   0.8 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Wan'Dale Robinson (6.73)
+       [Rec]  Tgt:  5.5 | Rec:  3.8 | Yds:  33.0 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  18.3
+       [Rush] Att:  0.6 |           | Yds:   3.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.8
+
+     Darius Slayton (5.54)
+       [Rec]  Tgt:  3.8 | Rec:  2.3 | Yds:  31.6 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  12.5
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Jalin Hyatt (4.88)
+       [Rec]  Tgt:  3.5 | Rec:  2.1 | Yds:  28.9 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  11.5
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Bryce Ford-Wheaton (0.65)
+       [Rec]  Tgt:  0.6 | Rec:  0.3 | Yds:   5.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.8
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Theo Johnson (2.92)
+       [Rec]  Tgt:  2.5 | Rec:  1.6 | Yds:  15.3 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   8.5
+
+     Daniel Bellinger (3.33)
+       [Rec]  Tgt:  2.4 | Rec:  1.5 | Yds:  16.7 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   8.0
+
+     Lawrence Cager (0.36)
+       [Rec]  Tgt:  0.3 | Rec:  0.0 | Yds:   3.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.0
+
+     Chris Manhertz (0.59)
+       [Rec]  Tgt:  0.2 | Rec:  0.1 | Yds:   2.1 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   0.8
+
+
+Away Team: MIN
+Projected Offensive Plays: 62.6
+Pass/Rush Split: 62.9% / 37.1%
+
+Projected Lineup:
+  QB:
+     Sam Darnold (15.88)
+       [Pass] Att: 33.6 | Yds: 231.1 | TDs:  1.2 | FD:  0.6 | DVOA: -2.4 | Norm: 193.7
+       [Rush] Att:  3.0 | Yds:  11.1 | TDs:  0.2 | FD:  0.0 | DVOA: -12.6 | Norm:  -2.7
+  RB:
+     Aaron Jones (11.49)
+       [Rush] Att: 13.3 |           | Yds:  56.5 | TDs:  0.4 | FD:  0.1 | DVOA: 11.5 | Norm:  95.9
+       [Rec]  Tgt:  3.2 | Rec:  2.3 | Yds:  16.1 | TDs:  0.1 | FD:  0.0 | DVOA: -3.2 | Norm:   8.4
+
+     Ty Chandler (6.46)
+       [Rush] Att:  7.5 |           | Yds:  31.6 | TDs:  0.2 | FD:  0.1 | DVOA:  0.2 | Norm:  25.2
+       [Rec]  Tgt:  1.6 | Rec:  1.1 | Yds:   8.8 | TDs:  0.1 | FD:  0.0 | DVOA:  3.8 | Norm:   6.9
+
+  WR:
+     Justin Jefferson (14.57)
+       [Rec]  Tgt: 10.3 | Rec:  6.5 | Yds:  85.0 | TDs:  0.5 | FD:  0.2 | DVOA:  0.0 | Norm:  34.3
+       [Rush] Att:  0.1 |           | Yds:   0.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Jordan Addison (8.71)
+       [Rec]  Tgt:  6.4 | Rec:  3.8 | Yds:  49.5 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  21.5
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Jalen Nailor (3.6)
+       [Rec]  Tgt:  2.5 | Rec:  1.8 | Yds:  18.2 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   8.2
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Brandon Powell (2.07)
+       [Rec]  Tgt:  1.5 | Rec:  0.9 | Yds:   9.3 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   5.0
+       [Rush] Att:  0.2 |           | Yds:   0.9 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.5
+
+     Trent Sherfield Sr. (1.74)
+       [Rec]  Tgt:  1.2 | Rec:  0.7 | Yds:   7.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   4.0
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Johnny Mundt (3.71)
+       [Rec]  Tgt:  3.2 | Rec:  2.0 | Yds:  18.3 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:  10.7
+
+     Josh Oliver (3.39)
+       [Rec]  Tgt:  2.4 | Rec:  1.5 | Yds:  17.4 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   8.0
+
+     Nick Muse (0.37)
+       [Rec]  Tgt:  0.2 | Rec:  0.1 | Yds:   3.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.8
+
+
+Betting Analysis:
+Projected Score: NYG 18.1 - MIN 25.2
+Spread: NYG 1.5 (105)
+Total: 41 (O/U)
+
+Detailed Edge Calculations:
+NYG Moneyline Edge:
+  Projected Win%: 28.4%
+  Implied Win% from Spread: 47.5%
+  Edge: -19.1% (NYG overvalued)
+
+MIN Moneyline Edge:
+  Projected Win%: 71.6%
+  Implied Win% from Spread: 52.5%
+  Edge: 19.1% (MIN undervalued)
+
+Spread Edge:
+  Projected Spread: 7.1
+  Actual Spread: 1.5
+  Edge: -5.6 points (favoring MIN)
+
+Total Edge:
+  Projected Total: 43.3
+  Actual Total: 41
+  Edge: 2.3 points (Over)
+
+Betting Recommendations:
+- Moneyline on MIN: The model projects a 19.1% edge, which is significant (>3%). This suggests value in the MIN moneyline bet.
+- Spread on MIN -1.5: The model projects a 5.6 point edge, which is significant (>1.5 points). This suggests value in this spread bet.
+- Total: No strong recommendation. The projected difference from the line is not significant enough (<3 points).
+
+Summary of Recommendations:
+- Moneyline: Consider MIN (-125) | Risk 9.6u ($96.0) to win 8.0 units ($80.0)
+- Spread: Consider MIN -1.5 | Risk 2.8u ($28.0) to win 2.5u ($25.0)
+==================================================
+
+==================================================
+Game Analysis: LAC vs LV
+Venue: LAC (Dome)
+Field: turf
+Weather: N/A (Dome)
+
+Win Probabilities:
+LAC: 57.2%
+LV: 42.8%
+
+Home Team: LAC
+Projected Offensive Plays: 64.1
+Pass/Rush Split: 60.9% / 39.1%
+
+Projected Lineup:
+  QB:
+     Justin Herbert (17.36)
+       [Pass] Att: 32.0 | Yds: 231.6 | TDs:  1.4 | FD:  0.6 | DVOA: 11.6 | Norm: 229.2
+       [Rush] Att:  3.9 | Yds:  15.1 | TDs:  0.2 | FD:  0.0 | DVOA: -8.7 | Norm:   1.7
+  RB:
+     Gus Edwards (8.08)
+       [Rush] Att: 11.3 |           | Yds:  48.1 | TDs:  0.3 | FD:  0.1 | DVOA:  9.7 | Norm:  74.1
+       [Rec]  Tgt:  1.4 | Rec:  1.1 | Yds:   5.8 | TDs:  0.0 | FD:  0.0 | DVOA: 11.9 | Norm:   8.4
+
+     J.K. Dobbins (6.95)
+       [Rush] Att:  7.8 |           | Yds:  32.6 | TDs:  0.2 | FD:  0.1 | DVOA:  4.0 | Norm:  36.2
+       [Rec]  Tgt:  1.8 | Rec:  1.4 | Yds:   8.5 | TDs:  0.1 | FD:  0.0 | DVOA:  1.9 | Norm:   6.6
+
+     Kimani Vidal (2.76)
+       [Rush] Att:  3.1 |           | Yds:  12.9 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:  10.3
+       [Rec]  Tgt:  0.9 | Rec:  0.7 | Yds:   4.9 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.8
+
+     Hassan Haskins (0.29)
+       [Rush] Att:  0.4 |           | Yds:   1.7 | TDs:  0.0 | FD:  0.0 | DVOA:  1.2 | Norm:   1.5
+       [Rec]  Tgt:  0.2 | Rec:  0.1 | Yds:   0.7 | TDs:  0.0 | FD:  0.0 | DVOA: -5.1 | Norm:   0.4
+
+  WR:
+     Ladd McConkey (7.82)
+       [Rec]  Tgt:  5.8 | Rec:  3.8 | Yds:  40.9 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  19.2
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Joshua Palmer (8.82)
+       [Rec]  Tgt:  6.2 | Rec:  3.9 | Yds:  47.4 | TDs:  0.3 | FD:  0.0 | DVOA:  0.0 | Norm:  20.8
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     DJ Chark (5.31)
+       [Rec]  Tgt:  4.5 | Rec:  2.1 | Yds:  29.8 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  15.0
+       [Rush] Att:  0.1 |           | Yds:   0.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Quentin Johnston (5.45)
+       [Rec]  Tgt:  3.8 | Rec:  2.5 | Yds:  29.8 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  12.7
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Brenden Rice (1.37)
+       [Rec]  Tgt:  1.0 | Rec:  0.7 | Yds:   7.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.2
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Derius Davis (1.36)
+       [Rec]  Tgt:  0.9 | Rec:  0.5 | Yds:   4.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   3.2
+       [Rush] Att:  0.7 |           | Yds:   3.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.2
+
+     Cornelius Johnson (0.66)
+       [Rec]  Tgt:  0.7 | Rec:  0.3 | Yds:   5.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Simi Fehoko (0.33)
+       [Rec]  Tgt:  1.0 | Rec:  0.2 | Yds:   2.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   3.3
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Hayden Hurst (4.42)
+       [Rec]  Tgt:  3.0 | Rec:  2.2 | Yds:  21.1 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:  10.2
+
+     Will Dissly (3.54)
+       [Rec]  Tgt:  2.2 | Rec:  1.5 | Yds:  18.8 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   7.5
+
+     Stone Smartt (0.84)
+       [Rec]  Tgt:  0.3 | Rec:  0.3 | Yds:   3.9 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.2
+
+     Tucker Fisk (0.31)
+       [Rec]  Tgt:  0.3 | Rec:  0.0 | Yds:   3.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.0
+
+
+Away Team: LV
+Projected Offensive Plays: 59.0
+Pass/Rush Split: 59.5% / 40.5%
+
+Projected Lineup:
+  QB:
+     Gardner Minshew II (14.32)
+       [Pass] Att: 31.8 | Yds: 216.1 | TDs:  1.2 | FD:  0.4 | DVOA:  2.2 | Norm: 197.7
+       [Rush] Att:  2.7 | Yds:   9.0 | TDs:  0.1 | FD:  0.0 | DVOA: -5.0 | Norm:   4.5
+  RB:
+     Zamir White (10.42)
+       [Rush] Att: 14.2 |           | Yds:  56.5 | TDs:  0.3 | FD:  0.1 | DVOA: -4.0 | Norm:  28.7
+       [Rec]  Tgt:  2.4 | Rec:  1.7 | Yds:  11.4 | TDs:  0.1 | FD:  0.0 | DVOA: -5.2 | Norm:   5.2
+
+     Alexander Mattison (3.92)
+       [Rush] Att:  5.9 |           | Yds:  23.0 | TDs:  0.1 | FD:  0.1 | DVOA: -8.8 | Norm:   2.4
+       [Rec]  Tgt:  1.1 | Rec:  0.9 | Yds:   5.7 | TDs:  0.0 | FD:  0.0 | DVOA: -14.5 | Norm:   0.1
+
+     Dylan Laube (1.22)
+       [Rush] Att:  1.2 |           | Yds:   4.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   4.0
+       [Rec]  Tgt:  0.7 | Rec:  0.3 | Yds:   2.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.2
+
+     Ameer Abdullah (1.34)
+       [Rush] Att:  0.6 |           | Yds:   2.5 | TDs:  0.0 | FD:  0.0 | DVOA:  1.3 | Norm:   2.3
+       [Rec]  Tgt:  1.1 | Rec:  0.6 | Yds:   4.7 | TDs:  0.1 | FD:  0.0 | DVOA:  7.6 | Norm:   5.3
+
+  WR:
+     Davante Adams (11.85)
+       [Rec]  Tgt:  9.2 | Rec:  5.5 | Yds:  66.7 | TDs:  0.4 | FD:  0.2 | DVOA:  0.0 | Norm:  30.8
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Jakobi Meyers (8.18)
+       [Rec]  Tgt:  6.0 | Rec:  3.8 | Yds:  43.3 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  20.0
+       [Rush] Att:  0.2 |           | Yds:   1.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.8
+
+     Tre Tucker (4.42)
+       [Rec]  Tgt:  3.2 | Rec:  1.9 | Yds:  25.8 | TDs:  0.1 | FD:  0.1 | DVOA:  0.0 | Norm:  10.5
+       [Rush] Att:  0.5 |           | Yds:   3.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.5
+
+     Jalen Guyton (0.32)
+       [Rec]  Tgt:  0.2 | Rec:  0.0 | Yds:   3.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Brock Bowers (6.59)
+       [Rec]  Tgt:  5.0 | Rec:  3.4 | Yds:  36.6 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  16.7
+
+     Michael Mayer (3.53)
+       [Rec]  Tgt:  2.9 | Rec:  1.6 | Yds:  18.2 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   9.5
+
+     Harrison Bryant (0.76)
+       [Rec]  Tgt:  0.5 | Rec:  0.3 | Yds:   3.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.7
+
+
+Betting Analysis:
+Projected Score: LAC 22.8 - LV 20.4
+Spread: LAC -3 (-165)
+Total: 40.5 (O/U)
+
+Detailed Edge Calculations:
+LAC Moneyline Edge:
+  Projected Win%: 57.2%
+  Implied Win% from Spread: 59.5%
+  Edge: -2.3% (LAC overvalued)
+
+LV Moneyline Edge:
+  Projected Win%: 42.8%
+  Implied Win% from Spread: 40.5%
+  Edge: 2.3% (LV undervalued)
+
+Spread Edge:
+  Projected Spread: -2.4
+  Actual Spread: -3
+  Edge: -0.6 points (favoring LV)
+
+Total Edge:
+  Projected Total: 43.2
+  Actual Total: 40.5
+  Edge: 2.7 points (Over)
+
+Betting Recommendations:
+- Moneyline: No strong recommendation. The projected edge is not significant enough (<3%).
+- Spread: No strong recommendation. The projected edge is not significant enough (<1.5 points).
+- Total: No strong recommendation. The projected difference from the line is not significant enough (<3 points).
+
+No strong betting recommendations for this game based on the model's projections.
+==================================================
+
+==================================================
+Game Analysis: SEA vs DEN
+Venue: SEA (Outdoor)
+Field: turf
+Weather: Temp: 72°F, Wind: 6 mph, Precipitation: 2%
+
+Win Probabilities:
+SEA: 66.6%
+DEN: 33.4%
+
+Home Team: SEA
+Projected Offensive Plays: 58.9
+Pass/Rush Split: 62.1% / 37.9%
+
+Projected Lineup:
+  QB:
+     Geno Smith (17.62)
+       [Pass] Att: 33.1 | Yds: 242.9 | TDs:  1.6 | FD:  0.6 | DVOA: 10.2 | Norm: 232.4
+       [Rush] Att:  3.0 | Yds:  11.8 | TDs:  0.2 | FD:  0.0 | DVOA:  1.1 | Norm:  10.9
+  RB:
+     Kenneth Walker III (12.95)
+       [Rush] Att: 14.6 |           | Yds:  64.3 | TDs:  0.6 | FD:  0.0 | DVOA:  0.0 | Norm:  48.5
+       [Rec]  Tgt:  2.4 | Rec:  1.9 | Yds:  13.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   7.8
+
+     Zach Charbonnet (6.57)
+       [Rush] Att:  6.0 |           | Yds:  25.8 | TDs:  0.2 | FD:  0.1 | DVOA:  1.1 | Norm:  22.5
+       [Rec]  Tgt:  2.3 | Rec:  1.8 | Yds:  12.4 | TDs:  0.1 | FD:  0.0 | DVOA: -8.8 | Norm:   3.2
+
+     Kenny McIntosh (0.53)
+       [Rush] Att:  0.7 |           | Yds:   2.9 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+       [Rec]  Tgt:  0.2 | Rec:  0.2 | Yds:   1.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+  WR:
+     DK Metcalf (11.43)
+       [Rec]  Tgt:  7.3 | Rec:  4.5 | Yds:  64.5 | TDs:  0.5 | FD:  0.2 | DVOA:  0.0 | Norm:  24.3
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Jaxon Smith-Njigba (8.73)
+       [Rec]  Tgt:  6.3 | Rec:  4.4 | Yds:  46.8 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  21.0
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Tyler Lockett (8.84)
+       [Rec]  Tgt:  6.2 | Rec:  4.2 | Yds:  49.2 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  20.8
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Jake Bobo (2.16)
+       [Rec]  Tgt:  1.5 | Rec:  0.9 | Yds:  10.6 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   5.0
+       [Rush] Att:  0.1 |           | Yds:   0.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Laviska Shenault Jr. (0.72)
+       [Rec]  Tgt:  0.8 | Rec:  0.3 | Yds:   3.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.7
+       [Rush] Att:  0.4 |           | Yds:   2.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+
+  TE:
+     Noah Fant (5.61)
+       [Rec]  Tgt:  3.9 | Rec:  2.6 | Yds:  30.7 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  12.8
+
+     AJ Barner (1.24)
+       [Rec]  Tgt:  0.6 | Rec:  0.4 | Yds:   4.4 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.0
+
+     Pharaoh Brown (1.68)
+       [Rec]  Tgt:  0.9 | Rec:  0.6 | Yds:   7.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.0
+
+     Tyler Mabry (0.22)
+       [Rec]  Tgt:  0.3 | Rec:  0.0 | Yds:   2.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.0
+
+
+Away Team: DEN
+Projected Offensive Plays: 59.8
+Pass/Rush Split: 55.0% / 45.0%
+
+Projected Lineup:
+  QB:
+     Bo Nix (15.06)
+       [Pass] Att: 31.4 | Yds: 204.6 | TDs:  1.1 | FD:  0.5 | DVOA:  0.0 | Norm: 188.4
+       [Rush] Att:  4.6 | Yds:  19.5 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:  15.3
+  RB:
+     Javonte Williams (10.68)
+       [Rush] Att: 12.8 |           | Yds:  52.6 | TDs:  0.3 | FD:  0.1 | DVOA: -5.0 | Norm:  21.6
+       [Rec]  Tgt:  3.5 | Rec:  2.6 | Yds:  16.5 | TDs:  0.1 | FD:  0.0 | DVOA: -22.4 | Norm:  -5.9
+
+     Jaleel McLaughlin (7.27)
+       [Rush] Att:  6.8 |           | Yds:  30.1 | TDs:  0.2 | FD:  0.1 | DVOA:  9.9 | Norm:  45.1
+       [Rec]  Tgt:  3.1 | Rec:  2.2 | Yds:  15.9 | TDs:  0.1 | FD:  0.0 | DVOA: -8.8 | Norm:   4.2
+
+     Audric Estime (2.74)
+       [Rush] Att:  2.5 |           | Yds:  10.3 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   8.2
+       [Rec]  Tgt:  0.8 | Rec:  0.6 | Yds:   4.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.7
+
+     Blake Watson (0.52)
+       [Rush] Att:  0.7 |           | Yds:   2.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.2
+       [Rec]  Tgt:  0.2 | Rec:  0.2 | Yds:   1.7 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+  WR:
+     Courtland Sutton (8.88)
+       [Rec]  Tgt:  6.9 | Rec:  4.1 | Yds:  50.1 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  23.0
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Josh Reynolds (5.44)
+       [Rec]  Tgt:  4.3 | Rec:  2.5 | Yds:  29.4 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  14.5
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Marvin Mims Jr. (4.69)
+       [Rec]  Tgt:  3.5 | Rec:  2.1 | Yds:  28.6 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:  11.7
+       [Rush] Att:  0.3 |           | Yds:   1.8 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.2
+
+     Troy Franklin (2.76)
+       [Rec]  Tgt:  1.8 | Rec:  1.2 | Yds:  15.2 | TDs:  0.1 | FD:  0.1 | DVOA:  0.0 | Norm:   5.8
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Devaughn Vele (1.3)
+       [Rec]  Tgt:  0.7 | Rec:  0.4 | Yds:   5.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.2
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Greg Dulcich (4.09)
+       [Rec]  Tgt:  3.4 | Rec:  2.0 | Yds:  21.4 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  11.3
+
+     Adam Trautman (2.25)
+       [Rec]  Tgt:  1.9 | Rec:  1.1 | Yds:  10.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   6.2
+
+     Donald Parham Jr. (1.73)
+       [Rec]  Tgt:  0.9 | Rec:  0.5 | Yds:   8.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.0
+
+     Lucas Krull (0.96)
+       [Rec]  Tgt:  0.9 | Rec:  0.4 | Yds:   4.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.0
+
+
+Betting Analysis:
+Projected Score: SEA 26.4 - DEN 21.0
+Spread: SEA -6 (-250)
+Total: 42 (O/U)
+
+Detailed Edge Calculations:
+SEA Moneyline Edge:
+  Projected Win%: 66.6%
+  Implied Win% from Spread: 71.4%
+  Edge: -4.8% (SEA overvalued)
+
+DEN Moneyline Edge:
+  Projected Win%: 33.4%
+  Implied Win% from Spread: 28.6%
+  Edge: 4.8% (DEN undervalued)
+
+Spread Edge:
+  Projected Spread: -5.5
+  Actual Spread: -6
+  Edge: -0.5 points (favoring DEN)
+
+Total Edge:
+  Projected Total: 47.4
+  Actual Total: 42
+  Edge: 5.4 points (Over)
+
+Betting Recommendations:
+- Moneyline on DEN: The model projects a 4.8% edge, which is significant (>3%). This suggests value in the DEN moneyline bet.
+- Spread: No strong recommendation. The projected edge is not significant enough (<1.5 points).
+- Total Over: The model projects the total to be 5.4 points higher than the line, which is significant (>3 points). This suggests value in the Over bet.
+
+Summary of Recommendations:
+- Moneyline: Consider DEN (205) | Risk 2.4u ($24.0) to win 5 units ($50)
+- Total: Consider Over 42 | Risk 2.7u ($27.0) to win 2.5u ($25.0)
+==================================================
+
+==================================================
+Game Analysis: CLE vs DAL
+Venue: CLE (Outdoor)
+Field: grass
+Weather: Temp: 66°F, Wind: 14 mph, Precipitation: 0%
+
+Win Probabilities:
+CLE: 58.2%
+DAL: 41.8%
+
+Home Team: CLE
+Projected Offensive Plays: 70.9
+Pass/Rush Split: 56.4% / 43.6%
+
+Projected Lineup:
+  QB:
+     Deshaun Watson (16.96)
+       [Pass] Att: 33.0 | Yds: 223.1 | TDs:  1.3 | FD:  0.5 | DVOA: -5.1 | Norm: 181.3
+       [Rush] Att:  4.7 | Yds:  23.0 | TDs:  0.2 | FD:  0.1 | DVOA: 11.3 | Norm:  33.3
+  RB:
+     Jerome Ford (10.82)
+       [Rush] Att: 13.5 |           | Yds:  53.0 | TDs:  0.3 | FD:  0.1 | DVOA: -11.4 | Norm:  -6.5
+       [Rec]  Tgt:  3.1 | Rec:  2.3 | Yds:  16.0 | TDs:  0.1 | FD:  0.0 | DVOA: -0.3 | Norm:  10.3
+
+     D'Onta Foreman (4.61)
+       [Rush] Att:  6.0 |           | Yds:  25.6 | TDs:  0.2 | FD:  0.0 | DVOA: -0.3 | Norm:  19.5
+       [Rec]  Tgt:  1.0 | Rec:  0.7 | Yds:   4.8 | TDs:  0.0 | FD:  0.0 | DVOA:  2.1 | Norm:   3.8
+
+     Pierre Strong Jr. (2.5)
+       [Rush] Att:  2.7 |           | Yds:  12.3 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   9.0
+       [Rec]  Tgt:  0.8 | Rec:  0.5 | Yds:   4.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.5
+
+  WR:
+     Amari Cooper (10.78)
+       [Rec]  Tgt:  7.5 | Rec:  4.4 | Yds:  61.2 | TDs:  0.4 | FD:  0.2 | DVOA:  0.0 | Norm:  25.0
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Jerry Jeudy (7.57)
+       [Rec]  Tgt:  5.6 | Rec:  3.5 | Yds:  42.6 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  18.5
+       [Rush] Att:  0.1 |           | Yds:   0.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Elijah Moore (4.97)
+       [Rec]  Tgt:  4.3 | Rec:  2.5 | Yds:  27.7 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  14.3
+       [Rush] Att:  0.1 |           | Yds:   0.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Cedric Tillman (2.34)
+       [Rec]  Tgt:  1.8 | Rec:  1.0 | Yds:  12.1 | TDs:  0.1 | FD:  0.1 | DVOA:  0.0 | Norm:   5.8
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     David Bell (0.81)
+       [Rec]  Tgt:  0.5 | Rec:  0.3 | Yds:   3.3 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.5
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Jamari Thrash (0.55)
+       [Rec]  Tgt:  0.6 | Rec:  0.3 | Yds:   3.9 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.0
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     David Njoku (8.5)
+       [Rec]  Tgt:  6.3 | Rec:  4.3 | Yds:  45.0 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  21.2
+
+     Jordan Akins (1.28)
+       [Rec]  Tgt:  1.0 | Rec:  0.7 | Yds:   6.3 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.2
+
+
+Away Team: DAL
+Projected Offensive Plays: 65.8
+Pass/Rush Split: 58.3% / 41.7%
+
+Projected Lineup:
+  QB:
+     Dak Prescott (17.09)
+       [Pass] Att: 35.3 | Yds: 246.8 | TDs:  1.5 | FD:  0.7 | DVOA: 22.2 | Norm: 290.6
+       [Rush] Att:  2.8 | Yds:  12.6 | TDs:  0.1 | FD:  0.0 | DVOA: -4.3 | Norm:   5.4
+  RB:
+     Ezekiel Elliott (8.13)
+       [Rush] Att: 10.4 |           | Yds:  37.5 | TDs:  0.3 | FD:  0.1 | DVOA: -3.5 | Norm:  22.6
+       [Rec]  Tgt:  2.2 | Rec:  1.7 | Yds:  10.7 | TDs:  0.1 | FD:  0.0 | DVOA: -12.1 | Norm:   1.5
+
+     Rico Dowdle (6.49)
+       [Rush] Att:  7.6 |           | Yds:  30.6 | TDs:  0.2 | FD:  0.1 | DVOA: -0.6 | Norm:  23.9
+       [Rec]  Tgt:  1.9 | Rec:  1.4 | Yds:   8.9 | TDs:  0.1 | FD:  0.0 | DVOA: 13.1 | Norm:  11.5
+
+     Dalvin Cook (2.11)
+       [Rush] Att:  2.5 |           | Yds:   9.6 | TDs:  0.1 | FD:  0.0 | DVOA: -9.6 | Norm:   0.3
+       [Rec]  Tgt:  0.5 | Rec:  0.5 | Yds:   3.0 | TDs:  0.0 | FD:  0.0 | DVOA: -16.9 | Norm:  -0.2
+
+     Deuce Vaughn (1.13)
+       [Rush] Att:  1.2 |           | Yds:   4.5 | TDs:  0.0 | FD:  0.0 | DVOA: -4.8 | Norm:   2.1
+       [Rec]  Tgt:  0.7 | Rec:  0.6 | Yds:   3.9 | TDs:  0.0 | FD:  0.0 | DVOA:  0.3 | Norm:   2.4
+
+  WR:
+     Brandin Cooks (7.65)
+       [Rec]  Tgt:  5.7 | Rec:  3.4 | Yds:  39.4 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  18.8
+       [Rush] Att:  0.2 |           | Yds:   1.8 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.8
+
+     Jalen Tolbert (4.75)
+       [Rec]  Tgt:  4.2 | Rec:  2.3 | Yds:  23.8 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  13.8
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     KaVontae Turpin (2.07)
+       [Rec]  Tgt:  1.1 | Rec:  0.8 | Yds:   8.4 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.7
+       [Rush] Att:  0.4 |           | Yds:   2.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+
+     Jalen Brooks (1.32)
+       [Rec]  Tgt:  0.7 | Rec:  0.6 | Yds:   6.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.2
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Ryan Flournoy (0.88)
+       [Rec]  Tgt:  0.5 | Rec:  0.3 | Yds:   4.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.5
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     CeeDee Lamb (7.79)
+       [Rec]  Tgt:  5.5 | Rec:  3.6 | Yds:  42.5 | TDs:  0.2 | FD:  0.2 | DVOA:  0.0 | Norm:  18.5
+       [Rush] Att:  0.2 |           | Yds:   1.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.8
+
+  TE:
+     Jake Ferguson (8.18)
+       [Rec]  Tgt:  6.3 | Rec:  4.2 | Yds:  42.5 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  21.0
+
+     Luke Schoonmaker (1.51)
+       [Rec]  Tgt:  0.8 | Rec:  0.6 | Yds:   6.1 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.5
+
+
+Betting Analysis:
+Projected Score: CLE 17.2 - DAL 14.5
+Spread: CLE -2.5 (-135)
+Total: 41 (O/U)
+
+Detailed Edge Calculations:
+CLE Moneyline Edge:
+  Projected Win%: 58.2%
+  Implied Win% from Spread: 57.6%
+  Edge: 0.6% (CLE undervalued)
+
+DAL Moneyline Edge:
+  Projected Win%: 41.8%
+  Implied Win% from Spread: 42.4%
+  Edge: -0.6% (DAL overvalued)
+
+Spread Edge:
+  Projected Spread: -2.7
+  Actual Spread: -2.5
+  Edge: 0.2 points (favoring CLE)
+
+Total Edge:
+  Projected Total: 31.6
+  Actual Total: 41
+  Edge: -9.4 points (Under)
+
+Betting Recommendations:
+- Moneyline: No strong recommendation. The projected edge is not significant enough (<3%).
+- Spread: No strong recommendation. The projected edge is not significant enough (<1.5 points).
+- Total Under: The model projects the total to be 9.4 points lower than the line, which is significant (>3 points). This suggests value in the Under bet.
+
+Summary of Recommendations:
+- Total: Consider Under 41 | Risk 4.7u ($47.0) to win 4.3u ($43.0)
+==================================================
+
+==================================================
+Game Analysis: TB vs WAS
+Venue: TB (Outdoor)
+Field: grass
+Weather: Temp: 86°F, Wind: 5 mph, Precipitation: 67%
+
+Win Probabilities:
+TB: 64.0%
+WAS: 36.0%
+
+Home Team: TB
+Projected Offensive Plays: 62.0
+Pass/Rush Split: 58.1% / 41.9%
+
+Projected Lineup:
+  QB:
+     Baker Mayfield (17.06)
+       [Pass] Att: 33.1 | Yds: 240.6 | TDs:  1.6 | FD:  0.6 | DVOA: -0.1 | Norm: 198.1
+       [Rush] Att:  3.0 | Yds:  10.1 | TDs:  0.1 | FD:  0.0 | DVOA: -35.3 | Norm: -25.8
+  RB:
+     Rachaad White (13.36)
+       [Rush] Att: 15.5 |           | Yds:  59.9 | TDs:  0.5 | FD:  0.1 | DVOA: -9.5 | Norm:   2.5
+       [Rec]  Tgt:  4.0 | Rec:  3.2 | Yds:  23.6 | TDs:  0.1 | FD:  0.1 | DVOA: 35.7 | Norm:  45.1
+
+     Bucky Irving (4.9)
+       [Rush] Att:  5.3 |           | Yds:  21.8 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:  17.7
+       [Rec]  Tgt:  1.2 | Rec:  1.0 | Yds:   7.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   4.0
+
+     Sean Tucker (0.52)
+       [Rush] Att:  0.8 |           | Yds:   3.4 | TDs:  0.0 | FD:  0.0 | DVOA: -2.6 | Norm:   2.0
+       [Rec]  Tgt:  0.1 | Rec:  0.2 | Yds:   1.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.1 | Norm:   0.3
+
+  WR:
+     Mike Evans (12.52)
+       [Rec]  Tgt:  7.8 | Rec:  4.7 | Yds:  68.5 | TDs:  0.6 | FD:  0.2 | DVOA:  0.0 | Norm:  26.0
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Chris Godwin (10.84)
+       [Rec]  Tgt:  7.7 | Rec:  5.2 | Yds:  60.0 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  25.5
+       [Rush] Att:  0.1 |           | Yds:   0.8 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Jalen McMillan (4.96)
+       [Rec]  Tgt:  3.7 | Rec:  2.2 | Yds:  25.9 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:  12.2
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Trey Palmer (3.54)
+       [Rec]  Tgt:  2.3 | Rec:  1.5 | Yds:  18.1 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:   7.8
+       [Rush] Att:  0.1 |           | Yds:   0.7 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+  TE:
+     Cade Otton (5.8)
+       [Rec]  Tgt:  4.3 | Rec:  2.9 | Yds:  28.3 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  14.3
+
+     Devin Culp (1.6)
+       [Rec]  Tgt:  1.1 | Rec:  0.7 | Yds:   6.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.7
+
+     Payne Durham (1.01)
+       [Rec]  Tgt:  0.9 | Rec:  0.5 | Yds:   4.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.0
+
+
+Away Team: WAS
+Projected Offensive Plays: 63.2
+Pass/Rush Split: 66.2% / 33.8%
+
+Projected Lineup:
+  QB:
+     Jayden Daniels (18.88)
+       [Pass] Att: 31.3 | Yds: 222.8 | TDs:  1.1 | FD:  0.6 | DVOA:  0.0 | Norm: 187.8
+       [Rush] Att:  7.2 | Yds:  39.6 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  24.2
+  RB:
+     Brian Robinson Jr. (9.25)
+       [Rush] Att: 11.0 |           | Yds:  45.3 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  36.7
+       [Rec]  Tgt:  2.0 | Rec:  1.5 | Yds:  12.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   6.8
+
+     Austin Ekeler (8.47)
+       [Rush] Att:  7.7 |           | Yds:  29.9 | TDs:  0.2 | FD:  0.1 | DVOA: -4.4 | Norm:  14.4
+       [Rec]  Tgt:  4.0 | Rec:  2.9 | Yds:  21.7 | TDs:  0.1 | FD:  0.1 | DVOA: -4.4 | Norm:   9.3
+
+  WR:
+     Terry McLaurin (10.18)
+       [Rec]  Tgt:  7.9 | Rec:  4.6 | Yds:  60.1 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  26.3
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Jahan Dotson (6.18)
+       [Rec]  Tgt:  5.5 | Rec:  2.8 | Yds:  35.1 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  18.3
+       [Rush] Att:  0.1 |           | Yds:   0.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Dyami Brown (3.85)
+       [Rec]  Tgt:  2.9 | Rec:  1.6 | Yds:  21.2 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   9.7
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Noah Brown (3.79)
+       [Rec]  Tgt:  2.2 | Rec:  1.4 | Yds:  22.1 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   7.2
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Olamide Zaccheaus (2.36)
+       [Rec]  Tgt:  2.0 | Rec:  0.9 | Yds:  12.9 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   6.7
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Luke McCaffrey (3.0)
+       [Rec]  Tgt:  0.9 | Rec:  1.2 | Yds:  14.7 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:   3.0
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Jamison Crowder (0.84)
+       [Rec]  Tgt:  1.0 | Rec:  0.3 | Yds:   3.9 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.3
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Byron Pringle (0.39)
+       [Rec]  Tgt:  0.7 | Rec:  0.3 | Yds:   2.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Zach Ertz (4.67)
+       [Rec]  Tgt:  3.3 | Rec:  2.5 | Yds:  22.1 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:  11.0
+
+     Ben Sinnott (2.89)
+       [Rec]  Tgt:  2.5 | Rec:  1.6 | Yds:  14.9 | TDs:  0.1 | FD:  0.1 | DVOA:  0.0 | Norm:   8.3
+
+     John Bates (0.91)
+       [Rec]  Tgt:  0.6 | Rec:  0.3 | Yds:   4.3 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.8
+
+     Cole Turner (0.35)
+       [Rec]  Tgt:  0.1 | Rec:  0.1 | Yds:   3.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.5
+
+
+Betting Analysis:
+Projected Score: TB 24.1 - WAS 19.5
+Spread: TB -3.5 (-170)
+Total: 43.5 (O/U)
+
+Detailed Edge Calculations:
+TB Moneyline Edge:
+  Projected Win%: 64.0%
+  Implied Win% from Spread: 61.5%
+  Edge: 2.5% (TB undervalued)
+
+WAS Moneyline Edge:
+  Projected Win%: 36.0%
+  Implied Win% from Spread: 38.5%
+  Edge: -2.5% (WAS overvalued)
+
+Spread Edge:
+  Projected Spread: -4.6
+  Actual Spread: -3.5
+  Edge: 1.1 points (favoring TB)
+
+Total Edge:
+  Projected Total: 43.6
+  Actual Total: 43.5
+  Edge: 0.1 points (Over)
+
+Betting Recommendations:
+- Moneyline: No strong recommendation. The projected edge is not significant enough (<3%).
+- Spread: No strong recommendation. The projected edge is not significant enough (<1.5 points).
+- Total: No strong recommendation. The projected difference from the line is not significant enough (<3 points).
+
+No strong betting recommendations for this game based on the model's projections.
+==================================================
+
+==================================================
+Game Analysis: DET vs LA
+Venue: DET (Dome)
+Field: turf
+Weather: N/A (Dome)
+
+Win Probabilities:
+DET: 94.4%
+LA: 5.6%
+
+Home Team: DET
+Projected Offensive Plays: 66.9
+Pass/Rush Split: 56.0% / 44.0%
+
+Projected Lineup:
+  QB:
+     Jared Goff (18.55)
+       [Pass] Att: 34.9 | Yds: 268.6 | TDs:  1.9 | FD:  0.7 | DVOA: 28.3 | Norm: 308.3
+       [Rush] Att:  1.6 | Yds:   2.8 | TDs:  0.1 | FD:  0.0 | DVOA: -19.4 | Norm:  -5.0
+  RB:
+     Jahmyr Gibbs (13.5)
+       [Rush] Att: 11.9 |           | Yds:  58.5 | TDs:  0.5 | FD:  0.1 | DVOA: 13.3 | Norm:  92.1
+       [Rec]  Tgt:  3.8 | Rec:  3.2 | Yds:  23.6 | TDs:  0.2 | FD:  0.1 | DVOA: -11.6 | Norm:   2.9
+
+     David Montgomery (11.31)
+       [Rush] Att: 12.5 |           | Yds:  56.0 | TDs:  0.6 | FD:  0.1 | DVOA:  6.0 | Norm:  66.5
+       [Rec]  Tgt:  1.8 | Rec:  1.4 | Yds:  10.2 | TDs:  0.1 | FD:  0.0 | DVOA:  9.7 | Norm:   9.6
+
+     Craig Reynolds (0.55)
+       [Rush] Att:  0.8 |           | Yds:   3.1 | TDs:  0.0 | FD:  0.0 | DVOA: -1.1 | Norm:   2.4
+       [Rec]  Tgt:  0.2 | Rec:  0.2 | Yds:   1.4 | TDs:  0.0 | FD:  0.0 | DVOA:  8.3 | Norm:   1.3
+
+  WR:
+     Amon-Ra St. Brown (15.43)
+       [Rec]  Tgt:  9.6 | Rec:  7.2 | Yds:  85.7 | TDs:  0.5 | FD:  0.2 | DVOA:  0.0 | Norm:  32.0
+       [Rush] Att:  0.3 |           | Yds:   1.8 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.0
+
+     Jameson Williams (8.14)
+       [Rec]  Tgt:  4.7 | Rec:  3.2 | Yds:  44.9 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  15.7
+       [Rush] Att:  0.3 |           | Yds:   1.9 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.0
+
+     Kalif Raymond (5.18)
+       [Rec]  Tgt:  3.5 | Rec:  2.3 | Yds:  29.5 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:  11.7
+       [Rush] Att:  0.3 |           | Yds:   1.7 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.0
+
+     Tim Patrick (2.71)
+       [Rec]  Tgt:  3.1 | Rec:  1.2 | Yds:  14.9 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:  10.3
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.3
+
+     Isaiah Williams (1.5)
+       [Rec]  Tgt:  0.1 | Rec:  0.7 | Yds:   8.4 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   0.5
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+  TE:
+     Sam LaPorta (11.17)
+       [Rec]  Tgt:  7.1 | Rec:  5.5 | Yds:  56.9 | TDs:  0.5 | FD:  0.1 | DVOA:  0.0 | Norm:  23.7
+
+     Brock Wright (1.68)
+       [Rec]  Tgt:  1.1 | Rec:  0.7 | Yds:   7.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.5
+
+     Shane Zylstra (0.73)
+       [Rec]  Tgt:  0.2 | Rec:  0.0 | Yds:   1.3 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+     James Mitchell (0.3)
+       [Rec]  Tgt:  0.2 | Rec:  0.1 | Yds:   2.7 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+
+Away Team: LA
+Projected Offensive Plays: 64.5
+Pass/Rush Split: 57.3% / 42.7%
+
+Projected Lineup:
+  QB:
+     Matthew Stafford (17.89)
+       [Pass] Att: 35.1 | Yds: 270.6 | TDs:  1.8 | FD:  0.7 | DVOA: 12.3 | Norm: 254.3
+       [Rush] Att:  0.8 | Yds:   2.3 | TDs:  0.1 | FD:  0.0 | DVOA: -5.0 | Norm:   1.3
+  RB:
+     Kyren Williams (13.09)
+       [Rush] Att: 15.1 |           | Yds:  65.8 | TDs:  0.5 | FD:  0.2 | DVOA: 12.0 | Norm: 110.8
+       [Rec]  Tgt:  3.0 | Rec:  2.3 | Yds:  16.4 | TDs:  0.1 | FD:  0.0 | DVOA: -8.7 | Norm:   4.2
+
+     Blake Corum (6.23)
+       [Rush] Att:  7.2 |           | Yds:  28.6 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  24.0
+       [Rec]  Tgt:  1.6 | Rec:  1.2 | Yds:   9.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   5.2
+
+     Ronnie Rivers (0.55)
+       [Rush] Att:  1.0 |           | Yds:   3.5 | TDs:  0.0 | FD:  0.0 | DVOA: -0.4 | Norm:   3.0
+       [Rec]  Tgt:  0.2 | Rec:  0.2 | Yds:   1.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.1 | Norm:   0.8
+
+     Cody Schrader (0.49)
+       [Rush] Att:  0.7 |           | Yds:   3.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+       [Rec]  Tgt:  0.2 | Rec:  0.2 | Yds:   0.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+  WR:
+     Puka Nacua (13.24)
+       [Rec]  Tgt:  8.5 | Rec:  5.8 | Yds:  76.8 | TDs:  0.4 | FD:  0.2 | DVOA:  0.0 | Norm:  28.3
+       [Rush] Att:  0.4 |           | Yds:   2.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+
+     Cooper Kupp (12.0)
+       [Rec]  Tgt:  8.1 | Rec:  5.5 | Yds:  66.9 | TDs:  0.4 | FD:  0.1 | DVOA:  0.0 | Norm:  26.8
+       [Rush] Att:  0.2 |           | Yds:   1.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+     Demarcus Robinson (6.04)
+       [Rec]  Tgt:  4.3 | Rec:  2.5 | Yds:  32.4 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  14.3
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Tutu Atwell (2.56)
+       [Rec]  Tgt:  1.6 | Rec:  1.0 | Yds:  13.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   5.3
+       [Rush] Att:  0.2 |           | Yds:   1.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+     Jordan Whittington (1.08)
+       [Rec]  Tgt:  0.8 | Rec:  0.4 | Yds:   5.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.5
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Colby Parkinson (5.07)
+       [Rec]  Tgt:  3.8 | Rec:  2.5 | Yds:  26.3 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:  12.7
+
+     Davis Allen (1.99)
+       [Rec]  Tgt:  1.1 | Rec:  0.9 | Yds:   9.6 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   3.7
+
+     Hunter Long (1.12)
+       [Rec]  Tgt:  0.5 | Rec:  0.3 | Yds:   3.4 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.7
+
+
+Betting Analysis:
+Projected Score: DET 36.8 - LA 22.1
+Spread: DET -3.5 (-190)
+Total: 51 (O/U)
+
+Detailed Edge Calculations:
+DET Moneyline Edge:
+  Projected Win%: 94.4%
+  Implied Win% from Spread: 61.5%
+  Edge: 32.9% (DET undervalued)
+
+LA Moneyline Edge:
+  Projected Win%: 5.6%
+  Implied Win% from Spread: 38.5%
+  Edge: -32.9% (LA overvalued)
+
+Spread Edge:
+  Projected Spread: -14.7
+  Actual Spread: -3.5
+  Edge: 11.2 points (favoring DET)
+
+Total Edge:
+  Projected Total: 58.9
+  Actual Total: 51
+  Edge: 7.9 points (Over)
+
+Betting Recommendations:
+- Moneyline on DET: The model projects a 32.9% edge, which is significant (>3%). This suggests value in the DET moneyline bet.
+- Spread on DET -3.5: The model projects a 11.2 point edge, which is significant (>1.5 points). This suggests value in this spread bet.
+- Total Over: The model projects the total to be 7.9 points higher than the line, which is significant (>3 points). This suggests value in the Over bet.
+
+Summary of Recommendations:
+- Moneyline: Consider DET (-190) | Risk 16.5u ($165.0) to win 9.0 units ($90.0)
+- Spread: Consider DET -3.5 | Risk 5.6u ($56.0) to win 5.1u ($51.0)
+- Total: Consider Over 51 | Risk 4.0u ($40.0) to win 3.6u ($36.0)
+==================================================
+
+==================================================
+Game Analysis: SF vs NYJ
+Venue: SF (Outdoor)
+Field: grass
+Weather: Temp: 75°F, Wind: 10 mph, Precipitation: 0%
+
+Win Probabilities:
+SF: 68.4%
+NYJ: 31.6%
+
+Home Team: SF
+Projected Offensive Plays: 60.2
+Pass/Rush Split: 51.3% / 48.7%
+
+Projected Lineup:
+  QB:
+     Brock Purdy (17.04)
+       [Pass] Att: 30.9 | Yds: 242.3 | TDs:  1.6 | FD:  0.6 | DVOA: 34.2 | Norm: 290.7
+       [Rush] Att:  2.2 | Yds:   8.1 | TDs:  0.1 | FD:  0.0 | DVOA:  6.2 | Norm:  12.2
+  RB:
+     Christian McCaffrey (18.95)
+       [Rush] Att: 17.1 |           | Yds:  79.0 | TDs:  0.6 | FD:  0.2 | DVOA: 12.2 | Norm: 126.1
+       [Rec]  Tgt:  5.7 | Rec:  4.6 | Yds:  35.4 | TDs:  0.2 | FD:  0.1 | DVOA: 58.0 | Norm:  91.7
+
+     Jordan Mason (3.79)
+       [Rush] Att:  5.0 |           | Yds:  21.2 | TDs:  0.2 | FD:  0.0 | DVOA:  4.4 | Norm:  23.7
+       [Rec]  Tgt:  0.8 | Rec:  0.6 | Yds:   4.5 | TDs:  0.0 | FD:  0.0 | DVOA:  3.3 | Norm:   3.1
+
+     Kyle Juszczyk (1.36)
+       [Rush] Att:  0.3 |           | Yds:   1.1 | TDs:  0.0 | FD:  0.0 | DVOA: -0.5 | Norm:   0.9
+       [Rec]  Tgt:  0.6 | Rec:  0.8 | Yds:   5.5 | TDs:  0.1 | FD:  0.0 | DVOA: 28.3 | Norm:   5.3
+
+     Matt Breida (1.06)
+       [Rush] Att:  0.7 |           | Yds:   3.1 | TDs:  0.1 | FD:  0.0 | DVOA: -3.7 | Norm:   1.5
+       [Rec]  Tgt:  0.2 | Rec:  0.1 | Yds:   1.0 | TDs:  0.0 | FD:  0.0 | DVOA: -14.7 | Norm:   0.0
+
+     Isaac Guerendo (1.07)
+       [Rush] Att:  1.4 |           | Yds:   5.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   4.5
+       [Rec]  Tgt:  0.1 | Rec:  0.2 | Yds:   1.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.5
+
+     Cody Schrader (0.59)
+       [Rush] Att:  0.7 |           | Yds:   4.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+       [Rec]  Tgt:  0.3 | Rec:  0.2 | Yds:   0.9 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.0
+
+     Patrick Taylor Jr. (0.26)
+       [Rush] Att:  0.2 |           | Yds:   1.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+       [Rec]  Tgt:  0.2 | Rec:  0.1 | Yds:   0.8 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+  WR:
+     Deebo Samuel Sr. (12.49)
+       [Rec]  Tgt:  6.2 | Rec:  4.1 | Yds:  54.9 | TDs:  0.4 | FD:  0.0 | DVOA:  0.0 | Norm:  20.7
+       [Rush] Att:  2.8 |           | Yds:  13.5 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   9.3
+
+     Brandon Aiyuk (10.66)
+       [Rec]  Tgt:  6.3 | Rec:  4.2 | Yds:  60.9 | TDs:  0.4 | FD:  0.2 | DVOA:  0.0 | Norm:  21.2
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Jauan Jennings (3.51)
+       [Rec]  Tgt:  2.3 | Rec:  1.6 | Yds:  18.1 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   7.8
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Jacob Cowing (0.84)
+       [Rec]  Tgt:  0.5 | Rec:  0.3 | Yds:   3.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.5
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Chris Conley (0.78)
+       [Rec]  Tgt:  0.4 | Rec:  0.2 | Yds:   3.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Ronnie Bell (0.67)
+       [Rec]  Tgt:  0.4 | Rec:  0.2 | Yds:   2.6 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   1.5
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     George Kittle (8.91)
+       [Rec]  Tgt:  5.3 | Rec:  3.9 | Yds:  48.2 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  17.7
+
+     Cameron Latu (0.43)
+       [Rec]  Tgt:  0.6 | Rec:  0.3 | Yds:   2.7 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.0
+
+     Eric Saubert (0.26)
+       [Rec]  Tgt:  0.4 | Rec:  0.2 | Yds:   1.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.3
+
+
+Away Team: NYJ
+Projected Offensive Plays: 61.9
+Pass/Rush Split: 65.0% / 35.0%
+
+Projected Lineup:
+  QB:
+     Aaron Rodgers (15.91)
+       [Pass] Att: 34.1 | Yds: 236.8 | TDs:  1.4 | FD:  0.6 | DVOA:  4.8 | Norm: 221.3
+       [Rush] Att:  1.9 | Yds:   5.5 | TDs:  0.1 | FD:  0.0 | DVOA: -3.7 | Norm:   4.0
+  RB:
+     Breece Hall (14.85)
+       [Rush] Att: 15.3 |           | Yds:  67.8 | TDs:  0.4 | FD:  0.2 | DVOA: -0.2 | Norm:  50.2
+       [Rec]  Tgt:  4.9 | Rec:  3.8 | Yds:  28.0 | TDs:  0.2 | FD:  0.1 | DVOA: 14.5 | Norm:  32.5
+
+     Braelon Allen (3.1)
+       [Rush] Att:  4.5 |           | Yds:  18.4 | TDs:  0.1 | FD:  0.1 | DVOA:  0.0 | Norm:  14.8
+       [Rec]  Tgt:  0.7 | Rec:  0.6 | Yds:   3.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+
+     Isaiah Davis (1.42)
+       [Rush] Att:  1.8 |           | Yds:   5.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   5.8
+       [Rec]  Tgt:  0.1 | Rec:  0.2 | Yds:   1.4 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.5
+
+     Israel Abanikanda (1.48)
+       [Rush] Att:  3.1 |           | Yds:  10.1 | TDs:  0.0 | FD:  0.0 | DVOA: -0.4 | Norm:  10.0
+       [Rec]  Tgt:  0.6 | Rec:  0.3 | Yds:   2.8 | TDs:  0.0 | FD:  0.0 | DVOA: -8.8 | Norm:   0.8
+
+  WR:
+     Garrett Wilson (12.5)
+       [Rec]  Tgt:  9.1 | Rec:  5.8 | Yds:  70.6 | TDs:  0.4 | FD:  0.2 | DVOA:  0.0 | Norm:  30.5
+       [Rush] Att:  0.2 |           | Yds:   1.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.8
+
+     Mike Williams (7.1)
+       [Rec]  Tgt:  4.7 | Rec:  3.0 | Yds:  40.4 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  15.7
+       [Rush] Att:  0.1 |           | Yds:   0.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Malachi Corley (3.0)
+       [Rec]  Tgt:  2.3 | Rec:  1.4 | Yds:  15.8 | TDs:  0.1 | FD:  0.1 | DVOA:  0.0 | Norm:   7.7
+       [Rush] Att:  0.2 |           | Yds:   1.2 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.5
+
+     Allen Lazard (2.68)
+       [Rec]  Tgt:  2.1 | Rec:  1.1 | Yds:  14.9 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   7.0
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Xavier Gipson (2.8)
+       [Rec]  Tgt:  2.2 | Rec:  1.2 | Yds:  14.4 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   7.2
+       [Rush] Att:  0.2 |           | Yds:   1.5 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.8
+
+     Jason Brownlee (0.4)
+       [Rec]  Tgt:  0.3 | Rec:  0.2 | Yds:   2.9 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   1.0
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Tyler Conklin (5.65)
+       [Rec]  Tgt:  4.9 | Rec:  3.3 | Yds:  30.8 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  16.5
+
+     Jeremy Ruckert (1.75)
+       [Rec]  Tgt:  1.8 | Rec:  0.9 | Yds:   9.7 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   5.8
+
+
+Betting Analysis:
+Projected Score: SF 22.7 - NYJ 16.6
+Spread: SF -4 (-215)
+Total: 44 (O/U)
+
+Detailed Edge Calculations:
+SF Moneyline Edge:
+  Projected Win%: 68.4%
+  Implied Win% from Spread: 63.5%
+  Edge: 5.0% (SF undervalued)
+
+NYJ Moneyline Edge:
+  Projected Win%: 31.6%
+  Implied Win% from Spread: 36.5%
+  Edge: -5.0% (NYJ overvalued)
+
+Spread Edge:
+  Projected Spread: -6.1
+  Actual Spread: -4
+  Edge: 2.1 points (favoring SF)
+
+Total Edge:
+  Projected Total: 39.3
+  Actual Total: 44
+  Edge: -4.7 points (Under)
+
+Betting Recommendations:
+- Moneyline on SF: The model projects a 5.0% edge, which is significant (>3%). This suggests value in the SF moneyline bet.
+- Spread on SF -4: The model projects a 2.1 point edge, which is significant (>1.5 points). This suggests value in this spread bet.
+- Total Under: The model projects the total to be 4.7 points lower than the line, which is significant (>3 points). This suggests value in the Under bet.
+
+Summary of Recommendations:
+- Moneyline: Consider SF (-215) | Risk 2.5u ($25.0) to win 1.0 units ($10.0)
+- Spread: Consider SF -4 | Risk 1.0u ($10.0) to win 0.9u ($9.0)
+- Total: Consider Under 44 | Risk 2.4u ($24.0) to win 2.2u ($22.0)
+==================================================
+
+==================================================
+Game Analysis: PHI vs GB
+Venue: PHI (Outdoor)
+Field: grass
+Weather: Temp: 70°F, Wind: 12 mph, Precipitation: 0%
+
+Win Probabilities:
+PHI: 51.5%
+GB: 48.5%
+
+Home Team: PHI
+Projected Offensive Plays: 65.4
+Pass/Rush Split: 52.6% / 47.4%
+
+Projected Lineup:
+  QB:
+     Jalen Hurts (22.27)
+       [Pass] Att: 32.8 | Yds: 240.3 | TDs:  1.5 | FD:  0.6 | DVOA:  8.6 | Norm: 224.9
+       [Rush] Att:  8.9 | Yds:  38.5 | TDs:  0.6 | FD:  0.1 | DVOA: 21.7 | Norm:  93.4
+  RB:
+     Saquon Barkley (13.42)
+       [Rush] Att: 16.1 |           | Yds:  69.0 | TDs:  0.5 | FD:  0.2 | DVOA: -9.3 | Norm:   3.5
+       [Rec]  Tgt:  3.3 | Rec:  2.7 | Yds:  17.7 | TDs:  0.1 | FD:  0.0 | DVOA: -14.2 | Norm:   0.6
+
+     Kenneth Gainwell (2.93)
+       [Rush] Att:  2.2 |           | Yds:  10.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.2 | Norm:   7.5
+       [Rec]  Tgt:  1.1 | Rec:  0.8 | Yds:   5.8 | TDs:  0.1 | FD:  0.0 | DVOA: -1.9 | Norm:   3.3
+
+     Will Shipley (1.98)
+       [Rush] Att:  1.8 |           | Yds:   7.8 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   5.8
+       [Rec]  Tgt:  0.6 | Rec:  0.5 | Yds:   3.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.2
+
+  WR:
+     A.J. Brown (13.72)
+       [Rec]  Tgt:  8.6 | Rec:  5.7 | Yds:  77.7 | TDs:  0.5 | FD:  0.2 | DVOA:  0.0 | Norm:  28.5
+       [Rush] Att:  0.1 |           | Yds:   0.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     DeVonta Smith (11.15)
+       [Rec]  Tgt:  7.0 | Rec:  4.9 | Yds:  62.5 | TDs:  0.4 | FD:  0.1 | DVOA:  0.0 | Norm:  23.2
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Jahan Dotson (4.66)
+       [Rec]  Tgt:  3.1 | Rec:  2.0 | Yds:  24.2 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:  10.5
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Johnny Wilson (1.02)
+       [Rec]  Tgt:  0.8 | Rec:  0.4 | Yds:   5.0 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.7
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+  TE:
+     Dallas Goedert (8.06)
+       [Rec]  Tgt:  5.5 | Rec:  4.2 | Yds:  41.2 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  18.5
+
+     C.J. Uzomah (0.61)
+       [Rec]  Tgt:  0.6 | Rec:  0.4 | Yds:   4.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.0
+
+     Grant Calcaterra (0.89)
+       [Rec]  Tgt:  0.8 | Rec:  0.3 | Yds:   4.2 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.5
+
+
+Away Team: GB
+Projected Offensive Plays: 61.9
+Pass/Rush Split: 58.1% / 41.9%
+
+Projected Lineup:
+  QB:
+     Jordan Love (18.88)
+       [Pass] Att: 34.8 | Yds: 257.3 | TDs:  1.8 | FD:  0.6 | DVOA: 15.4 | Norm: 262.3
+       [Rush] Att:  2.1 | Yds:  10.0 | TDs:  0.2 | FD:  0.0 | DVOA: -7.0 | Norm:   2.1
+  RB:
+     Josh Jacobs (13.22)
+       [Rush] Att: 16.2 |           | Yds:  66.7 | TDs:  0.5 | FD:  0.2 | DVOA: -3.7 | Norm:  34.1
+       [Rec]  Tgt:  3.3 | Rec:  2.6 | Yds:  18.6 | TDs:  0.1 | FD:  0.0 | DVOA: -1.3 | Norm:  10.2
+
+     Emanuel Wilson (4.17)
+       [Rush] Att:  4.1 |           | Yds:  17.8 | TDs:  0.1 | FD:  0.0 | DVOA:  1.2 | Norm:  15.3
+       [Rec]  Tgt:  1.6 | Rec:  1.2 | Yds:   8.9 | TDs:  0.1 | FD:  0.0 | DVOA:  0.3 | Norm:   5.3
+
+     MarShawn Lloyd (2.05)
+       [Rush] Att:  1.4 |           | Yds:   6.8 | TDs:  0.1 | FD:  0.1 | DVOA:  0.0 | Norm:   4.8
+       [Rec]  Tgt:  0.2 | Rec:  0.3 | Yds:   2.5 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   0.7
+
+  WR:
+     Jayden Reed (9.34)
+       [Rec]  Tgt:  5.9 | Rec:  3.9 | Yds:  47.4 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  19.7
+       [Rush] Att:  0.8 |           | Yds:   5.1 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.7
+
+     Christian Watson (8.34)
+       [Rec]  Tgt:  5.6 | Rec:  3.3 | Yds:  43.8 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  18.5
+       [Rush] Att:  0.2 |           | Yds:   1.7 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.8
+
+     Romeo Doubs (7.75)
+       [Rec]  Tgt:  5.6 | Rec:  3.5 | Yds:  41.6 | TDs:  0.3 | FD:  0.1 | DVOA:  0.0 | Norm:  18.7
+       [Rush] Att:  0.1 |           | Yds:   0.3 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Dontayvion Wicks (6.13)
+       [Rec]  Tgt:  4.0 | Rec:  2.7 | Yds:  32.6 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  13.3
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Bo Melton (1.36)
+       [Rec]  Tgt:  0.8 | Rec:  0.4 | Yds:   5.1 | TDs:  0.1 | FD:  0.0 | DVOA:  0.0 | Norm:   2.7
+       [Rush] Att:  0.1 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.2
+
+     Malik Heath (0.62)
+       [Rec]  Tgt:  0.6 | Rec:  0.4 | Yds:   4.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.0
+       [Rush] Att:  0.0 |           | Yds:   0.1 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+     Samori Toure (0.21)
+       [Rec]  Tgt:  0.7 | Rec:  0.1 | Yds:   1.6 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   2.3
+       [Rush] Att:  0.0 |           | Yds:   0.0 | TDs:  0.0 | FD:  0.0 | DVOA:  0.0 | Norm:   0.0
+
+  TE:
+     Luke Musgrave (5.35)
+       [Rec]  Tgt:  3.6 | Rec:  2.7 | Yds:  27.8 | TDs:  0.2 | FD:  0.1 | DVOA:  0.0 | Norm:  12.2
+
+     Tucker Kraft (3.53)
+       [Rec]  Tgt:  2.5 | Rec:  1.7 | Yds:  17.7 | TDs:  0.2 | FD:  0.0 | DVOA:  0.0 | Norm:   8.5
+
+
+Betting Analysis:
+Projected Score: PHI 27.8 - GB 27.2
+Spread: PHI -2.5 (-140)
+Total: 49 (O/U)
+
+Detailed Edge Calculations:
+PHI Moneyline Edge:
+  Projected Win%: 51.5%
+  Implied Win% from Spread: 57.6%
+  Edge: -6.0% (PHI overvalued)
+
+GB Moneyline Edge:
+  Projected Win%: 48.5%
+  Implied Win% from Spread: 42.4%
+  Edge: 6.0% (GB undervalued)
+
+Spread Edge:
+  Projected Spread: -0.5
+  Actual Spread: -2.5
+  Edge: -2.0 points (favoring GB)
+
+Total Edge:
+  Projected Total: 55.0
+  Actual Total: 49
+  Edge: 6.0 points (Over)
+
+Betting Recommendations:
+- Moneyline on GB: The model projects a 6.0% edge, which is significant (>3%). This suggests value in the GB moneyline bet.
+- Spread on GB 2.5: The model projects a 2.0 point edge, which is significant (>1.5 points). This suggests value in this spread bet.
+- Total Over: The model projects the total to be 6.0 points higher than the line, which is significant (>3 points). This suggests value in the Over bet.
+
+Summary of Recommendations:
+- Moneyline: Consider GB (118) | Risk 3.0u ($30.0) to win 4 units ($40)
+- Spread: Consider GB 2.5 | Risk 1.0u ($10.0) to win 0.9u ($9.0)
+- Total: Consider Over 49 | Risk 3.0u ($30.0) to win 2.7u ($27.0)
+==================================================
+
+DataFrame 1:
+Home Away  H_O  A_O  HP  AP  Spread  H Win %  A Win %  H ML  A ML  ~H Win %  ~A Win %   ~HD   ~AD  H Spread  A Spread  ~HSD  ~ASD  PrjTotal  Total  ~TD O/U ML Bet Spr Bet Tot Bet
+  KC  BAL -1.7  1.2  18  20     2.4     42.7     57.3  -155   130      60.8      43.5 -18.1  13.8      -3.0       3.0  -5.4   5.4      38.2   47.0 -8.8   U A: 260  A: 205     130
+ ATL  PIT -1.4  0.2  24  22    -2.1     56.2     43.8  -170   143      63.0      41.2  -6.7   2.6      -3.0       3.0  -0.9   0.9      45.3   42.0  3.3   O  A: 75       ~      50
+ BUF  ARI  6.8 -1.4  43  19   -23.3     99.9      0.1  -305   240      75.3      29.4  24.6 -29.3      -6.5       6.5  16.8 -16.8      61.9   48.0 13.9   O H: 615  H: 630     210
+ CHI  TEN -0.2 -2.1  23  18    -4.9     65.0     35.0  -190   158      65.5      38.8  -0.5  -3.8      -4.0       4.0   0.9  -0.9      40.8   45.0 -4.2   U      ~       ~      65
+ CIN   NE -0.7  1.0  22  22     0.6     48.1     51.9  -400   310      80.0      24.4 -31.9  27.5      -7.5       7.5  -8.1   8.1      44.2   40.5  3.7   O A: 415  A: 305      55
+ IND  HOU -0.1  2.3  25  22    -2.6     57.7     42.3   143  -170      41.2      63.0  16.6 -20.7       3.0      -3.0   5.6  -5.6      46.9   48.5 -1.6   U H: 240  H: 210       ~
+ MIA  JAC  1.5 -0.5  25  21    -4.6     63.8     36.2  -178   150      64.0      40.0  -0.2  -3.8      -3.5       3.5   1.1  -1.1      46.4   49.0 -2.6   U      ~       ~       ~
+  NO  CAR  2.2 -2.6  27  19    -8.1     74.7     25.3  -205   170      67.2      37.0   7.4 -11.7      -4.0       4.0   4.1  -4.1      45.3   42.0  3.3   O H: 140  H: 155      50
+ NYG  MIN -2.3  2.2  18  25     7.1     28.4     71.6   105  -125      48.8      55.6 -20.3  16.0       1.5      -1.5  -5.6   5.6      43.3   41.0  2.3   O A: 365  A: 210       ~
+ LAC   LV -0.6  0.8  23  20    -2.4     57.2     42.8  -165   140      62.3      41.7  -5.1   1.2      -3.0       3.0  -0.6   0.6      43.2   40.5  2.7   O  A: 55       ~       ~
+ SEA  DEN  2.8  1.4  26  21    -5.5     66.6     33.4  -250   205      71.4      32.8  -4.9   0.7      -6.0       6.0  -0.5   0.5      47.4   42.0  5.4   O  A: 40       ~      80
+ CLE  DAL -2.8 -3.0  17  14    -2.7     58.2     41.8  -135   115      57.4      46.5   0.7  -4.7      -2.5       2.5   0.2  -0.2      31.6   41.0 -9.4   U      ~       ~     140
+  TB  WAS  0.8 -2.1  24  20    -4.6     64.0     36.0  -170   143      63.0      41.2   1.0  -5.1      -3.5       3.5   1.1  -1.1      43.6   43.5  0.1   O      ~       ~       ~
+ DET   LA  4.1  0.6  37  22   -14.7     94.4      5.6  -190   158      65.5      38.8  28.9 -33.2      -3.5       3.5  11.2 -11.2      58.9   51.0  7.9   O H: 680  H: 420     120
+  SF  NYJ  0.6 -2.4  23  17    -6.1     68.4     31.6  -215   178      68.3      36.0   0.2  -4.4      -4.0       4.0   2.1  -2.1      39.3   44.0 -4.7   U      ~   H: 80      70
+ PHI   GB  2.8  4.3  28  27    -0.5     51.5     48.5  -140   118      58.3      45.9  -6.8   2.6      -2.5       2.5  -2.0   2.0      55.0   49.0  6.0   O  A: 80   A: 75      90
+
+DataFrame 2:
+Home Away  H Pass Adv  H Rush Adv  A Pass Adv  A Rush Adv
+  KC  BAL       -26.0        -4.0        -7.0        35.0
+ ATL  PIT        -2.0       -28.0        27.0       -27.0
+ BUF  ARI        58.0        80.0        -8.0       -24.0
+ CHI  TEN        19.0       -27.0        -0.0       -52.0
+ CIN   NE        17.0       -44.0         6.0        15.0
+ IND  HOU        19.0       -28.0        34.0         8.0
+ MIA  JAC        28.0        -3.0        14.0       -33.0
+  NO  CAR        14.0        30.0       -43.0        -4.0
+ NYG  MIN       -15.0       -35.0        12.0        36.0
+ LAC   LV         0.0       -15.0        25.0       -17.0
+ SEA  DEN        30.0        26.0        24.0         1.0
+ CLE  DAL       -11.0       -50.0       -22.0       -41.0
+  TB  WAS        44.0       -42.0        -7.0       -46.0
+ DET   LA        44.0        37.0        23.0       -19.0
+  SF  NYJ        10.0         1.0       -23.0       -28.0
+ PHI   GB        41.0        13.0        46.0        38.0
+
+DataFrame 3:
+Team  QB DVOA  QB Val  Rush DVOA  Rush Val  Rec DVOA  Rec Val  OL Pass Val  OL Rush Val  Off Pass Val  Off Rush Val  Def Pass Val  Def Rush Val
+  KC     25.9     8.6       13.1       7.7      10.1      5.6          9.0          7.1           7.7           7.5           6.5           3.3
+ BAL     13.4     7.3       11.4       7.1       4.0      4.2          5.2          6.0           6.2           6.7           9.8           7.9
+ ATL     10.6     7.1        1.3       3.8      -0.1      3.3          7.5          6.7           5.8           4.8           2.0           7.5
+ PIT     -5.8     5.4        3.5       4.5      -0.3      3.3          5.8          5.5           4.8           4.8           6.0           7.6
+ BUF     24.3     8.4       17.7       9.2       4.8      4.4          7.6          7.8           7.2           8.7           5.4           5.8
+ ARI      0.9     6.1       -0.6       3.1       0.5      3.4          4.3          3.9           5.0           3.4           0.9           0.8
+ CHI      0.0     6.0        3.2       4.4       4.2      4.3          5.0          5.7           5.3           4.9           3.8           8.0
+ TEN    -10.7     4.9       -2.6       2.5      -3.8      2.5          2.2          3.6           3.8           2.9           3.4           7.6
+ CIN      8.0     6.8       -0.0       3.3      13.4      6.3          6.1          5.3           6.4           4.0           4.1           2.1
+  NE      4.4     6.4        1.4       3.8      -6.5      1.9          4.0          3.2           4.7           3.6           4.7           8.4
+ IND      1.0     6.1        7.1       5.7      -2.1      2.9          7.8          7.0           5.3           6.1           4.1           4.1
+ HOU     26.4     8.6        3.4       4.5      14.0      6.4          6.2          5.7           7.5           4.9           3.4           9.0
+ MIA     31.9     9.2       11.6       7.2      24.6      8.8          6.4          6.7           8.7           7.0           3.7           6.1
+ JAC      8.2     6.8       -1.0       3.0       0.8      3.5          5.7          2.4           5.5           2.8           5.2           7.3
+  NO      9.2     6.9       -1.0       3.0       4.3      4.3          4.5          4.4           5.7           3.5           5.1           4.2
+ CAR    -55.9     0.4        3.1       4.4     -14.4      0.1          3.6          2.9           0.8           3.9           4.3           0.4
+ NYG    -15.4     4.5        5.1       5.0      -1.9      2.9          0.7          0.6           3.7           3.5           4.8           1.9
+ MIN     -2.4     5.8        5.4       5.1      15.4      6.8          6.0          6.1           6.0           5.5           5.1           7.0
+ LAC     11.6     7.2        2.6       4.2      -1.6      3.0          6.9          3.9           5.7           4.1           2.6           5.0
+  LV      2.2     6.2       -2.5       2.5       0.7      3.5          5.6          4.9           5.1           3.3           5.7           5.6
+ SEA     10.2     7.0        0.5       3.5       3.2      4.0          4.3          3.2           5.7           3.4           2.6           4.0
+ DEN      0.0     6.0        0.1       3.4       0.8      3.5          4.7          5.3           5.0           4.0           2.7           0.8
+ CLE     -5.1     5.5       -4.3       1.9      -1.0      3.1          7.9          5.9           4.8           3.3           9.1           8.4
+ DAL     22.2     8.2        0.5       3.5       9.5      5.5          6.1          5.6           6.9           4.3           5.9           8.3
+  TB     -0.1     6.0       -9.6       0.1       6.9      4.9          5.6          3.6           5.3           1.3           4.6           7.7
+ WAS      0.0     6.0       -2.1       2.6      -0.8      3.2          2.5          4.0           4.6           3.1           0.0           5.5
+ DET     28.3     8.8       15.0       8.3      15.0      6.7          9.1          9.9           8.2           8.9           4.4           9.3
+  LA     12.3     7.2       12.1       7.4       9.4      5.4          7.1          7.4           6.7           7.4           3.8           5.2
+  SF     34.2     9.4        8.0       6.0      29.5      9.9          6.2          7.7           9.1           6.6           6.8           6.3
+ NYJ      4.8     6.5       -1.2       2.9     -10.9      0.9          5.8          4.6           4.6           3.5           8.1           6.5
+ PHI      8.6     6.9        1.2       3.7      14.8      6.6          8.3          7.7           6.8           5.1           2.1           4.5
+  GB     15.4     7.5       17.7       9.2       6.1      4.7          7.1          6.5           6.7           8.3           2.6           3.8
+
+DataFrame 4:
+Home  HP  AP Away  Total
+  KC  18  20  BAL   38.2
+ ATL  24  22  PIT   45.3
+ BUF  43  19  ARI   61.9
+ CHI  23  18  TEN   40.8
+ CIN  22  22   NE   44.2
+ IND  25  22  HOU   46.9
+ MIA  25  21  JAC   46.4
+  NO  27  19  CAR   45.3
+ NYG  18  25  MIN   43.3
+ LAC  23  20   LV   43.2
+ SEA  26  21  DEN   47.4
+ CLE  17  14  DAL   31.6
+  TB  24  20  WAS   43.6
+ DET  37  22   LA   58.9
+  SF  23  17  NYJ   39.3
+ PHI  28  27   GB   55.0
