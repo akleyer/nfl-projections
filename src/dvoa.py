@@ -16,7 +16,7 @@ class DVOA:
 
     def _load_dave_data(self):
         team_data = {}
-        file_path = f"../data/raw/dvoa/dave.csv"
+        file_path = "../data/raw/dvoa/dave.csv"
         with open(file_path, newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
@@ -40,9 +40,6 @@ class DVOA:
                 "Defense Rush" : self._get_def_dvoa(year, "Rush")
             }
         return data
-
-    def _get_dvoa(self, year, group):
-        return
 
     def _get_def_dvoa(self, year, group):
         team_data = {}
@@ -83,28 +80,30 @@ class DVOA:
 
     def _get_rec_dvoa(self, year):
         player_data = {}
-        for position in ["wr", "te", "rb"]:
-            file_path = f"../data/raw/dvoa/{year}/{position}_receiving_dvoa.csv"
-            with open(file_path, newline='', encoding='utf-8') as csvfile:
-                reader = csv.DictReader(csvfile)
-                for row in reader:
-                    player_name = row['Full Name']
-                    receiving_dvoa = self._convert_strpct_to_float(row['DVOA'])
-                    targets = float(row['Passes'])
-                    player_data.setdefault(player_name, []).append((receiving_dvoa, targets))
+        file_path = f"../data/raw/dvoa/{year}/receiving_dvoa.csv"
+        with open(file_path, newline='', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                player_name = row['Player']
+                receiving_dvoa = self._convert_strpct_to_float(row['DVOA'])
+                targets = float(row['TAR'])
+                player_data.setdefault(player_name, []).append((receiving_dvoa, targets))
         return player_data
 
     def _get_rush_dvoa(self, year):
         player_data = {}
-        for position in ["wr", "rb"]:
-            file_path = f"../data/raw/dvoa/{year}/{position}_rushing_dvoa.csv"
-            with open(file_path, newline='', encoding='utf-8') as csvfile:
-                reader = csv.DictReader(csvfile)
-                for row in reader:
-                    player_name = row['Full Name']
+        file_path = f"../data/raw/dvoa/{year}/rushing_dvoa.csv"
+        with open(file_path, newline='', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                player_name = row['Player']
+                try:
                     rushing_dvoa = self._convert_strpct_to_float(row['DVOA'])
-                    rush_attempts = float(row['Runs'])
-                    player_data.setdefault(player_name, []).append((rushing_dvoa, rush_attempts))
+                    rush_attempts = float(row['ATT'])
+                except ValueError:
+                    rushing_dvoa = 0
+                    rush_attempts = 1
+                player_data.setdefault(player_name, []).append((rushing_dvoa, rush_attempts))
         return player_data
     
     def _get_passing_dvoa(self, year):
@@ -113,11 +112,11 @@ class DVOA:
         with open(file_path, newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                player_name = row['Full Name']
+                player_name = row['Player']
                 passing_dvoa = self._convert_strpct_to_float(row['DVOA'])
-                passing_attempts = float(row['Passes'])
+                passing_attempts = float(row['ATT'])
                 player_data.setdefault(player_name, []).append((passing_dvoa, passing_attempts))
         return player_data
     
     def _convert_strpct_to_float(self, str_pct):
-        return float(str_pct.replace("%",""))/100
+        return float(str_pct.replace("%","").replace("\"","").replace("\'",""))/100

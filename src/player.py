@@ -1,6 +1,5 @@
 import config
 import utils
-import pprint as pp
 
 class Player:
     def __init__(self, name, pos, team):
