@@ -9,7 +9,7 @@ import csv
 import logging
 from typing import Dict, List, Tuple
 
-from data_loader import load_json_data
+from data_loader import load_yaml_data
 from dvoa import DVOA
 from matchup import Matchup
 from projections import Projections
@@ -45,12 +45,10 @@ def main():
     """Main function to run the NFL projection model."""
     projections = Projections()
     dvoa = DVOA()
-    pass_rates = _load_pass_rates()
-    matchups = [
+    pass_rates = _load_pass_rates()        
+    for matchup in load_yaml_data(config.MATCHUPS_FILE):
         Matchup(matchup, projections, dvoa.get_data(), dvoa.get_dave(),
                 pass_rates).project_outcome()
-        for matchup in load_json_data(config.MATCHUPS_FILE)
-    ]
 
 
 if __name__ == "__main__":

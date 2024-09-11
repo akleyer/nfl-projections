@@ -5,11 +5,9 @@ This module defines the Team class, which represents a football team and provide
 to calculate various offensive and defensive values based on player projections and DVOA data.
 """
 
-from typing import Callable, Dict, List, Tuple
+from typing import Callable, Dict, Tuple
 
 from projections import Projections
-
-import config
 
 class Team:
     """Represents a football team."""
@@ -83,6 +81,15 @@ class Team:
         )
         return self._create_function_dict()["Pass"](total_contribution / total_passing_att)
 
+    def get_total_passing_value_def(self) -> float:
+        """Get the defensive pass value with potential multiplier."""
+        return self._create_function_dict()["DPF"](self.dvoa["2023"]["Defense Pass"][self.team_name][0])
+
+    def get_total_rushing_value_def(self) -> float:
+        """Get the defensive rush value with potential multiplier."""
+        return self._create_function_dict()["DRF"](self.dvoa["2023"]["Defense Pass"][self.team_name][0])
+
+
     def _get_receiving_value(self) -> float:
         """Calculate the receiving value based on WR, RB, and TE projections and DVOA."""
         total_targets = sum(
@@ -107,7 +114,7 @@ class Team:
         """Calculate the rushing value based on RB and WR projections and DVOA."""
         total_attempts = sum(
             player_data.get_proj_attempts() for _, player_position, player_data in self.team_projections
-            if player_position in ["WR", "RB"]
+            if player_position in ["QB", "WR", "RB"]
         )
         total_contribution = sum(
             player_data.get_rushing_dvoa(self.dvoa) * player_data.get_proj_attempts()
