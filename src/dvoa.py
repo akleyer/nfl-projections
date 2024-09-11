@@ -60,7 +60,10 @@ class DVOA:
         with open(file_path, newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                team = row['TEAM']
+                try:
+                    team = row['TEAM']
+                except:
+                    continue
                 if group == "Pass":
                     def_dvoa = self._convert_strpct_to_float(row['PASS'])
                 elif group == "Rush":
