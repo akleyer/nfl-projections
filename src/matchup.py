@@ -150,15 +150,15 @@ class Matchup:
     def _print_projected_scores(self, home_score: float, away_score: float):
         """Print projected scores for both teams."""
         print(f"\n{Fore.GREEN}{Style.BRIGHT}Projected Scores:{Style.RESET_ALL}")
-        print(f"{self.home_team.team_name:<20} {home_score:.1f}")
-        print(f"{self.away_team.team_name:<20} {away_score:.1f}")
+        print(f"{self.home_team.team_name:<20} {home_score:.0f}")
+        print(f"{self.away_team.team_name:<20} {away_score:.0f}")
 
     def _print_win_percentages(self, home_score: float, away_score: float):
         """Print win percentages for both teams."""
         home_win_pct = self._calculate_win_percentage(away_score - home_score)
         print(f"\n{Fore.GREEN}{Style.BRIGHT}Win Percentages:{Style.RESET_ALL}")
-        print(f"{self.home_team.team_name:<20} {home_win_pct:.1f}%")
-        print(f"{self.away_team.team_name:<20} {100 - home_win_pct:.1f}%")
+        print(f"{self.home_team.team_name:<20} {home_win_pct:.0f}%")
+        print(f"{self.away_team.team_name:<20} {100 - home_win_pct:.0f}%")
 
     def _print_betting_info(self, home_score: float, away_score: float):
         """Print betting information and recommendations."""
