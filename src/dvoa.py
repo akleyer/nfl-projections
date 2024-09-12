@@ -82,9 +82,9 @@ class DVOA:
             for row in reader:
                 team = row['Team']
                 if group == "Pass":
-                    ol_dvoa = self._convert_strpct_to_float(row['Adjusted Sack Rate'])
+                    ol_dvoa = utils.safe_float(row['Adj Sack %']) / 100
                 elif group == "Rush":
-                    ol_dvoa = utils.safe_float(row['Adjusted Line Yards'])
+                    ol_dvoa = utils.safe_float(row['ALYards'])
                 else:
                     raise ValueError(f"Invalid group type for OL: {group}")
                 team_data.setdefault(team, []).append(ol_dvoa)
@@ -109,7 +109,7 @@ class DVOA:
         with open(file_path, newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                player_name = row['Player']
+                player_name = row['Player'].lower()
                 try:
                     dvoa = self._convert_strpct_to_float(row[dvoa_col])
                     attempts = float(row[att_col])
