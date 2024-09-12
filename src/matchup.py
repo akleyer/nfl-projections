@@ -51,33 +51,43 @@ class Matchup:
     def _calculate_projected_points(self) -> Tuple[float, float]:
         """Calculate projected points for home and away teams."""
         home_off, home_def = self._get_adjusted_team_values(self.home_team)
+
+        print()
         away_off, away_def = self._get_adjusted_team_values(self.away_team)
+        # print(f"{self.home_team.team_name} Off: {home_off}")
+        # print(f"{self.away_team.team_name} Off: {away_off}")
+        # print("-")
+        # print(f"{self.home_team.team_name} Def: {home_def}")
+        # print(f"{self.away_team.team_name} Def: {away_def}")
+        # print("-")
 
         home_pass_rate, away_pass_rate = self._get_adjusted_pass_rates()
 
-        home_off_value = self._calculate_offensive_value(home_off, away_def, home_pass_rate)
-        away_off_value = self._calculate_offensive_value(away_off, home_def, away_pass_rate)
-
-        home_points = self._calculate_points(home_off_value)
-        away_points = self._calculate_points(away_off_value)
-
-        # Adjust for home field advantage
         home_adv = float(self.home_adv[self.home_team.team_name][0])
-        home_points += home_adv / 2
-        away_points -= home_adv / 2
+
+        home_off_value = self._calculate_offensive_value(home_off, away_def, home_pass_rate)
+        # home_off_value += home_adv / 2
+        #print(f"Home Off Value: {home_off_value}")
+        away_off_value = self._calculate_offensive_value(away_off, home_def, away_pass_rate)
+        # away_off_value -= home_adv / 2
+        #print(f"Away Off Value: {away_off_value}")
+
+        home_points = self._calculate_points(home_off_value) + (home_adv / 2)
+        away_points = self._calculate_points(away_off_value) - (home_adv / 2)
 
         return home_points, away_points
 
     def _get_adjusted_team_values(self, team: Team) -> Tuple[Dict[str, float], Dict[str, float]]:
         """Get adjusted offensive and defensive values for a team."""
         off_values = {
-            'pass': (team.get_total_passing_value() + team.get_off_dave_normalized()) / 2,
-            'rush': (team.get_total_rushing_value() + team.get_off_dave_normalized()) / 2
+            'pass': (team.get_total_passing_value()),# + team.get_off_dave_normalized()) / 2,
+            'rush': (team.get_total_rushing_value()),# + team.get_off_dave_normalized()) / 2
         }
         def_values = {
-            'pass': (team.get_total_passing_value_def() + team.get_def_dave_normalized()) / 2,
-            'rush': (team.get_total_rushing_value_def() + team.get_def_dave_normalized()) / 2
+            'pass': (team.get_total_passing_value_def()),# + team.get_def_dave_normalized()) / 2,
+            'rush': (team.get_total_rushing_value_def()),# + team.get_def_dave_normalized()) / 2
         }
+        #print(team.get_total_rushing_value_def())
         return off_values, def_values
 
     def _get_adjusted_pass_rates(self) -> Tuple[float, float]:
@@ -94,8 +104,10 @@ class Matchup:
 
     def _calculate_points(self, offensive_value: float) -> float:
         """Calculate projected points based on offensive value and field type."""
-        base = 23 if self.field_type == "turf" else 21
-        return base + 1.23 * offensive_value + 0.0692 * offensive_value**2 + 0.0242 * offensive_value**3 + 0.000665 * offensive_value**4
+        if self.field_type == 'turf':
+            return 2.5 * offensive_value + 24.333
+        else:
+            return 2.5 * offensive_value + 23.667
 
     def _print_game_analysis(self, home_points: float, away_points: float):
         """Print comprehensive game analysis including projections and betting recommendations."""
@@ -138,15 +150,15 @@ class Matchup:
     def _print_projected_scores(self, home_score: float, away_score: float):
         """Print projected scores for both teams."""
         print(f"\n{Fore.GREEN}{Style.BRIGHT}Projected Scores:{Style.RESET_ALL}")
-        print(f"{self.home_team.team_name:<20} {home_score:.2f}")
-        print(f"{self.away_team.team_name:<20} {away_score:.2f}")
+        print(f"{self.home_team.team_name:<20} {home_score:.0f}")
+        print(f"{self.away_team.team_name:<20} {away_score:.0f}")
 
     def _print_win_percentages(self, home_score: float, away_score: float):
         """Print win percentages for both teams."""
         home_win_pct = self._calculate_win_percentage(away_score - home_score)
         print(f"\n{Fore.GREEN}{Style.BRIGHT}Win Percentages:{Style.RESET_ALL}")
-        print(f"{self.home_team.team_name:<20} {home_win_pct:.2f}%")
-        print(f"{self.away_team.team_name:<20} {100 - home_win_pct:.2f}%")
+        print(f"{self.home_team.team_name:<20} {home_win_pct:.0f}%")
+        print(f"{self.away_team.team_name:<20} {100 - home_win_pct:.0f}%")
 
     def _print_betting_info(self, home_score: float, away_score: float):
         """Print betting information and recommendations."""
@@ -197,9 +209,9 @@ class Matchup:
 
         if recommendations:
             for recommendation in recommendations:
-                print(f"{Fore.YELLOW}{recommendation}")
+                print(recommendation)
         else:
-            print(f"{Fore.YELLOW}No strong betting recommendations for this game.")
+            print("No strong betting recommendations for this game.")
 
         print("\n" + "=" * 60)
 
