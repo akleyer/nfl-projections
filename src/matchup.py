@@ -13,6 +13,7 @@ from colorama import Fore, Style
 from team import Team
 from weather import WeatherConditions
 import config
+import math
 
 logger = logging.getLogger(__name__)
 
@@ -192,20 +193,62 @@ class Matchup:
         print(f"\n{Fore.GREEN}{Style.BRIGHT}Bet Recommendations:{Style.RESET_ALL}")
         recommendations = []
 
-        if edges['home_ml'] > 5:
-            ml_factor = 5 if self.betting_data['home_spread'] > 0 else 10
-            recommendations.append(f"Bet on {self.home_team.team_name} to win | {abs(edges['home_ml']/ml_factor):.2f}u")
-        if edges['away_ml'] > 5:
-            ml_factor = 5 if self.betting_data['away_spread'] > 0 else 10
-            recommendations.append(f"Bet on {self.away_team.team_name} to win | {abs(edges['away_ml']/ml_factor):.2f}u")
-        if edges['spread'] > 2:
-            recommendations.append(f"Bet on {self.home_team.team_name} to cover the spread | {abs(edges['spread']):.2f}u")
-        if edges['spread'] < -2:
-            recommendations.append(f"Bet on {self.away_team.team_name} to cover the spread | {abs(edges['spread']):.2f}u")
-        if edges['total'] > 2:
-            recommendations.append(f"Bet on the Over | {abs(edges['total']):.2f}u")
-        if edges['total'] < -2:
-            recommendations.append(f"Bet on the Under | {abs(edges['total']):.2f}u")
+        # Example usage
+        bankroll = 2000
+        # edge_ml = 0.05  # 5% edge
+        # odds_ml = 2.22  # +122 odds
+
+        # edge_spread = 0.03  # 3% edge
+        # odds_spread = 1.91  # -110 odds
+
+        # bet_size_ml = calculate_bet_size(edge_ml, odds_ml, bankroll)
+        # bet_size_spread = calculate_bet_size(edge_spread, odds_spread, bankroll)
+
+        # print(f"Moneyline bet size: ${bet_size_ml:.2f}")
+        # print(f"Spread bet size: ${bet_size_spread:.2f}")
+
+        if edges['home_ml'] > 0:
+            odds_ml = self._american_to_decimal(self.betting_data['home_ml'])
+            edge_ml = edges['home_ml'] / 100
+            bet_size_ml = self._calculate_bet_size(edge_ml, odds_ml, bankroll)
+            ml_plus = "+" if self.betting_data['home_ml'] > 0 else ""
+            recommendations.append(f"Bet ${bet_size_ml:.0f} on {self.home_team.team_name} moneyline ({ml_plus}{self.betting_data['home_ml']}) | Edge: {edge_ml * 100:.1f}%")
+        if edges['away_ml'] > 0:
+            odds_ml = self._american_to_decimal(self.betting_data['away_ml'])
+            edge_ml = edges['away_ml'] / 100
+            bet_size_ml = self._calculate_bet_size(edge_ml, odds_ml, bankroll)
+            ml_plus = "+" if self.betting_data['away_ml'] > 0 else ""
+            recommendations.append(f"Bet ${bet_size_ml:.0f} on {self.away_team.team_name} moneyline ({ml_plus}{self.betting_data['away_ml']}) | Edge: {edge_ml * 100:.1f}%")
+
+        if edges['spread'] < 0:
+            odds_ml = self._american_to_decimal(-110)
+            edge_ml = edges['spread'] / 100
+            bet_size_ml = self._calculate_bet_size(edge_ml, odds_ml, bankroll)
+            recommendations.append(f"Bet ${bet_size_ml:.0f} on {self.home_team.team_name} spread ({self.betting_data['home_spread']}) | Edge: {edge_ml * 100:.1f}")
+        else:
+            odds_ml = self._american_to_decimal(-110)
+            edge_ml = edges['spread'] / 100
+            bet_size_ml = self._calculate_bet_size(edge_ml, odds_ml, bankroll)
+            recommendations.append(f"Bet ${bet_size_ml:.0f} on {self.away_team.team_name} spread ({self.betting_data['away_spread']}) | Edge: {edge_ml * 100:.1f}")
+
+        odds_tot = self._american_to_decimal(-110)
+        edge_tot = edges['total'] / 100
+        bet_size_tot = self._calculate_bet_size(edge_tot, odds_tot, bankroll)
+        if edges['total'] > 0:
+            recommendations.append(f"Bet ${bet_size_tot:.0f} on O{self.betting_data['total']} | Edge: {edge_tot * 100:.1f}")
+        else:
+            recommendations.append(f"Bet ${bet_size_ml:.0f} on U{self.betting_data['total']} | Edge: {edge_tot * 100:.1f}")
+        # if edges['away_ml'] > 5:
+        #     ml_factor = 5 if self.betting_data['away_spread'] > 0 else 10
+        #     recommendations.append(f"Bet on {self.away_team.team_name} to win | {abs(edges['away_ml']/ml_factor):.2f}u")
+        # if edges['spread'] > 2:
+        #     recommendations.append(f"Bet on {self.home_team.team_name} to cover the spread | {abs(edges['spread']):.2f}u")
+        # if edges['spread'] < -2:
+        #     recommendations.append(f"Bet on {self.away_team.team_name} to cover the spread | {abs(edges['spread']):.2f}u")
+        # if edges['total'] > 2:
+        #     recommendations.append(f"Bet on the Over | {abs(edges['total']):.2f}u")
+        # if edges['total'] < -2:
+        #     recommendations.append(f"Bet on the Under | {abs(edges['total']):.2f}u")
 
         if recommendations:
             for recommendation in recommendations:
@@ -214,6 +257,52 @@ class Matchup:
             print("No strong betting recommendations for this game.")
 
         print("\n" + "=" * 60)
+
+
+    def _american_to_decimal(self, american_odds):
+        """
+        Convert American odds to decimal odds.
+        
+        :param american_odds: Integer representing American odds (e.g., +150, -200)
+        :return: Float representing the equivalent decimal odds
+        """
+        if american_odds == 0:
+            raise ValueError("American odds cannot be zero.")
+        
+        if american_odds > 0:
+            return (american_odds / 100) + 1
+        else:
+            return (100 / abs(american_odds)) + 1
+
+    def _calculate_bet_size(self, edge, odds, bankroll, max_bet_percentage=1, kelly_fraction=0.25):
+        """
+        Calculate the bet size based on the edge and odds.
+        
+        :param edge: The perceived edge as a decimal (e.g., 0.05 for 5%)
+        :param odds: The decimal odds (e.g., 2.0 for +100, 1.91 for -110)
+        :param bankroll: Your total bankroll
+        :param max_bet_percentage: Maximum percentage of bankroll to bet (default 5%)
+        :return: The recommended bet size
+        """
+
+        # Calculate the probability implied by the odds
+        implied_prob = 1 / odds
+        
+        # Calculate the estimated actual probability
+        estimated_prob = implied_prob + edge
+        
+        # Kelly Criterion formula
+        kelly_stake = (estimated_prob * odds - 1) / (odds - 1)
+        
+        # Apply the Kelly fraction
+        fractional_kelly = kelly_stake * kelly_fraction
+        
+        # Limit the stake to the max bet percentage
+        final_stake = min(fractional_kelly, max_bet_percentage)
+        
+        return bankroll * final_stake
+
+    
 
     @staticmethod
     def _calculate_win_percentage(point_difference: float) -> float:
