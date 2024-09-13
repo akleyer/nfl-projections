@@ -186,73 +186,41 @@ class Matchup:
             'total': (home_score + away_score) - self.betting_data["total"]
         }
 
-        self._print_bet_recommendations(edges)
+        self._print_bet_recommendations(edges, home_score + away_score)
 
-    def _print_bet_recommendations(self, edges: Dict[str, float]):
+    def _print_bet_recommendations(self, edges: Dict[str, float], proj_total: float):
         """Print bet recommendations based on calculated edges."""
         print(f"\n{Fore.GREEN}{Style.BRIGHT}Bet Recommendations:{Style.RESET_ALL}")
+        bankroll = 2000
         recommendations = []
 
-        # Example usage
-        bankroll = 2000
-        # edge_ml = 0.05  # 5% edge
-        # odds_ml = 2.22  # +122 odds
+        def format_recommendation(team, bet_type, odds, edge, bet_size):
+            odds_str = f"+{odds}" if odds > 0 else str(odds)
+            return f"{"Moneyline:":<10} {team:<5} ({odds_str}) ${bet_size:<3.0f}  | Edge: {edge:.1f}%"
 
-        # edge_spread = 0.03  # 3% edge
-        # odds_spread = 1.91  # -110 odds
-
-        # bet_size_ml = calculate_bet_size(edge_ml, odds_ml, bankroll)
-        # bet_size_spread = calculate_bet_size(edge_spread, odds_spread, bankroll)
-
-        # print(f"Moneyline bet size: ${bet_size_ml:.2f}")
-        # print(f"Spread bet size: ${bet_size_spread:.2f}")
-
-        if edges['home_ml'] > 0:
-            odds_ml = self._american_to_decimal(self.betting_data['home_ml'])
-            edge_ml = edges['home_ml'] / 100
-            bet_size_ml = self._calculate_bet_size(edge_ml, odds_ml, bankroll)
-            ml_plus = "+" if self.betting_data['home_ml'] > 0 else ""
-            recommendations.append(f"Bet ${bet_size_ml:.0f} on {self.home_team.team_name} moneyline ({ml_plus}{self.betting_data['home_ml']}) | Edge: {edge_ml * 100:.1f}%")
-        if edges['away_ml'] > 0:
-            odds_ml = self._american_to_decimal(self.betting_data['away_ml'])
-            edge_ml = edges['away_ml'] / 100
-            bet_size_ml = self._calculate_bet_size(edge_ml, odds_ml, bankroll)
-            ml_plus = "+" if self.betting_data['away_ml'] > 0 else ""
-            recommendations.append(f"Bet ${bet_size_ml:.0f} on {self.away_team.team_name} moneyline ({ml_plus}{self.betting_data['away_ml']}) | Edge: {edge_ml * 100:.1f}%")
-
-        if edges['spread'] < 0:
-            odds_ml = self._american_to_decimal(-110)
-            edge_ml = edges['spread'] / 100
-            bet_size_ml = self._calculate_bet_size(edge_ml, odds_ml, bankroll)
-            recommendations.append(f"Bet ${bet_size_ml:.0f} on {self.home_team.team_name} spread ({self.betting_data['home_spread']}) | Edge: {edge_ml * 100:.1f}")
-        else:
-            odds_ml = self._american_to_decimal(-110)
-            edge_ml = edges['spread'] / 100
-            bet_size_ml = self._calculate_bet_size(edge_ml, odds_ml, bankroll)
-            recommendations.append(f"Bet ${bet_size_ml:.0f} on {self.away_team.team_name} spread ({self.betting_data['away_spread']}) | Edge: {edge_ml * 100:.1f}")
-
-        odds_tot = self._american_to_decimal(-110)
-        edge_tot = edges['total'] / 100
-        bet_size_tot = self._calculate_bet_size(edge_tot, odds_tot, bankroll)
-        if edges['total'] > 0:
-            recommendations.append(f"Bet ${bet_size_tot:.0f} on O{self.betting_data['total']} | Edge: {edge_tot * 100:.1f}")
-        else:
-            recommendations.append(f"Bet ${bet_size_ml:.0f} on U{self.betting_data['total']} | Edge: {edge_tot * 100:.1f}")
-        # if edges['away_ml'] > 5:
-        #     ml_factor = 5 if self.betting_data['away_spread'] > 0 else 10
-        #     recommendations.append(f"Bet on {self.away_team.team_name} to win | {abs(edges['away_ml']/ml_factor):.2f}u")
-        # if edges['spread'] > 2:
-        #     recommendations.append(f"Bet on {self.home_team.team_name} to cover the spread | {abs(edges['spread']):.2f}u")
-        # if edges['spread'] < -2:
-        #     recommendations.append(f"Bet on {self.away_team.team_name} to cover the spread | {abs(edges['spread']):.2f}u")
-        # if edges['total'] > 2:
-        #     recommendations.append(f"Bet on the Over | {abs(edges['total']):.2f}u")
-        # if edges['total'] < -2:
-        #     recommendations.append(f"Bet on the Under | {abs(edges['total']):.2f}u")
+        for bet_type, edge in edges.items():
+            if bet_type in ('home_ml', 'away_ml'):
+                if edge <= 0:
+                    continue
+                team = self.home_team.team_name if bet_type == 'home_ml' else self.away_team.team_name
+                odds = self.betting_data[bet_type]
+                edge_decimal = edge / 100
+                bet_size = self._calculate_bet_size(edge_decimal, self._american_to_decimal(odds), bankroll)
+                recommendations.append(format_recommendation(team, "moneyline", odds, edge, bet_size))
+            # elif bet_type == 'spread':
+            #     team = self.home_team.team_name if edge < 0 else self.away_team.team_name
+            #     spread = self.betting_data['home_spread'] if edge < 0 else self.betting_data['away_spread']
+            #     edge_decimal = abs(edge) / 100
+            #     bet_size = self._calculate_bet_size(edge_decimal, self._american_to_decimal(-110), bankroll)
+            #     recommendations.append(f"{"Spread:":<10} {team:<5} ({spread})  ${bet_size:<4.0f} | Proj Spread ({}) | Edge: {abs(edge):.1f}%")
+            elif bet_type == 'total':
+                over_under = "o" if edge > 0 else "u"
+                edge_decimal = abs(edge) / 100
+                bet_size = self._calculate_bet_size(edge_decimal, self._american_to_decimal(-110), bankroll)
+                recommendations.append(f"{"Total:":<10} {over_under}{self.betting_data['total']:<11} ${bet_size:<4.0f} | Proj Total ({proj_total:.1f}) | Edge: {abs(edge):.1f}%")
 
         if recommendations:
-            for recommendation in recommendations:
-                print(recommendation)
+            print(*recommendations, sep='\n')
         else:
             print("No strong betting recommendations for this game.")
 
