@@ -186,17 +186,23 @@ class Matchup:
             'total': (home_score + away_score) - self.betting_data["total"]
         }
 
-        self._print_bet_recommendations(edges, home_score + away_score)
+        other_data = {
+            'proj_tot': home_score + away_score,
+            'h_impl_win': home_implied_win_pct,
+            'a_impl_win': 100 - home_implied_win_pct
+        }
 
-    def _print_bet_recommendations(self, edges: Dict[str, float], proj_total: float):
+        self._print_bet_recommendations(edges, other_data)
+
+    def _print_bet_recommendations(self, edges: Dict[str, float], game_data: Dict[str, float]):
         """Print bet recommendations based on calculated edges."""
         print(f"\n{Fore.GREEN}{Style.BRIGHT}Bet Recommendations:{Style.RESET_ALL}")
-        bankroll = 2000
+        bankroll = 1000
         recommendations = []
 
-        def format_recommendation(team, bet_type, odds, edge, bet_size):
+        def format_recommendation(team, bet_type, odds, edge, bet_size, impl_win):
             odds_str = f"+{odds}" if odds > 0 else str(odds)
-            return f"{"Moneyline:":<10} {team:<5} ({odds_str}) ${bet_size:<3.0f}  | Edge: {edge:.1f}%"
+            return f"{"Moneyline:":<10} {team:<5} ({odds_str}) ${bet_size:<3.0f}  | Implied Win% ({impl_win:.1f}) | Edge: {edge:.1f}%"
 
         for bet_type, edge in edges.items():
             if bet_type in ('home_ml', 'away_ml'):
@@ -206,7 +212,8 @@ class Matchup:
                 odds = self.betting_data[bet_type]
                 edge_decimal = edge / 100
                 bet_size = self._calculate_bet_size(edge_decimal, self._american_to_decimal(odds), bankroll)
-                recommendations.append(format_recommendation(team, "moneyline", odds, edge, bet_size))
+                impl_win = game_data['h_impl_win'] if bet_type == 'home_ml' else game_data['a_impl_win']
+                recommendations.append(format_recommendation(team, "moneyline", odds, edge, bet_size, impl_win))
             # elif bet_type == 'spread':
             #     team = self.home_team.team_name if edge < 0 else self.away_team.team_name
             #     spread = self.betting_data['home_spread'] if edge < 0 else self.betting_data['away_spread']
@@ -217,7 +224,7 @@ class Matchup:
                 over_under = "o" if edge > 0 else "u"
                 edge_decimal = abs(edge) / 100
                 bet_size = self._calculate_bet_size(edge_decimal, self._american_to_decimal(-110), bankroll)
-                recommendations.append(f"{"Total:":<10} {over_under}{self.betting_data['total']:<11} ${bet_size:<4.0f} | Proj Total ({proj_total:.1f}) | Edge: {abs(edge):.1f}%")
+                recommendations.append(f"{"Total:":<10} {over_under}{self.betting_data['total']:<11} ${bet_size:<4.0f} | Proj Total   ({game_data['proj_tot']:.1f}) | Edge: {abs(edge):.1f}%")
 
         if recommendations:
             print(*recommendations, sep='\n')
