@@ -16,7 +16,7 @@
 DATA_DIR = "../data/raw/"
 
 # Define Week
-WEEK_NUM = 2
+WEEK_NUM = 3
 
 # File paths
 FTN_PROJECTIONS_FILE = f"{DATA_DIR}projections/2024/week{WEEK_NUM}/ftn_all_projections.csv"

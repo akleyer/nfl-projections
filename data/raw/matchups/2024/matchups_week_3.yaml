@@ -1,0 +1,223 @@
+- home: NYJ
+  away: NE
+  weather: 36
+  wind: 10
+  temp: 70
+  dome: "no"
+  field: turf
+  betting_lines:
+    home_ml: -278
+    away_ml: 222
+    home_spread: -6
+    away_spread: 6
+    total: 38.5
+
+- home: CLE
+  away: NYG
+  weather: 7
+  wind: 9
+  temp: 81
+  dome: "no"
+  field: grass
+  betting_lines:
+    home_ml: -305
+    away_ml: 240
+    home_spread: -6.5
+    away_spread: 6.5
+    total: 38.5
+
+- home: TEN
+  away: GB
+  weather: 0
+  wind: 5
+  dome: "no"
+  temp: 90
+  field: turf
+  betting_lines:
+    home_ml: -135
+    away_ml: 115
+    home_spread: -2
+    away_spread: 2
+    total: 38
+
+- home: IND
+  away: CHI
+  weather: null
+  wind: null
+  temp: null
+  dome: "yes"
+  field: turf
+  betting_lines:
+    home_ml: -120
+    away_ml: 100
+    home_spread: -1
+    away_spread: 1
+    total: 43.5
+
+- home: MIN
+  away: HOU
+  weather: null
+  wind: null
+  temp: null
+  dome: "yes"
+  field: turf
+  betting_lines:
+    home_ml: 110
+    away_ml: -130
+    home_spread: 1.5
+    away_spread: -1.5
+    total: 46
+
+- home: "NO"
+  away: PHI
+  weather: null
+  wind: null
+  temp: null
+  dome: "yes"
+  field: turf
+  betting_lines:
+    home_ml: -155
+    away_ml: 130
+    home_spread: -3
+    away_spread: 3
+    total: 49.5
+
+- home: PIT
+  away: LAC
+  weather: 4
+  wind: 7
+  temp: 81
+  dome: "no"
+  field: grass
+  betting_lines:
+    home_ml: -125
+    away_ml: 105
+    home_spread: -1.5
+    away_spread: 1.5
+    total: 35.5
+
+- home: TB
+  away: DEN
+  weather: 0
+  wind: 8
+  dome: "no"
+  temp: 88
+  field: grass
+  betting_lines:
+    home_ml: -335
+    away_ml: 260
+    home_spread: -6.5
+    away_spread: 6.5
+    total: 40
+
+- home: LV
+  away: CAR
+  weather: null
+  wind: null
+  dome: "yes"
+  temp: null
+  field: grass
+  betting_lines:
+    home_ml: -235
+    away_ml: 192
+    home_spread: -5.5
+    away_spread: 5.5
+    total: 40
+
+- home: SEA
+  away: MIA
+  weather: 37
+  wind: 7
+  dome: "no"
+  temp: 65
+  field: turf
+  betting_lines:
+    home_ml: -220
+    away_ml: 180
+    home_spread: -4.5
+    away_spread: 4.5
+    total: 41.5
+
+- home: DAL
+  away: BAL
+  weather: null
+  wind: null
+  dome: "yes"
+  temp: null
+  field: turf
+  betting_lines:
+    home_ml: -105
+    away_ml: -115
+    home_spread: 1
+    away_spread: -1
+    total: 48.5
+
+- home: LA
+  away: SF
+  weather: null
+  wind: null
+  dome: "yes"
+  temp: null
+  field: turf
+  betting_lines:
+    home_ml: 285
+    away_ml: -365
+    home_spread: 7.5
+    away_spread: -7.5
+    total: 44.5
+
+- home: ARI
+  away: DET
+  weather: null
+  wind: null
+  dome: "yes"
+  temp: null
+  field: grass
+  betting_lines:
+    home_ml: 122
+    away_ml: -145
+    home_spread: 3
+    away_spread: -3
+    total: 51.5
+
+- home: ATL
+  away: KC
+  weather: null
+  wind: null
+  dome: "yes"
+  temp: null
+  field: turf
+  betting_lines:
+    home_ml: 150
+    away_ml: -178
+    home_spread: 3.5
+    away_spread: -3.5
+    total: 46.5
+
+- home: BUF
+  away: JAC
+  weather: 23
+  wind: 6
+  dome: "no"
+  temp: 62
+  field: turf
+  betting_lines:
+    home_ml: -240
+    away_ml: 196
+    home_spread: -5
+    away_spread: 5
+    total: 45.5
+
+- home: CIN
+  away: WAS
+  weather: 20
+  wind: 5
+  dome: "no"
+  temp: 77
+  field: turf
+  betting_lines:
+    home_ml: -365
+    away_ml: 285
+    home_spread: -7.5
+    away_spread: 7.5
+    total: 47

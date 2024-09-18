@@ -10,8 +10,6 @@ class Projections:
 
     def _load_projections(self):
         ftn_projections = self._load_ftn_projections()
-        pp.pprint(ftn_projections)
-        # quit()
         fantasy_data_projections = self._load_fantasydata_projections(ftn_projections)
         return ftn_projections
 

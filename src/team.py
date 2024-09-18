@@ -31,10 +31,10 @@ class Team:
             "Pass": create_linear_function(-.80, 0, .55, 10),
             "Rush": create_linear_function(-.20, 0, .25, 10),
             "Rec": create_linear_function(-.20, 0, .30, 10),
-            "OLPF": create_linear_function(.036, 0, .013, 10),
-            "OLRF": create_linear_function(1.12, 0, 1.46, 10),
-            "DPF": create_linear_function(.09, 0, -.0475, 10),
-            "DRF": create_linear_function(.0125, 0, -.055, 10),
+            "OLPF": create_linear_function(.85, 0, .25, 10),
+            "OLRF": create_linear_function(22.5, 0, 35.75, 10),
+            "DPF": create_linear_function(3.55, 0, -1.6, 10),
+            "DRF": create_linear_function(0.85, 0, -2, 10),
             "DAVE DEF": create_linear_function(9.5, 0, -10.5, 10),
             "DAVE OFF": create_linear_function(-17, 0, 17, 10)
         }
@@ -55,7 +55,7 @@ class Team:
             }.items()
         )
 
-        #print(f"  O: {self.team_name} P: {round(offensive_pass_value,1)}")
+        # print(f"  O: {self.team_name} P: {round(offensive_pass_value,1)}")
 
         return offensive_pass_value
 
@@ -105,23 +105,23 @@ class Team:
     def _get_offensive_line_pass_value(self) -> float:
         """Get the offensive line pass value based on DVOA."""
         _weighted_avg = (
-            ((17 * self.dvoa["2021"]["OL Pass"][self.team_name][0]) / 8) + \
-            ((17 * self.dvoa["2022"]["OL Pass"][self.team_name][0]) / 4) + \
-            ((17 * self.dvoa["2023"]["OL Pass"][self.team_name][0]) / 2) + \
-            (1  * self.dvoa["2024"]["OL Pass"][self.team_name][0])
-        ) / 52
-        # print(_weighted_avg)
+            ((self.dvoa["2021"]["OL Pass"][self.team_name][0]) / 8) + \
+            ((self.dvoa["2022"]["OL Pass"][self.team_name][0]) / 4) + \
+            ((self.dvoa["2023"]["OL Pass"][self.team_name][0]) / 2) + \
+            (self.dvoa["2024"]["OL Pass"][self.team_name][0])
+        ) * 15 / 4
+        #print(_weighted_avg)
         return self._create_function_dict()["OLPF"](_weighted_avg)
 
     def _get_offensive_line_rush_value(self) -> float:
         """Get the offensive line rush value based on DVOA."""
         _weighted_avg = (
-            ((17 * self.dvoa["2021"]["OL Run"][self.team_name][0]) / 8) + \
-            ((17 * self.dvoa["2022"]["OL Run"][self.team_name][0]) / 4) + \
-            ((17 * self.dvoa["2023"]["OL Run"][self.team_name][0]) / 2) + \
-            (1  * self.dvoa["2024"]["OL Run"][self.team_name][0])
-        ) / 52
-        # print(_weighted_avg)
+            ((self.dvoa["2021"]["OL Run"][self.team_name][0]) / 8) + \
+            ((self.dvoa["2022"]["OL Run"][self.team_name][0]) / 4) + \
+            ((self.dvoa["2023"]["OL Run"][self.team_name][0]) / 2) + \
+            (self.dvoa["2024"]["OL Run"][self.team_name][0])
+        ) * 15 / 4
+        #print(_weighted_avg)
         return self._create_function_dict()["OLRF"](_weighted_avg)
 
     def _get_rushing_value(self) -> float:
@@ -140,23 +140,23 @@ class Team:
     def get_total_passing_value_def(self) -> float:
         """Get the defensive pass value with potential multiplier."""
         _weighted_avg = (
-            ((17 * self.dvoa["2021"]["Defense Pass"][self.team_name][0]) / 8) + \
-            ((17 * self.dvoa["2022"]["Defense Pass"][self.team_name][0]) / 4) + \
-            ((17 * self.dvoa["2023"]["Defense Pass"][self.team_name][0]) / 2) + \
-            (1  * self.dvoa["2024"]["Defense Pass"][self.team_name][0])
-        ) / 52
-        #print(_weighted_avg)
+            ((self.dvoa["2021"]["Defense Pass"][self.team_name][0]) / 8) + \
+            ((self.dvoa["2022"]["Defense Pass"][self.team_name][0]) / 4) + \
+            ((self.dvoa["2023"]["Defense Pass"][self.team_name][0]) / 2) + \
+            (self.dvoa["2024"]["Defense Pass"][self.team_name][0])
+        ) * 15 / 4
+        # print(_weighted_avg)
         # print(f"  D: {self.team_name} P: {round(self._create_function_dict()["DPF"](_weighted_avg),1)}")
         return self._create_function_dict()["DPF"](_weighted_avg)
 
     def get_total_rushing_value_def(self) -> float:
         """Get the defensive rush value with potential multiplier."""
         _weighted_avg = (
-            ((17 * self.dvoa["2021"]["Defense Rush"][self.team_name][0]) / 8) + \
-            ((17 * self.dvoa["2022"]["Defense Rush"][self.team_name][0]) / 4) + \
-            ((17 * self.dvoa["2023"]["Defense Rush"][self.team_name][0]) / 2) + \
-            (1  * self.dvoa["2024"]["Defense Rush"][self.team_name][0])
-        ) / 52
+            ((self.dvoa["2021"]["Defense Rush"][self.team_name][0]) / 8) + \
+            ((self.dvoa["2022"]["Defense Rush"][self.team_name][0]) / 4) + \
+            ((self.dvoa["2023"]["Defense Rush"][self.team_name][0]) / 2) + \
+            (self.dvoa["2024"]["Defense Rush"][self.team_name][0])
+        ) * 15 / 4
         # print(round(_weighted_avg,3))
         # print(f"  D: {self.team_name} R: {round(self._create_function_dict()["DRF"](_weighted_avg),1)}")
         return self._create_function_dict()["DRF"](_weighted_avg)
