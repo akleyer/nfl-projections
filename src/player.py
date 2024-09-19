@@ -118,3 +118,30 @@ class Player:
             proj_key: utils.safe_float(player_data[ftn_key])
             for proj_key, ftn_key in projection_mappings.items()
         }
+    
+    def load_fd_data(self, player_data: Dict[str, str]):
+        """Load player projections from FTN data."""
+        projection_mappings = {
+            "PassAtt": "pass_att",
+            "PassComp": "pass_cmp",
+            "PassTDs": "pass_td",
+            "PassYds": "pass_yds",
+            "PassInt": "pass_int",
+            "RushAtt": "rush_att",
+            "RushYds": "rush_yds",
+            "RushTDs": "rush_td",
+            "Targets": "rec_tgt",
+            "Receptions": "rec",
+            "RecYards": "rec_yds",
+            "RecTDs": "rec_td",
+            "Fumbles": "fum"
+        }
+            
+        for proj_key, fd_key in projection_mappings.items():
+            original_value = utils.safe_float(self.projections[proj_key])
+            try:
+                incoming_value = utils.safe_float(player_data[fd_key])
+            except KeyError:
+                continue
+            new_value = (original_value + incoming_value) / 2
+            self.projections[proj_key] = new_value

@@ -13,6 +13,7 @@ from colorama import Fore, Style
 from team import Team
 from weather import WeatherConditions
 import config
+import math
 
 logger = logging.getLogger(__name__)
 
@@ -185,35 +186,98 @@ class Matchup:
             'total': (home_score + away_score) - self.betting_data["total"]
         }
 
-        self._print_bet_recommendations(edges)
+        other_data = {
+            'proj_tot': home_score + away_score,
+            'h_impl_win': home_implied_win_pct,
+            'a_impl_win': 100 - home_implied_win_pct
+        }
 
-    def _print_bet_recommendations(self, edges: Dict[str, float]):
+        self._print_bet_recommendations(edges, other_data)
+
+    def _print_bet_recommendations(self, edges: Dict[str, float], game_data: Dict[str, float]):
         """Print bet recommendations based on calculated edges."""
         print(f"\n{Fore.GREEN}{Style.BRIGHT}Bet Recommendations:{Style.RESET_ALL}")
+        bankroll = 1000
         recommendations = []
 
-        if edges['home_ml'] > 5:
-            ml_factor = 5 if self.betting_data['home_spread'] > 0 else 10
-            recommendations.append(f"Bet on {self.home_team.team_name} to win | {abs(edges['home_ml']/ml_factor):.2f}u")
-        if edges['away_ml'] > 5:
-            ml_factor = 5 if self.betting_data['away_spread'] > 0 else 10
-            recommendations.append(f"Bet on {self.away_team.team_name} to win | {abs(edges['away_ml']/ml_factor):.2f}u")
-        if edges['spread'] > 2:
-            recommendations.append(f"Bet on {self.home_team.team_name} to cover the spread | {abs(edges['spread']):.2f}u")
-        if edges['spread'] < -2:
-            recommendations.append(f"Bet on {self.away_team.team_name} to cover the spread | {abs(edges['spread']):.2f}u")
-        if edges['total'] > 2:
-            recommendations.append(f"Bet on the Over | {abs(edges['total']):.2f}u")
-        if edges['total'] < -2:
-            recommendations.append(f"Bet on the Under | {abs(edges['total']):.2f}u")
+        def format_recommendation(team, bet_type, odds, edge, bet_size, impl_win):
+            odds_str = f"+{odds}" if odds > 0 else str(odds)
+            return f"{"Moneyline:":<10} {team:<5} ({odds_str}) ${bet_size:<3.0f}  | Implied Win% ({impl_win:.1f}) | Edge: {edge:.1f}%"
+
+        for bet_type, edge in edges.items():
+            if bet_type in ('home_ml', 'away_ml'):
+                if edge <= 0:
+                    continue
+                team = self.home_team.team_name if bet_type == 'home_ml' else self.away_team.team_name
+                odds = self.betting_data[bet_type]
+                edge_decimal = edge / 100
+                bet_size = self._calculate_bet_size(edge_decimal, self._american_to_decimal(odds), bankroll)
+                impl_win = game_data['h_impl_win'] if bet_type == 'home_ml' else game_data['a_impl_win']
+                recommendations.append(format_recommendation(team, "moneyline", odds, edge, bet_size, impl_win))
+            # elif bet_type == 'spread':
+            #     team = self.home_team.team_name if edge < 0 else self.away_team.team_name
+            #     spread = self.betting_data['home_spread'] if edge < 0 else self.betting_data['away_spread']
+            #     edge_decimal = abs(edge) / 100
+            #     bet_size = self._calculate_bet_size(edge_decimal, self._american_to_decimal(-110), bankroll)
+            #     recommendations.append(f"{"Spread:":<10} {team:<5} ({spread})  ${bet_size:<4.0f} | Proj Spread ({}) | Edge: {abs(edge):.1f}%")
+            elif bet_type == 'total':
+                over_under = "o" if edge > 0 else "u"
+                edge_decimal = abs(edge) / 100
+                bet_size = self._calculate_bet_size(edge_decimal, self._american_to_decimal(-110), bankroll)
+                recommendations.append(f"{"Total:":<10} {over_under}{self.betting_data['total']:<11} ${bet_size:<4.0f} | Proj Total   ({game_data['proj_tot']:.1f}) | Edge: {abs(edge):.1f}%")
 
         if recommendations:
-            for recommendation in recommendations:
-                print(recommendation)
+            print(*recommendations, sep='\n')
         else:
             print("No strong betting recommendations for this game.")
 
         print("\n" + "=" * 60)
+
+
+    def _american_to_decimal(self, american_odds):
+        """
+        Convert American odds to decimal odds.
+        
+        :param american_odds: Integer representing American odds (e.g., +150, -200)
+        :return: Float representing the equivalent decimal odds
+        """
+        if american_odds == 0:
+            raise ValueError("American odds cannot be zero.")
+        
+        if american_odds > 0:
+            return (american_odds / 100) + 1
+        else:
+            return (100 / abs(american_odds)) + 1
+
+    def _calculate_bet_size(self, edge, odds, bankroll, max_bet_percentage=1, kelly_fraction=0.25):
+        """
+        Calculate the bet size based on the edge and odds.
+        
+        :param edge: The perceived edge as a decimal (e.g., 0.05 for 5%)
+        :param odds: The decimal odds (e.g., 2.0 for +100, 1.91 for -110)
+        :param bankroll: Your total bankroll
+        :param max_bet_percentage: Maximum percentage of bankroll to bet (default 5%)
+        :return: The recommended bet size
+        """
+
+        # Calculate the probability implied by the odds
+        implied_prob = 1 / odds
+        
+        # Calculate the estimated actual probability
+        estimated_prob = implied_prob + edge
+        
+        # Kelly Criterion formula
+        kelly_stake = (estimated_prob * odds - 1) / (odds - 1)
+        
+        # Apply the Kelly fraction
+        fractional_kelly = kelly_stake * kelly_fraction
+        
+        # Limit the stake to the max bet percentage
+        final_stake = min(fractional_kelly, max_bet_percentage)
+        
+        return bankroll * final_stake
+
+    
 
     @staticmethod
     def _calculate_win_percentage(point_difference: float) -> float:
