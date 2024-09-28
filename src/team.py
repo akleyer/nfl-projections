@@ -12,11 +12,12 @@ from projections import Projections
 class Team:
     """Represents a football team."""
 
-    __slots__ = ['team_name', 'dvoa', 'team_projections', 'dave_off', 'dave_def', 'dave_st']
+    __slots__ = ['team_name', 'dvoa', 'pff', 'team_projections', 'dave_off', 'dave_def', 'dave_st']
 
-    def __init__(self, team_name: str, projections: Projections, dvoa: Dict, dave: Dict):
+    def __init__(self, team_name: str, projections: Projections, dvoa: Dict, dave: Dict, pff_data: Dict):
         self.team_name = team_name
         self.dvoa = dvoa
+        self.pff = pff_data
         self.team_projections = projections.get_team_projections(self.team_name)
         self.dave_off, self.dave_def, self.dave_st = self._get_dave_values(dave)
 
@@ -36,7 +37,8 @@ class Team:
             "DPF": create_linear_function(3.55, 0, -1.6, 10),
             "DRF": create_linear_function(0.85, 0, -2, 10),
             "DAVE DEF": create_linear_function(9.5, 0, -10.5, 10),
-            "DAVE OFF": create_linear_function(-17, 0, 17, 10)
+            "DAVE OFF": create_linear_function(-17, 0, 17, 10),
+            "PFF Pass": create_linear_function(30,0,95,10)
         }
 
     def get_total_passing_value(self) -> float:
@@ -87,7 +89,25 @@ class Team:
             for _, player_position, player_data in self.team_projections if player_position == "QB"
         )
 
-        return self._create_function_dict()["Pass"](total_contribution / total_passing_att)
+        normalized_dvoa_value = self._create_function_dict()["Pass"](total_contribution / total_passing_att)
+        # import pprint
+        # pprint.pprint(self.pff)
+        pff_passing_data = self.pff["2024"]["Passing"]
+
+        total_pff_player_grade = 0
+        total_passes = 0
+        total_cont = 0
+        for _, player_position, player_data in self.team_projections:
+            if player_position == "QB":
+                total_pff_player_grade += pff_passing_data[player_data.name][0][0]
+                total_passes += pff_passing_data[player_data.name][0][1]
+                total_cont = pff_passing_data[player_data.name][0][0] * pff_passing_data[player_data.name][0][1]
+
+        pff_player_grade = self._create_function_dict()["PFF Pass"](total_cont / total_passes)
+        # print(normalized_dvoa_value)
+        # print(pff_player_grade)
+
+        return (normalized_dvoa_value + pff_player_grade) / 2
 
     def _get_receiving_value(self) -> float:
         """Calculate the receiving value based on WR, RB, and TE projections and DVOA."""
@@ -157,8 +177,8 @@ class Team:
             ((self.dvoa["2023"]["Defense Rush"][self.team_name][0]) / 2) + \
             (self.dvoa["2024"]["Defense Rush"][self.team_name][0])
         ) * 15 / 4
-        # print(round(_weighted_avg,3))
-        # print(f"  D: {self.team_name} R: {round(self._create_function_dict()["DRF"](_weighted_avg),1)}")
+        print(round(_weighted_avg,3))
+        print(f"  D: {self.team_name} R: {round(self._create_function_dict()["DRF"](_weighted_avg),1)}")
         return self._create_function_dict()["DRF"](_weighted_avg)
 
     def get_def_dave_normalized(self) -> float:

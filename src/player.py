@@ -99,25 +99,26 @@ class Player:
     def load_ftn_data(self, player_data: Dict[str, str]):
         """Load player projections from FTN data."""
         projection_mappings = {
-            "PassAtt": "PaAtt",
-            "PassComp": "PaCom",
-            "PassTDs": "PaTDs",
-            "PassYds": "PaYds",
-            "PassInt": "INT",
-            "RushAtt": "RuAtt",
-            "RushYds": "RuYds",
-            "RushTDs": "RuTDs",
-            "Targets": "Tar",
-            "Receptions": "Rec",
-            "RecYards": "ReYds",
-            "RecTDs": "ReTDs",
-            "Fumbles": "Fum"
+            "PassAtt": "Pass Att.",
+            "PassComp": "Pass Cmp.",
+            "PassTDs": "Pass TD",
+            "PassYds": "Pass Yd.",
+            "PassInt": "Int.",
+            "RushAtt": "Rush Att.",
+            "RushYds": "Rush Yd.",
+            "RushTDs": "Rush TD",
+            "Targets": "Tgt",
+            "Receptions": "Rec.",
+            "RecYards": "Rec Yd.",
+            "RecTDs": "Rec TD"
         }
 
-        self.projections = {
-            proj_key: utils.safe_float(player_data[ftn_key])
-            for proj_key, ftn_key in projection_mappings.items()
-        }
+        for proj_key, ftn_key in projection_mappings.items():
+            try:
+                self.projections[proj_key] = utils.safe_float(player_data[ftn_key])
+            except:
+                self.projections[proj_key] = 0.0
+            
     
     def load_fd_data(self, player_data: Dict[str, str]):
         """Load player projections from FTN data."""

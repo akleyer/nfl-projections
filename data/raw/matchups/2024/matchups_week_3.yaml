@@ -1,16 +1,16 @@
 - home: NYJ
   away: NE
-  weather: 36
-  wind: 10
-  temp: 70
+  weather: 0
+  wind: 6
+  temp: 81
   dome: "no"
   field: turf
   betting_lines:
-    home_ml: -278
-    away_ml: 222
-    home_spread: -6
-    away_spread: 6
-    total: 38.5
+    home_ml: -305
+    away_ml: 240
+    home_spread: -6.5
+    away_spread: 6.5
+    total: 39.5
 
 - home: CLE
   away: NYG

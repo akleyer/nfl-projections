@@ -19,7 +19,7 @@ DATA_DIR = "../data/raw/"
 WEEK_NUM = 3
 
 # File paths
-FTN_PROJECTIONS_FILE = f"{DATA_DIR}projections/2024/week{WEEK_NUM}/ftn_all_projections.csv"
+FTN_PROJECTIONS_FILE = f"../data/raw/projections/2024/week3/ftn_all_projections.csv"
 PLAY_RATES_FILE = f"{DATA_DIR}misc/play_rates.csv"
 HOME_ADV_FILE = f"{DATA_DIR}misc/home_adv.csv"
 # AVERAGE_TEMPERATURE_FILE = f"{DATA_DIR}misc/avg_tmp.csv"

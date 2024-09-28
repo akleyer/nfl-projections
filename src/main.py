@@ -14,6 +14,7 @@ from dvoa import DVOA
 from matchup import Matchup
 from projections import Projections
 from utils import safe_float
+from pff import PFF
 
 import config
 
@@ -45,10 +46,11 @@ def main():
     """Main function to run the NFL projection model."""
     projections = Projections()
     dvoa = DVOA()
-    pass_rates = _load_pass_rates()        
+    pass_rates = _load_pass_rates()      
+    pff = PFF()  
     for matchup in load_yaml_data(config.MATCHUPS_FILE):
         Matchup(matchup, projections, dvoa.get_data(), dvoa.get_dave(),
-                pass_rates).project_outcome()
+                pass_rates, pff.get_data()).project_outcome()
 
 
 if __name__ == "__main__":
