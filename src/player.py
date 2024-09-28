@@ -138,11 +138,8 @@ class Player:
             "Fumbles": "fum"
         }
             
-        for proj_key, fd_key in projection_mappings.items():
-            original_value = utils.safe_float(self.projections[proj_key])
+        for proj_key, ftn_key in projection_mappings.items():
             try:
-                incoming_value = utils.safe_float(player_data[fd_key])
-            except KeyError:
-                continue
-            new_value = (original_value + incoming_value) / 2
-            self.projections[proj_key] = new_value
+                self.projections[proj_key] = utils.safe_float(player_data[ftn_key])
+            except:
+                self.projections[proj_key] = 0.0
