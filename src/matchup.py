@@ -20,16 +20,17 @@ logger = logging.getLogger(__name__)
 class Matchup:
     """Represents a matchup between two teams."""
 
-    def __init__(self, matchup_data: Dict, projections: object, dvoa: Dict, dave: Dict, pass_rates: Dict):
+    def __init__(self, matchup_data: Dict, projections: object, dvoa: Dict, dave: Dict, pass_rates: Dict, pff_data: Dict):
         """Initialize a Matchup instance with game data and team statistics."""
-        self.home_team = Team(matchup_data['home'], projections, dvoa, dave)
-        self.away_team = Team(matchup_data['away'], projections, dvoa, dave)
+        self.home_team = Team(matchup_data['home'], projections, dvoa, dave, pff_data)
+        self.away_team = Team(matchup_data['away'], projections, dvoa, dave, pff_data)
         self.field_type = matchup_data['field']
         self.dome = matchup_data['dome']
         self.betting_data = matchup_data['betting_lines']
         self.pass_rates_data = pass_rates
         self.weather_obj = self._init_weather(matchup_data)
         self.home_adv = self._load_home_field_advantage()
+        self.pff = pff_data
 
     def _init_weather(self, matchup_data: Dict) -> WeatherConditions:
         """Initialize weather conditions, adjusting for dome if necessary."""

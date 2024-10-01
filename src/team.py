@@ -12,11 +12,12 @@ from projections import Projections
 class Team:
     """Represents a football team."""
 
-    __slots__ = ['team_name', 'dvoa', 'team_projections', 'dave_off', 'dave_def', 'dave_st']
+    __slots__ = ['team_name', 'dvoa', 'pff', 'team_projections', 'dave_off', 'dave_def', 'dave_st']
 
-    def __init__(self, team_name: str, projections: Projections, dvoa: Dict, dave: Dict):
+    def __init__(self, team_name: str, projections: Projections, dvoa: Dict, dave: Dict, pff_data: Dict):
         self.team_name = team_name
         self.dvoa = dvoa
+        self.pff = pff_data
         self.team_projections = projections.get_team_projections(self.team_name)
         self.dave_off, self.dave_def, self.dave_st = self._get_dave_values(dave)
 
@@ -28,15 +29,16 @@ class Team:
             return lambda x: slope * x + (y1 - slope * x1)
 
         return {
-            "Pass": create_linear_function(-.80, 0, .55, 10),
-            "Rush": create_linear_function(-.20, 0, .25, 10),
-            "Rec": create_linear_function(-.20, 0, .30, 10),
-            "OLPF": create_linear_function(.85, 0, .25, 10),
-            "OLRF": create_linear_function(22.5, 0, 35.75, 10),
-            "DPF": create_linear_function(3.55, 0, -1.6, 10),
-            "DRF": create_linear_function(0.85, 0, -2, 10),
+            "Pass": create_linear_function(-.35, 0, .40, 10),
+            "Rush": create_linear_function(-.20, 0, .20, 10),
+            "Rec": create_linear_function(-.22, 0, .25, 10),
+            "OLPF": create_linear_function(.88, 0, .25, 10),
+            "OLRF": create_linear_function(24, 0, 35, 10),
+            "DPF": create_linear_function(3.10, 0, -1.4, 10),
+            "DRF": create_linear_function(0.09, 0, -1.75, 10),
             "DAVE DEF": create_linear_function(9.5, 0, -10.5, 10),
-            "DAVE OFF": create_linear_function(-17, 0, 17, 10)
+            "DAVE OFF": create_linear_function(-17, 0, 17, 10),
+            "PFF Pass": create_linear_function(45,0,87.5,10)
         }
 
     def get_total_passing_value(self) -> float:
@@ -55,7 +57,7 @@ class Team:
             }.items()
         )
 
-        # print(f"  O: {self.team_name} P: {round(offensive_pass_value,1)}")
+        #print(f"  O: {self.team_name} P: {round(offensive_pass_value,1)}")
 
         return offensive_pass_value
 
@@ -87,7 +89,37 @@ class Team:
             for _, player_position, player_data in self.team_projections if player_position == "QB"
         )
 
-        return self._create_function_dict()["Pass"](total_contribution / total_passing_att)
+        normalized_dvoa_value = self._create_function_dict()["Pass"](total_contribution / total_passing_att)
+        # print(f"Value: {total_contribution/total_passing_att}")
+        # print(f"Norm Pass DVOA: {normalized_dvoa_value}")
+        # import pprint
+        # pprint.pprint(self.pff)
+        pff_passing_data = self.pff["2024"]["Passing"]
+
+        pff_player_grade = 0
+        total_passes = 0
+        total_cont = 0
+        for _, player_position, player_data in self.team_projections:
+            if player_position == "QB":
+                try:
+                    pff_player_grade = pff_passing_data[player_data.name][0][0]
+                    passes = pff_passing_data[player_data.name][0][1]
+                    total_passes += passes
+                    total_cont += pff_player_grade * passes
+                except KeyError:
+                    total_cont += 50
+                    total_passes += 1  
+                    pff_player_grade = "N/A"
+                    passes = 0
+                # print(f"Name: {player_data.name}")
+                # print(f"PFF: {pff_player_grade}")   
+                # print(f"Passes: {passes}")           
+
+        #print(f"total_cont / total_passes: {total_cont / total_passes}")
+        pff_player_grade = self._create_function_dict()["PFF Pass"](total_cont / total_passes)
+        #print(f"Norm PFF: {pff_player_grade}")
+
+        return (normalized_dvoa_value + pff_player_grade) / 2
 
     def _get_receiving_value(self) -> float:
         """Calculate the receiving value based on WR, RB, and TE projections and DVOA."""
@@ -145,7 +177,7 @@ class Team:
             ((self.dvoa["2023"]["Defense Pass"][self.team_name][0]) / 2) + \
             (self.dvoa["2024"]["Defense Pass"][self.team_name][0])
         ) * 15 / 4
-        # print(_weighted_avg)
+        #print(_weighted_avg)
         # print(f"  D: {self.team_name} P: {round(self._create_function_dict()["DPF"](_weighted_avg),1)}")
         return self._create_function_dict()["DPF"](_weighted_avg)
 
@@ -157,12 +189,13 @@ class Team:
             ((self.dvoa["2023"]["Defense Rush"][self.team_name][0]) / 2) + \
             (self.dvoa["2024"]["Defense Rush"][self.team_name][0])
         ) * 15 / 4
-        # print(round(_weighted_avg,3))
+        #print(round(_weighted_avg,3))
         # print(f"  D: {self.team_name} R: {round(self._create_function_dict()["DRF"](_weighted_avg),1)}")
         return self._create_function_dict()["DRF"](_weighted_avg)
 
     def get_def_dave_normalized(self) -> float:
         """Get the normalized defensive DAVE value."""
+        print(f"Dave Def: {self.dave_def}")
         return self._create_function_dict()["DAVE DEF"](float(self.dave_def))
 
     def get_off_dave_normalized(self) -> float:
