@@ -16,7 +16,7 @@
 DATA_DIR = "../data/raw/"
 
 # Define Week
-WEEK_NUM = 4
+WEEK_NUM = 5
 
 # File paths
 FTN_PROJECTIONS_FILE = f"../data/raw/projections/2024/week3/ftn_all_projections.csv"
@@ -25,6 +25,7 @@ HOME_ADV_FILE = f"{DATA_DIR}misc/home_adv.csv"
 # AVERAGE_TEMPERATURE_FILE = f"{DATA_DIR}misc/avg_tmp.csv"
 MATCHUPS_FILE = f"{DATA_DIR}matchups/2024/matchups_week_{WEEK_NUM}.yaml"
 # PROJECTED_OLINE_VALUE_FILE = f"{DATA_DIR}dvoa/oline_delta.csv"
+ELO_FILE = f"{DATA_DIR}elo/nfelo-power-rankings.csv"
 
 # Constants
 # POSITIONS = ['QB', 'WR', 'RB', 'TE']
